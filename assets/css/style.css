@@ -2252,13 +2252,16 @@ h3 {
   display: none;
 }
 
-@media (min-width: 1500px) {
+/* Shown once the viewport is wide enough for the fixed 1080px content plus
+   the TOC in the right gutter. Content can't go fluid (the scene-02 ring
+   diagram is built at a fixed 932px), so this is the practical floor. */
+@media (min-width: 1400px) {
   .toc {
     display: block;
     position: fixed;
     top: 96px;
-    left: calc(50% + 540px + 20px);
-    width: 176px;
+    left: calc(50% + 540px + 6px);
+    width: 150px;
     max-height: calc(100vh - 132px);
     overflow-y: auto;
   }
