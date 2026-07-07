@@ -245,7 +245,7 @@ h3 {
 }
 
 /* -----------------------------------------------------------------------------
-   3. Layout shell + masthead
+   3. Layout shell + top navbar
    -------------------------------------------------------------------------- */
 .page {
   width: 1080px;
@@ -253,7 +253,7 @@ h3 {
   padding: 0 40px 80px;
 }
 
-/* Sticky brand line at the very top ("Git guide for group work") */
+/* Sticky full-width top navbar */
 .topbar {
   position: sticky;
   top: 0;
@@ -312,7 +312,7 @@ h3 {
 }
 
 .topbar-link:hover {
-  background: rgba(255, 255, 255, 0.14);
+  background: rgba(148, 160, 179, 0.18);
   color: #fff;
 }
 
@@ -349,12 +349,12 @@ h3 {
 }
 
 .topbar-trigger:hover {
-  background: rgba(255, 255, 255, 0.14);
+  background: rgba(148, 160, 179, 0.18);
   color: #fff;
 }
 
 .topbar-menu[open] > .topbar-trigger {
-  background: rgba(255, 255, 255, 0.18);
+  background: rgba(148, 160, 179, 0.26);
   color: #fff;
 }
 
@@ -393,12 +393,12 @@ h3 {
 }
 
 .topbar-icon:hover {
-  background: rgba(255, 255, 255, 0.14);
+  background: rgba(148, 160, 179, 0.18);
   color: #fff;
 }
 
 .topbar-menu[open] > .topbar-icon {
-  background: rgba(255, 255, 255, 0.18);
+  background: rgba(148, 160, 179, 0.26);
   color: #fff;
 }
 
