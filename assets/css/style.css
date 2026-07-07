@@ -316,6 +316,6 @@ h3 { margin:0; font-size:inherit; font-weight:inherit; line-height:inherit; }
 .picker-formats { display:flex; flex-wrap:wrap; gap:16px; justify-content:center; }
 .picker-format { display:flex; flex-direction:column; align-items:center; gap:11px; width:172px; padding:24px 22px; background:#fff; border:1px solid #e3e8ee; border-radius:6px; box-shadow:0 1px 2px rgba(13,37,61,.04),0 18px 40px -26px rgba(13,37,61,.24); text-decoration:none; transition:border-color .15s ease, transform .15s ease; }
 .picker-format:hover { border-color:#533afd; transform:translateY(-2px); }
-.picker-format-icon { width:46px; height:46px; border-radius:6px; background:#eef0ff; display:grid; place-items:center; }
+.picker-format-icon { width:46px; height:46px; border-radius:50%; background:#eef0ff; display:grid; place-items:center; }
 .picker-format-label { font-size:15px; font-weight:600; color:#0d253d; }
 .picker-format-hint { font-size:12px; color:#64748d; }
