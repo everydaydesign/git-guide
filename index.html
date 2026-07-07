@@ -4,7 +4,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Git guide for group work</title>
-    <link rel="stylesheet" href="assets/css/style.css?v=14" />
+    <link rel="stylesheet" href="assets/css/style.css?v=15" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("theme");
+          if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          document.documentElement.dataset.theme = t;
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <main class="picker">

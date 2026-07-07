@@ -4,9 +4,131 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Git-guide för grupparbete</title>
-    <link rel="stylesheet" href="../../assets/css/style.css?v=13" />
+    <link rel="stylesheet" href="../../assets/css/style.css?v=15" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("theme");
+          if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          document.documentElement.dataset.theme = t;
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
+    <nav class="topbar">
+      <div class="topbar-inner">
+        <a class="topbar-brand" href="../../" title="Till startsidan">
+          <span class="topbar-mark"
+            ><svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#533afd"
+              stroke-width="1.9"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="6" x2="6" y1="3" y2="15"></line>
+              <circle cx="18" cy="6" r="3"></circle>
+              <circle cx="6" cy="18" r="3"></circle>
+              <path d="M18 9a9 9 0 0 1-9 9"></path></svg
+          ></span>
+          <span class="topbar-brand-text">Git-guide för grupparbete</span>
+        </a>
+        <details class="topbar-menu">
+          <summary class="topbar-trigger">
+            Avsnitt
+            <svg
+              class="topbar-caret"
+              aria-hidden="true"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="m6 9 6 6 6-6"></path>
+            </svg>
+          </summary>
+          <div class="topbar-panel">
+            <a href="#overview">Så fungerar Git</a><a href="#sec-1">01 Grunden</a
+            ><a href="#sec-2">02 Stora bilden</a><a href="#sec-3">03 Grundläggande</a
+            ><a href="#sec-4">04 Ordningen</a><a href="#sec-5">05 Branches</a
+            ><a href="#sec-6">06 Synka</a><a href="#sec-7">07 Granskning</a
+            ><a href="#sec-8">08 När det krockar</a><a href="#sec-9">Snabb checklista</a>
+          </div>
+        </details>
+        <div class="topbar-right">
+          <details class="topbar-menu">
+            <summary class="topbar-icon" aria-label="Språk" title="Språk">
+              <svg
+                aria-hidden="true"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M2 12h20"></path>
+                <path
+                  d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                ></path>
+              </svg>
+            </summary>
+            <div class="topbar-panel is-right">
+              <a href="../sv/" aria-current="true"><span class="topbar-flag">🇸🇪</span> Svenska</a
+              ><a href="../en/"><span class="topbar-flag">🇺🇸</span> English</a>
+            </div>
+          </details>
+          <button
+            type="button"
+            class="topbar-icon theme-toggle"
+            data-theme-toggle
+            aria-label="Växla mörkt läge"
+          >
+            <svg
+              class="icon-sun"
+              aria-hidden="true"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="4"></circle>
+              <path
+                d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"
+              ></path></svg
+            ><svg
+              class="icon-moon"
+              aria-hidden="true"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
     <svg aria-hidden="true" width="0" height="0" class="svg-defs">
       <defs>
         <marker id="ah" markerWidth="9" markerHeight="9" refX="4.5" refY="7.6" orient="auto">
@@ -23,66 +145,6 @@
     </svg>
     <div class="page">
       <!-- identity -->
-      <header class="masthead">
-        <a class="masthead-brand" href="../../" title="Till startsidan"
-          ><span class="masthead-mark"
-            ><svg
-              aria-hidden="true"
-              width="17"
-              height="17"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#fff"
-              stroke-width="1.9"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="masthead-mark-glyph"
-            >
-              <line x1="6" x2="6" y1="3" y2="15"></line>
-              <circle cx="18" cy="6" r="3"></circle>
-              <circle cx="6" cy="18" r="3"></circle>
-              <path d="M18 9a9 9 0 0 1-9 9"></path></svg
-          ></span>
-          <span class="masthead-title">Git-guide för grupparbete</span></a
-        >
-        <div class="masthead-actions">
-          <details class="nav-menu">
-            <summary class="nav-menu-trigger">
-              Avsnitt
-              <svg
-                aria-hidden="true"
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="nav-menu-caret"
-              >
-                <path d="m6 9 6 6 6-6"></path>
-              </svg>
-            </summary>
-            <div class="nav-menu-panel">
-              <a href="#overview">Så fungerar Git</a>
-              <a href="#sec-1">01 Grunden</a>
-              <a href="#sec-2">02 Stora bilden</a>
-              <a href="#sec-3">03 Grundläggande</a>
-              <a href="#sec-4">04 Ordningen</a>
-              <a href="#sec-5">05 Branches</a>
-              <a href="#sec-6">06 Synka</a>
-              <a href="#sec-7">07 Granskning</a>
-              <a href="#sec-8">08 När det krockar</a>
-              <a href="#sec-9">Snabb checklista</a>
-            </div>
-          </details>
-          <nav class="masthead-nav" aria-label="Språk">
-            <span class="lang lang-current" aria-current="true">Svenska</span>
-            <a class="lang" href="../en/">English</a>
-          </nav>
-        </div>
-      </header>
       <main>
         <section aria-labelledby="overview">
           <div class="hero">
@@ -1650,5 +1712,6 @@
       <!-- ===== SCENE 08 — Merge-konflikter ===== -->
       <!-- CLOSING — checklist -->
     </div>
+    <script src="../../assets/js/site.js" defer></script>
   </body>
 </html>
