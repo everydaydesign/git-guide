@@ -1,0 +1,20 @@
+{
+  "name": "github-guide",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Git guide for group work — static site",
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{css,js,json,md}": "prettier --write"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.11",
+    "prettier": "^3.4.2"
+  }
+}

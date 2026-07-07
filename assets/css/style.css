@@ -25,74 +25,79 @@
      Danger #ea2261/#c01a50 · success #1f8a5b · warn #9b6829 · dark panel #1c1e54
    ============================================================================= */
 
-
 /* -----------------------------------------------------------------------------
    1. Fonts
    -------------------------------------------------------------------------- */
 /* cyrillic-ext */
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 300 700;
   font-display: swap;
-  src: url("../fonts/inter-cyrillic-ext.woff2") format('woff2');
+  src: url("../fonts/inter-cyrillic-ext.woff2") format("woff2");
   unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 /* cyrillic */
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 300 700;
   font-display: swap;
-  src: url("../fonts/inter-cyrillic.woff2") format('woff2');
+  src: url("../fonts/inter-cyrillic.woff2") format("woff2");
   unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 /* greek-ext */
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 300 700;
   font-display: swap;
-  src: url("../fonts/inter-greek-ext.woff2") format('woff2');
+  src: url("../fonts/inter-greek-ext.woff2") format("woff2");
   unicode-range: U+1F00-1FFF;
 }
 /* greek */
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 300 700;
   font-display: swap;
-  src: url("../fonts/inter-greek.woff2") format('woff2');
+  src: url("../fonts/inter-greek.woff2") format("woff2");
   unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
 }
 /* vietnamese */
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 300 700;
   font-display: swap;
-  src: url("../fonts/inter-vietnamese.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+  src: url("../fonts/inter-vietnamese.woff2") format("woff2");
+  unicode-range:
+    U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301,
+    U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
 }
 /* latin-ext */
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 300 700;
   font-display: swap;
-  src: url("../fonts/inter-latin-ext.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  src: url("../fonts/inter-latin-ext.woff2") format("woff2");
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329,
+    U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F,
+    U+A720-A7FF;
 }
 /* latin */
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 300 700;
   font-display: swap;
-  src: url("../fonts/inter-latin.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  src: url("../fonts/inter-latin.woff2") format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
-
 
 /* -----------------------------------------------------------------------------
    2. Base, tokens & resets
@@ -105,7 +110,7 @@ body {
   margin: 0;
   background: #eef1f5;
   font-family: Inter, system-ui, sans-serif;
-  font-feature-settings: 'ss01';
+  font-feature-settings: "ss01";
   color: #0d253d;
   -webkit-font-smoothing: antialiased;
 }
@@ -124,7 +129,7 @@ a:hover {
   font-variant-numeric: tabular-nums;
 }
 .mono {
-  font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
 }
 
 /* Keep list/heading semantics without their default look */
@@ -149,7 +154,6 @@ h3 {
 .svg-defs {
   position: absolute;
 }
-
 
 /* -----------------------------------------------------------------------------
    3. Layout shell + masthead
@@ -189,7 +193,6 @@ h3 {
   color: #0d253d;
 }
 
-
 /* -----------------------------------------------------------------------------
    4. Hero / overview — "How Git works" (without-Git vs with-Git)
    -------------------------------------------------------------------------- */
@@ -201,7 +204,7 @@ h3 {
 .hero-kicker {
   font-size: 12px;
   font-weight: 600;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #533afd;
   margin-bottom: 18px;
@@ -243,13 +246,15 @@ h3 {
   border: 1px solid #f6c9d8;
   border-radius: 6px;
   padding: 20px 22px;
-  box-shadow: 0 1px 2px rgba(13, 37, 61, .04), 0 16px 34px -24px rgba(234, 34, 97, .24);
+  box-shadow:
+    0 1px 2px rgba(13, 37, 61, 0.04),
+    0 16px 34px -24px rgba(234, 34, 97, 0.24);
 }
 
 .hero-chaos-kicker {
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: .08em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #c01a50;
   margin-bottom: 12px;
@@ -274,13 +279,13 @@ h3 {
   background: #1c1e54;
   border-radius: 6px;
   padding: 20px 24px;
-  box-shadow: 0 18px 40px -22px rgba(28, 30, 84, .55);
+  box-shadow: 0 18px 40px -22px rgba(28, 30, 84, 0.55);
 }
 
 .hero-order-kicker {
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: .08em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #a5a1ff;
   margin-bottom: 14px;
@@ -332,7 +337,6 @@ h3 {
   margin-top: 14px;
 }
 
-
 /* -----------------------------------------------------------------------------
    5. Section scaffold — shared by every numbered scene (01–08)
    -------------------------------------------------------------------------- */
@@ -356,7 +360,7 @@ h3 {
 .section-kicker {
   font-size: 20px;
   font-weight: 600;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #533afd;
 }
@@ -383,7 +387,7 @@ h3 {
 .section-title-sm {
   font-size: 26px;
   font-weight: 300;
-  letter-spacing: -.8px;
+  letter-spacing: -0.8px;
   margin: 0 0 24px;
 }
 
@@ -413,7 +417,6 @@ h3 {
   max-width: 720px;
   margin: 0 0 30px;
 }
-
 
 /* -----------------------------------------------------------------------------
    6. Shared components — reused across multiple scenes
@@ -473,7 +476,9 @@ h3 {
   border: 1px solid #e3e8ee;
   border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0 1px 2px rgba(13, 37, 61, .04), 0 18px 40px -26px rgba(13, 37, 61, .24);
+  box-shadow:
+    0 1px 2px rgba(13, 37, 61, 0.04),
+    0 18px 40px -26px rgba(13, 37, 61, 0.24);
 }
 
 /* Keep a card's trailing callout pinned to the bottom */
@@ -534,14 +539,13 @@ h3 {
   font-weight: 600;
 }
 
-
 /* -----------------------------------------------------------------------------
    7. Scene 01 — What is Git (old copy-files way vs Git history)
    -------------------------------------------------------------------------- */
 .card-kicker-danger {
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: .08em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #c01a50;
 }
@@ -549,7 +553,7 @@ h3 {
 .card-kicker-success {
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: .08em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #1f8a5b;
 }
@@ -714,7 +718,6 @@ h3 {
   color: #64748d;
 }
 
-
 /* -----------------------------------------------------------------------------
    8. Scene 02 — The big picture (six-step ring diagram)
    -------------------------------------------------------------------------- */
@@ -723,7 +726,9 @@ h3 {
   border: 1px solid #e3e8ee;
   border-radius: 6px;
   padding: 30px 34px 26px;
-  box-shadow: 0 1px 2px rgba(13, 37, 61, .04), 0 22px 50px -30px rgba(13, 37, 61, .26);
+  box-shadow:
+    0 1px 2px rgba(13, 37, 61, 0.04),
+    0 22px 50px -30px rgba(13, 37, 61, 0.26);
 }
 
 .ring {
@@ -750,7 +755,7 @@ h3 {
   border-radius: 6px;
   padding: 18px 20px;
   text-align: center;
-  box-shadow: 0 20px 44px -22px rgba(28, 30, 84, .6);
+  box-shadow: 0 20px 44px -22px rgba(28, 30, 84, 0.6);
 }
 
 .ring-hub-icon {
@@ -798,7 +803,7 @@ h3 {
   border-radius: 50%;
   background: #fff;
   border: 1px solid #e3e8ee;
-  box-shadow: 0 8px 20px -10px rgba(13, 37, 61, .22);
+  box-shadow: 0 8px 20px -10px rgba(13, 37, 61, 0.22);
   display: grid;
   place-items: center;
 }
@@ -827,7 +832,7 @@ h3 {
   top: 190px;
   background: #f1faf5;
   border-color: #b9e0cd;
-  box-shadow: 0 8px 20px -10px rgba(31, 138, 91, .24);
+  box-shadow: 0 8px 20px -10px rgba(31, 138, 91, 0.24);
 }
 
 /* Text labels beside each ring node */
@@ -929,7 +934,6 @@ h3 {
   color: #8a5c24;
 }
 
-
 /* -----------------------------------------------------------------------------
    9. Scene 03 — Stage & commit ("packing a bag")
    -------------------------------------------------------------------------- */
@@ -953,7 +957,7 @@ h3 {
 .step-kicker {
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: .06em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #533afd;
 }
@@ -1007,7 +1011,7 @@ h3 {
   gap: 10px;
   padding: 11px 14px;
   border-top: 1px solid #eef2f6;
-  opacity: .6;
+  opacity: 0.6;
 }
 
 .check-tile {
@@ -1120,7 +1124,6 @@ h3 {
   margin: 0;
 }
 
-
 /* -----------------------------------------------------------------------------
    10. Scene 04 — Workflow order (Stage → Commit → Push)
    -------------------------------------------------------------------------- */
@@ -1136,7 +1139,9 @@ h3 {
   border: 1px solid #e3e8ee;
   border-radius: 6px;
   padding: 22px 22px;
-  box-shadow: 0 1px 2px rgba(13, 37, 61, .04), 0 16px 34px -26px rgba(13, 37, 61, .22);
+  box-shadow:
+    0 1px 2px rgba(13, 37, 61, 0.04),
+    0 16px 34px -26px rgba(13, 37, 61, 0.22);
 }
 
 .step-card-head {
@@ -1180,7 +1185,7 @@ h3 {
   background: #1c1e54;
   border-radius: 6px;
   padding: 22px 22px;
-  box-shadow: 0 16px 34px -22px rgba(28, 30, 84, .55);
+  box-shadow: 0 16px 34px -22px rgba(28, 30, 84, 0.55);
 }
 
 .step-num-dark {
@@ -1247,7 +1252,7 @@ h3 {
 .scope-label {
   font-size: 11.5px;
   font-weight: 600;
-  letter-spacing: .04em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #6b7584;
 }
@@ -1255,11 +1260,10 @@ h3 {
 .scope-label-remote {
   font-size: 11.5px;
   font-weight: 600;
-  letter-spacing: .04em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #7b78c9;
 }
-
 
 /* -----------------------------------------------------------------------------
    11. Scene 05 — Branches
@@ -1269,7 +1273,9 @@ h3 {
   border: 1px solid #e3e8ee;
   border-radius: 6px;
   padding: 34px 34px 30px;
-  box-shadow: 0 1px 2px rgba(13, 37, 61, .04), 0 20px 46px -30px rgba(13, 37, 61, .24);
+  box-shadow:
+    0 1px 2px rgba(13, 37, 61, 0.04),
+    0 20px 46px -30px rgba(13, 37, 61, 0.24);
 }
 
 .branch-diagram {
@@ -1322,7 +1328,7 @@ h3 {
 .names-panel-label {
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: .06em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #6b7584;
   margin-bottom: 11px;
@@ -1343,7 +1349,6 @@ h3 {
   color: #475569;
 }
 
-
 /* -----------------------------------------------------------------------------
    12. Scene 06 — Sync (pull first, push after)
    -------------------------------------------------------------------------- */
@@ -1352,7 +1357,9 @@ h3 {
   border: 1px solid #e3e8ee;
   border-radius: 6px;
   padding: 32px 40px;
-  box-shadow: 0 1px 2px rgba(13, 37, 61, .04), 0 20px 46px -30px rgba(13, 37, 61, .24);
+  box-shadow:
+    0 1px 2px rgba(13, 37, 61, 0.04),
+    0 20px 46px -30px rgba(13, 37, 61, 0.24);
 }
 
 .sync-row {
@@ -1449,7 +1456,6 @@ h3 {
   color: #64748d;
 }
 
-
 /* -----------------------------------------------------------------------------
    13. Scene 07 — Pull requests / review
    -------------------------------------------------------------------------- */
@@ -1458,7 +1464,9 @@ h3 {
   border: 1px solid #e3e8ee;
   border-radius: 6px;
   padding: 34px;
-  box-shadow: 0 1px 2px rgba(13, 37, 61, .04), 0 20px 46px -30px rgba(13, 37, 61, .24);
+  box-shadow:
+    0 1px 2px rgba(13, 37, 61, 0.04),
+    0 20px 46px -30px rgba(13, 37, 61, 0.24);
 }
 
 .review-step {
@@ -1495,7 +1503,7 @@ h3 {
 .review-decision-label {
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: .07em;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
   color: #6b7584;
   text-align: center;
@@ -1608,7 +1616,6 @@ h3 {
   line-height: 1.5;
 }
 
-
 /* -----------------------------------------------------------------------------
    14. Scene 08 — Merge conflicts
    -------------------------------------------------------------------------- */
@@ -1624,13 +1631,15 @@ h3 {
   border: 1px solid #e3e8ee;
   border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0 1px 2px rgba(13, 37, 61, .04), 0 18px 40px -28px rgba(13, 37, 61, .24);
+  box-shadow:
+    0 1px 2px rgba(13, 37, 61, 0.04),
+    0 18px 40px -28px rgba(13, 37, 61, 0.24);
 }
 
 .conflict-kicker {
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: .06em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #c01a50;
 }
@@ -1677,13 +1686,15 @@ h3 {
   border: 1px solid #b9e0cd;
   border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0 1px 2px rgba(13, 37, 61, .04), 0 18px 40px -28px rgba(31, 138, 91, .18);
+  box-shadow:
+    0 1px 2px rgba(13, 37, 61, 0.04),
+    0 18px 40px -28px rgba(31, 138, 91, 0.18);
 }
 
 .resolve-kicker {
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: .06em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #1f8a5b;
 }
@@ -1729,7 +1740,6 @@ h3 {
   margin: 0;
 }
 
-
 /* -----------------------------------------------------------------------------
    15. Closing checklist + footer
    -------------------------------------------------------------------------- */
@@ -1751,13 +1761,13 @@ h3 {
   border: 1px solid #e3e8ee;
   border-radius: 6px;
   padding: 24px 26px;
-  box-shadow: 0 1px 2px rgba(13, 37, 61, .04);
+  box-shadow: 0 1px 2px rgba(13, 37, 61, 0.04);
 }
 
 .checklist-label {
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: .07em;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
   color: #6b7584;
   margin-bottom: 16px;
@@ -1791,13 +1801,13 @@ h3 {
   background: #1c1e54;
   border-radius: 6px;
   padding: 24px 26px;
-  box-shadow: 0 18px 40px -26px rgba(28, 30, 84, .5);
+  box-shadow: 0 18px 40px -26px rgba(28, 30, 84, 0.5);
 }
 
 .checklist-label-dark {
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: .07em;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
   color: #a5a1ff;
   margin-bottom: 16px;
@@ -1826,7 +1836,7 @@ h3 {
   color: #0d253d;
   margin: 30px 0 0;
   max-width: 760px;
-  letter-spacing: -.3px;
+  letter-spacing: -0.3px;
 }
 
 .site-footer {
@@ -1836,7 +1846,6 @@ h3 {
   font-size: 12px;
   color: #6b7584;
 }
-
 
 /* -----------------------------------------------------------------------------
    16. Language picker (root landing page — index.html)
@@ -1931,9 +1940,11 @@ h3 {
   background: #fff;
   border: 1px solid #e3e8ee;
   border-radius: 6px;
-  box-shadow: 0 1px 2px rgba(13, 37, 61, .04), 0 18px 40px -26px rgba(13, 37, 61, .24);
+  box-shadow:
+    0 1px 2px rgba(13, 37, 61, 0.04),
+    0 18px 40px -26px rgba(13, 37, 61, 0.24);
   text-decoration: none;
-  transition: border-color .15s ease;
+  transition: border-color 0.15s ease;
 }
 
 .picker-format:hover {
