@@ -297,6 +297,33 @@ h3 {
   color: #fff;
 }
 
+/* Plain nav link in the bar (Home). Dark overrides beat the global dark <a>
+   rule so bar links stay light on the always-navy bar. */
+.topbar-link {
+  display: flex;
+  align-items: center;
+  height: 34px;
+  padding: 0 12px;
+  border-radius: 6px;
+  color: #eae7ff;
+  font-size: 13.5px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.topbar-link:hover {
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+}
+
+:root[data-theme="dark"] .topbar-link {
+  color: #eae7ff;
+}
+
+:root[data-theme="dark"] .topbar-link:hover {
+  color: #fff;
+}
+
 /* Nav menus in the bar (Sections + language) — pure-CSS <details> */
 .topbar-menu {
   position: relative;
