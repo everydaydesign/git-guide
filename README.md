@@ -1,4 +1,4 @@
-# Git-guide för grupparbete
+# Guide till Git
 
 En guide för studenter om hur man använder Git och GitHub i grupparbeten — från din första commit till pull requests och merge-konflikter.
 

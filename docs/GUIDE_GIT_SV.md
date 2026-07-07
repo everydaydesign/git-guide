@@ -1,4 +1,4 @@
-# Git-guide för grupparbete
+# Guide till Git
 
 ## Innehåll
 

@@ -1,4 +1,4 @@
-# Git guide for group work
+# Guide to Git
 
 ## Contents
 
