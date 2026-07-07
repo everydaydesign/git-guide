@@ -2,9 +2,10 @@
   "name": "git-guide",
   "version": "1.0.0",
   "private": true,
-  "description": "Git guide for group work — static site",
+  "description": "Guide to Git — static site",
   "license": "MIT",
   "scripts": {
+    "build:text": "node scripts/build-text.mjs",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "prepare": "husky"
@@ -15,6 +16,8 @@
   "devDependencies": {
     "husky": "^9.1.7",
     "lint-staged": "^15.2.11",
+    "marked": "^18.0.5",
+    "marked-gfm-heading-id": "^4.1.4",
     "prettier": "^3.4.2"
   }
 }

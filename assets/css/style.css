@@ -2311,3 +2311,130 @@ h3 {
   border-left-color: #533afd;
   font-weight: 500;
 }
+
+/* -----------------------------------------------------------------------------
+   18. Text guide — rendered markdown (docs/*.md via scripts/build-text.mjs)
+   -------------------------------------------------------------------------- */
+.markdown {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 44px 0 24px;
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: var(--ink-2);
+}
+
+.markdown h1 {
+  margin: 0 0 24px;
+  font-size: 34px;
+  font-weight: 300;
+  letter-spacing: -1px;
+  color: var(--ink);
+}
+
+.markdown h2 {
+  margin: 46px 0 14px;
+  font-size: 23px;
+  font-weight: 500;
+  color: var(--ink);
+  scroll-margin-top: 88px;
+}
+
+.markdown h3 {
+  margin: 30px 0 10px;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ink);
+  scroll-margin-top: 88px;
+}
+
+.markdown p {
+  margin: 0 0 16px;
+}
+
+.markdown ul,
+.markdown ol {
+  margin: 0 0 16px;
+  padding-left: 22px;
+}
+
+.markdown li {
+  margin: 5px 0;
+}
+
+.markdown li::marker {
+  color: var(--mute);
+}
+
+.markdown strong {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.markdown code {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.86em;
+  background: var(--surface-soft);
+  border: 1px solid var(--hairline);
+  border-radius: 4px;
+  padding: 1px 5px;
+}
+
+.markdown pre {
+  margin: 0 0 18px;
+  padding: 14px 16px;
+  background: var(--surface-soft);
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.markdown pre code {
+  padding: 0;
+  border: 0;
+  background: none;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.markdown blockquote {
+  margin: 0 0 18px;
+  padding: 6px 16px;
+  border-left: 3px solid #533afd;
+  border-radius: 0 6px 6px 0;
+  background: var(--surface-soft);
+}
+
+.markdown blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+.markdown table {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  margin: 0 0 18px;
+  border-collapse: collapse;
+  overflow-x: auto;
+  font-size: 14px;
+}
+
+.markdown th,
+.markdown td {
+  padding: 8px 13px;
+  border: 1px solid var(--hairline);
+  text-align: left;
+  vertical-align: top;
+}
+
+.markdown th {
+  background: var(--surface-soft);
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.markdown hr {
+  margin: 34px 0;
+  border: 0;
+  border-top: 1px solid var(--hairline);
+}

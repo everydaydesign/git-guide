@@ -1,0 +1,833 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Guide to Git</title>
+    <link rel="stylesheet" href="../../../assets/css/style.css?v=21" />
+    <script>
+      (function () {
+        try {
+          document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <nav class="topbar">
+      <div class="topbar-inner">
+        <a class="topbar-brand" href="../../../" title="Back to start">
+          <span class="topbar-mark"
+            ><svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#533afd"
+              stroke-width="1.9"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="6" x2="6" y1="3" y2="15"></line>
+              <circle cx="18" cy="6" r="3"></circle>
+              <circle cx="6" cy="18" r="3"></circle>
+              <path d="M18 9a9 9 0 0 1-9 9"></path></svg
+          ></span>
+          <span class="topbar-brand-text">Guide to Git</span>
+        </a>
+        <a class="topbar-link" href="../">Visual guide</a>
+        <div class="topbar-right">
+          <details class="topbar-menu">
+            <summary class="topbar-icon" aria-label="Language" title="Language">
+              <svg
+                aria-hidden="true"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M2 12h20"></path>
+                <path
+                  d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                ></path>
+              </svg>
+            </summary>
+            <div class="topbar-panel is-right">
+              <a href="../../sv/text/"><span class="topbar-flag">🇸🇪</span> Svenska</a
+              ><a href="../../en/text/" aria-current="true"
+                ><span class="topbar-flag">🇺🇸</span> English</a
+              >
+            </div>
+          </details>
+          <button
+            type="button"
+            class="topbar-icon theme-toggle"
+            data-theme-toggle
+            aria-label="Toggle dark mode"
+          >
+            <svg
+              class="icon-sun"
+              aria-hidden="true"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="4"></circle>
+              <path
+                d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"
+              ></path></svg
+            ><svg
+              class="icon-moon"
+              aria-hidden="true"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <main class="page">
+      <article class="markdown">
+        <h1 id="guide-to-git">Guide to Git</h1>
+        <h2 id="contents">Contents</h2>
+        <ul>
+          <li>
+            <a href="#1-if-you-have-never-used-git-before">1. If you have never used Git before</a>
+            <ul>
+              <li><a href="#11-what-is-git">1.1 What is Git?</a></li>
+              <li>
+                <a href="#12-why-do-we-use-git-in-this-course"
+                  >1.2 Why do we use Git in this course?</a
+                >
+              </li>
+              <li>
+                <a href="#13-what-are-you-expected-to-know-afterwards"
+                  >1.3 What are you expected to know afterwards?</a
+                >
+              </li>
+              <li><a href="#14-what-do-you-do-when">1.4 What do you do when?</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#2-getting-started-with-group-work">2. Getting started with group work</a>
+          </li>
+          <li>
+            <a href="#3-starting-a-group-project">3. Starting a group project</a>
+            <ul>
+              <li><a href="#31-one-person-creates-the-repo">3.1 One person creates the repo</a></li>
+              <li><a href="#32-invite-group-members">3.2 Invite group members</a></li>
+              <li><a href="#33-everyone-opens-the-project">3.3 Everyone opens the project</a></li>
+              <li><a href="#34-create-your-branch">3.4 Create your branch</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#4-basic-git">4. Basic Git</a>
+            <ul>
+              <li><a href="#41-stage-vs-commit--whats-the-difference">4.1 Stage vs Commit</a></li>
+              <li><a href="#42-saving-changes-commit">4.2 Saving changes (commit)</a></li>
+              <li><a href="#43-the-three-step-workflow">4.3 The three-step workflow</a></li>
+              <li><a href="#44-undoing-changes">4.4 Undoing changes</a></li>
+              <li><a href="#45-viewing-history">4.5 Viewing history</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#5-group-work-with-git">5. Group work with Git</a>
+            <ul>
+              <li><a href="#51-push-and-pull--syncing-with-github">5.1 Push and Pull</a></li>
+              <li><a href="#52-pull-requests-pr--review-before-merging">5.2 Pull Requests</a></li>
+              <li><a href="#53-reviewing-a-pull-request">5.3 Reviewing a Pull Request</a></li>
+              <li>
+                <a href="#54-requesting-changes--example">5.4 Requesting changes – example</a>
+              </li>
+              <li><a href="#55-tips-for-good-reviews">5.5 Tips for good reviews</a></li>
+              <li>
+                <a href="#56-merge-conflicts--when-two-people-change-the-same-file"
+                  >5.6 Merge conflicts</a
+                >
+              </li>
+              <li><a href="#57-gitignore--files-that-shouldnt-be-shared">5.7 .gitignore</a></li>
+            </ul>
+          </li>
+          <li><a href="#6-problems">6. Problems?</a></li>
+        </ul>
+        <hr />
+        <h2 id="1-if-you-have-never-used-git-before">1. If you have never used Git before</h2>
+        <h3 id="11-what-is-git">1.1 What is Git?</h3>
+        <p>
+          Git saves &quot;snapshots&quot; of your code so you can view history and undo changes.
+          Instead of having files like <code>project_v1.php</code>,
+          <code>project_v2_final.php</code>, <code>project_v2_final_FINAL.php</code>, Git keeps
+          track of all changes automatically. You can go back to a previous version at any time.
+        </p>
+        <h3 id="12-why-do-we-use-git-in-this-course">1.2 Why do we use Git in this course?</h3>
+        <ul>
+          <li><strong>Backup</strong> – your code exists both locally and on GitHub.</li>
+          <li>
+            <strong>Collaboration</strong> – multiple people can work on the same project without
+            overwriting each other&#39;s code.
+          </li>
+          <li><strong>History</strong> – you can see who changed what and when.</li>
+          <li><strong>Industry standard</strong> – almost all developers use Git daily.</li>
+        </ul>
+        <h3 id="13-what-are-you-expected-to-know-afterwards">
+          1.3 What are you expected to know afterwards?
+        </h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Basics</th>
+              <th>Group work</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Understand what stage and commit mean</td>
+              <td>Create and switch between branches</td>
+            </tr>
+            <tr>
+              <td>Save changes with clear messages</td>
+              <td>Sync with GitHub (pull/push)</td>
+            </tr>
+            <tr>
+              <td>Undo changes</td>
+              <td>Create and review Pull Requests</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Resolve simple merge conflicts</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3 id="14-what-do-you-do-when">1.4 What do you do when?</h3>
+        <pre><code>┌─────────────────────────────────────────────────────────────────────────────┐
+│  DO ONCE (project start)              │    DO EVERY WORK SESSION            │
+│  ───────────────────────              │    ──────────────────────           │
+│  □ Create repo (one person)           │    □ Switch to main + Pull          │
+│  □ Invite group members               │    □ Create/switch to your branch   │
+│  □ Accept invitation                  │    □ Work on your code              │
+│  □ Create your first Codespace        │    □ Stage → Commit → Push          │
+│                                       │    □ Create PR + ask for review     │
+│  COMMUNICATION                        │                                     │
+│  ─────────────                        │                                     │
+│  □ Decide who does what               │                                     │
+│  □ Announce before working on a file  │                                     │
+│  □ Review each other&#39;s Pull Requests  │                                     │
+└─────────────────────────────────────────────────────────────────────────────┘
+</code></pre>
+        <h2 id="2-getting-started-with-group-work">2. Getting started with group work</h2>
+        <pre><code>┌─────────────────────────────────────────────────────────────────────────────┐
+│                         GIT GROUP WORK – OVERVIEW                           │
+│                                                                             │
+│  1. ONE person creates the repo and invites the others as collaborators     │
+│  2. Everyone does PULL from main to get the latest version                  │
+│  3. Each person creates their own BRANCH for their task                     │
+│  4. When finished: PUSH + create PULL REQUEST                               │
+│  5. A group member REVIEWS your code                                        │
+│  6. After approval: MERGE to main                                           │
+│                                                                             │
+│  Golden rule: Never work directly in main – always create a branch!         │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+                            ┌──────────────────┐
+                        1.  │   Lisa&#39;s GitHub  │
+                            │   main branch    │◄────────────────────────────┐
+                            │  (group&#39;s repo)  │                             │
+                            └────────┬─────────┘                             │
+                                     │                                       │
+        ┌────────────────────────────┼────────────────────────────┐          │
+        │ 2. pull                    │ 2. pull                    │ 2. pull  │
+        ▼                            ▼                            ▼          │
+  ┌────────────────┐          ┌────────────────┐          ┌────────────────┐ │
+  │      Lisa      │          │      Erik      │          │      Anna      │ │
+  │    Codespace   │          │    Codespace   │          │    Codespace   │ │
+  │    (owner)     │          │ (collaborator) │          │ (collaborator) │ │
+  └───────┬────────┘          └───────┬────────┘          └───────┬────────┘ │
+          │                           │                           │          │
+          ▼                           ▼                           ▼          │
+      3. branch:                  3. branch:                  3. branch:     │
+         contact                     products                    login       │
+          │                           │                           │          │
+          └───────────────────────────┼───────────────────────────┘          │
+                                      │                                      │
+                                      │ 4. push + PR                         │
+                                      ▼                                      │
+                            ┌──────────────────┐                             │
+                        5.  │   Pull Request   │                             │
+                            │    + Review      │                             │
+                            └────────┬─────────┘                             │
+                                     │                                       │
+                                     │ 6. Merge                              │
+                                     └───────────────────────────────────────┘
+</code></pre>
+        <h2 id="3-starting-a-group-project">3. Starting a group project</h2>
+        <h3 id="31-one-person-creates-the-repo">3.1 One person creates the repo</h3>
+        <p>One person in the group creates the project:</p>
+        <ol>
+          <li>
+            Go to the template repo for your project —
+            <a href="https://github.com/everydaydesign/website">website</a> for HTML/CSS, or
+            <a href="https://github.com/everydaydesign/web-app">web-app</a> for PHP/MySQL
+          </li>
+          <li>
+            Click <strong>&quot;Use this template&quot;</strong> →
+            <strong>&quot;Create a new repository&quot;</strong>
+          </li>
+          <li>Choose a name, e.g., <code>group1-design-project</code></li>
+          <li>Select <strong>Private</strong> (if you do not want others to see it)</li>
+          <li>Click <strong>Create repository</strong></li>
+        </ol>
+        <h3 id="32-invite-group-members">3.2 Invite group members</h3>
+        <p>The same person invites the rest of the group:</p>
+        <ol>
+          <li>Go to the repo on GitHub</li>
+          <li>Click <strong>Settings</strong> → <strong>Collaborators</strong> (in the sidebar)</li>
+          <li>Click <strong>Add people</strong></li>
+          <li>Search for the group member&#39;s GitHub username or email</li>
+          <li>Click <strong>Add to repository</strong></li>
+          <li>Repeat for everyone in the group</li>
+        </ol>
+        <p>Group members will receive an email and must accept the invitation!</p>
+        <h3 id="33-everyone-opens-the-project">3.3 Everyone opens the project</h3>
+        <p>Once everyone has accepted the invitation:</p>
+        <ol>
+          <li>Go to the repo on <strong>github.com</strong></li>
+          <li>
+            Click <strong>&quot;&lt;&gt; Code&quot;</strong> →
+            <strong>&quot;Codespaces&quot;</strong>
+          </li>
+          <li>Click <strong>&quot;Create codespace on main&quot;</strong></li>
+          <li>Wait while the environment builds (about 1-2 minutes)</li>
+        </ol>
+        <p>
+          <strong>Important:</strong> Each person has their own Codespace – you do not work in the
+          same window, but sync via Git!
+        </p>
+        <p><strong>Next time you want to work:</strong></p>
+        <ol>
+          <li>Go to <a href="https://github.com/codespaces">github.com/codespaces</a></li>
+          <li>Click on your existing Codespace (do not create a new one each time!)</li>
+        </ol>
+        <h3 id="34-create-your-branch">3.4 Create your branch</h3>
+        <p>
+          Before you start coding, you need to create your own branch. A branch is a
+          &quot;copy&quot; of the project where you can work without affecting others&#39; code.
+          Never work directly in <code>main</code>!
+        </p>
+        <ol>
+          <li>
+            Look at the bottom left of Codespace – it says <strong>main</strong> (in the status bar)
+          </li>
+          <li>Click on <strong>main</strong></li>
+          <li>A menu appears at the top – select <strong>Create new branch...</strong></li>
+          <li>
+            Type a name that describes your task, e.g., <code>contact</code> or
+            <code>products</code>
+          </li>
+          <li>
+            Press <strong>Enter</strong> – you are now on your new branch (check that the name has
+            changed at the bottom)
+          </li>
+        </ol>
+        <p>
+          You are now automatically on your new branch and can start working. All commits you make
+          will go to your branch, not to main.
+        </p>
+        <p><strong>Good branch names:</strong></p>
+        <pre><code>contact
+products
+database-connection
+startpage
+</code></pre>
+        <p><strong>Every new work session</strong> (when the branch already exists):</p>
+        <ol>
+          <li>Click the branch name at the bottom left</li>
+          <li>Select your branch from the list</li>
+        </ol>
+        <p><strong>Branch workflow:</strong></p>
+        <pre><code>main         ●───────●───────────────────────●───────●
+                     │                       ▲
+                     │ 1. Create branch      │ 4. Merge (via PR)
+                     ▼                       │
+contact              ●─────●─────●───────────┘
+                           │     │
+                     2. commit  3. commit
+</code></pre>
+        <blockquote>
+          <p><strong>Important: Everyone works in the same repo!</strong></p>
+          <p>
+            Group members should <strong>not</strong> create their own repos. Everyone opens
+            Codespaces on the <strong>team leader&#39;s repo</strong> – the one created with
+            &quot;Use this template&quot;. That is where <code>.devcontainer/</code> lives, which
+            installs PHP, MySQL and everything you need. If you create your own empty repo, you will
+            not get a development environment.
+          </p>
+          <ul>
+            <li>
+              The team leader creates the repo with <strong>&quot;Use this template&quot;</strong>
+            </li>
+            <li>The team leader invites everyone as <strong>collaborators</strong></li>
+            <li>Everyone opens Codespaces on the <strong>same repo</strong></li>
+            <li>Everyone creates their own <strong>branches</strong> in their Codespace</li>
+          </ul>
+        </blockquote>
+        <hr />
+        <h2 id="4-basic-git">4. Basic Git</h2>
+        <h3 id="41-stage-vs-commit--what-is-the-difference">
+          4.1 Stage vs Commit – What is the difference?
+        </h3>
+        <p>Think of it like packing a suitcase for a trip:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Step</th>
+              <th>Git term</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1. Choosing clothes</td>
+              <td><strong>Stage</strong></td>
+              <td>You select which files to include in the next save</td>
+            </tr>
+            <tr>
+              <td>2. Closing the suitcase</td>
+              <td><strong>Commit</strong></td>
+              <td>You save a &quot;snapshot&quot; with a message</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          <strong>Why does stage exist?</strong> You might have changed 5 files but only want to
+          save 2 of them now. With stage, you choose exactly which changes belong together logically
+          – e.g., &quot;all changes for the login page&quot; in one commit and &quot;bugfix in the
+          contact form&quot; in another.
+        </p>
+        <h3 id="42-saving-changes-commit">4.2 Saving changes (commit)</h3>
+        <ol>
+          <li>
+            Click the <strong>Source Control</strong> icon in the sidebar (or
+            <code>Ctrl+Shift+G</code>)
+          </li>
+          <li>You&#39;ll see changed files under <strong>Changes</strong></li>
+          <li>Click <strong>+</strong> (the plus sign) to stage files (choose which to include)</li>
+          <li>The files move to <strong>Staged Changes</strong></li>
+          <li>
+            Write a commit message – or click <strong>✨</strong> (the AI icon) to generate one
+            automatically
+          </li>
+          <li>Click <strong>✓ Commit</strong></li>
+        </ol>
+        <p>
+          <strong>Tip:</strong> Commit often with clear messages – it makes it easier to find your
+          way back!
+        </p>
+        <h3 id="43-the-three-step-workflow">4.3 The three-step workflow</h3>
+        <pre><code>      1. STAGE               2. COMMIT               3. PUSH
+   (select files)         (save locally)       (share with group)
+          │                      │                      │
+          ▼                      ▼                      ▼
+   ┌─────────────┐       ┌───────────────┐       ┌─────────────┐
+   │ Click + on  │       │ Write message │       │ Click Sync  │
+   │    files    │──────►│ (or ✨ for AI)│──────►│   or Push   │
+   │             │       │    then ✓     │       │             │
+   └─────────────┘       └───────────────┘       └─────────────┘
+</code></pre>
+        <p><strong>Remember:</strong> Stage → Commit → Push. Always in that order.</p>
+        <h3 id="44-undoing-changes">4.4 Undoing changes</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Situation</th>
+              <th>Solution</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Undo changes in a file (not committed)</strong></td>
+              <td>Right-click the file → <strong>Discard Changes</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Remove file from staged</strong></td>
+              <td>Click <strong>−</strong> next to the file under Staged Changes</td>
+            </tr>
+            <tr>
+              <td><strong>Undo last commit</strong></td>
+              <td>
+                <strong>⋯</strong> → <strong>Commit</strong> → <strong>Undo Last Commit</strong>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Restore to previous version</strong></td>
+              <td>Right-click the file → <strong>Open Timeline</strong> → Select version</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3 id="45-viewing-history">4.5 Viewing history</h3>
+        <ol>
+          <li>Right-click a file in the file tree</li>
+          <li>Select <strong>Open Timeline</strong></li>
+          <li>Click on a previous version to see the difference</li>
+        </ol>
+        <hr />
+        <h2 id="5-group-work-with-git">5. Group work with Git</h2>
+        <p>
+          When multiple people work on the same project, you need to synchronize your changes via
+          GitHub.
+        </p>
+        <h3 id="51-push-and-pull--syncing-with-github">5.1 Push and Pull – syncing with GitHub</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Command</th>
+              <th>What it does</th>
+              <th>When</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Pull</strong></td>
+              <td>Downloads others&#39; changes from GitHub to you</td>
+              <td>Always before you start working</td>
+            </tr>
+            <tr>
+              <td><strong>Push</strong></td>
+              <td>Sends your commits to GitHub</td>
+              <td>When you&#39;re done with a change</td>
+            </tr>
+          </tbody>
+        </table>
+        <p><strong>How to do it:</strong></p>
+        <ol>
+          <li>
+            <strong>Before you start working</strong> – click <strong>⋯</strong> →
+            <strong>Pull</strong> (or <code>Ctrl+Shift+P</code> → &quot;Git: Pull&quot;)
+          </li>
+          <li>
+            <strong>When you&#39;re done</strong> – commit first, then <strong>⋯</strong> →
+            <strong>Push</strong>
+          </li>
+        </ol>
+        <p><strong>Golden rule:</strong> Pull before you start, push when you&#39;re done!</p>
+        <pre><code>┌──────────────────────────────────────────┐
+│              GitHub (Remote)             │
+│         main branch on the server        │
+└──────────────────────────────────────────┘
+        │                    ▲
+        │ 1. PULL            │ 2. PUSH
+        │ (download)         │ (upload)
+        ▼                    │
+┌──────────────────────────────────────────┐
+│           Your Codespace (local)         │
+│          your copy of the project        │
+└──────────────────────────────────────────┘
+</code></pre>
+        <hr />
+        <h3 id="52-pull-requests-pr--review-before-merging">
+          5.2 Pull Requests (PR) – review before merging
+        </h3>
+        <p>A Pull Request (PR) lets the group review your code before it is merged into main.</p>
+        <p><strong>Create a Pull Request:</strong></p>
+        <ol>
+          <li>Push your branch to GitHub</li>
+          <li>Go to the repo on <strong>github.com</strong> → <strong>Code</strong> tab</li>
+          <li>
+            If you see a yellow banner <strong>&quot;Compare &amp; pull request&quot;</strong> –
+            click it
+          </li>
+          <li>
+            <strong>If no banner appears:</strong>
+            <ul>
+              <li>Click the <strong>Pull requests</strong> tab</li>
+              <li>Click <strong>New pull request</strong> (green button)</li>
+              <li>Select your branch in the <strong>compare</strong> dropdown</li>
+            </ul>
+          </li>
+          <li>Write a brief description of what you&#39;ve done</li>
+          <li>Click <strong>Create pull request</strong></li>
+          <li>Ask a group member to review and click <strong>Merge pull request</strong></li>
+        </ol>
+        <p>
+          <strong>Tip:</strong> Write what they should look at, e.g., &quot;Check that the form
+          validates correctly&quot;
+        </p>
+        <p><strong>After your PR is merged:</strong></p>
+        <ol>
+          <li>Switch back to <code>main</code> (click the branch name at the bottom)</li>
+          <li>Pull to download your merged changes</li>
+          <li>
+            Delete your old branch (optional): <strong>⋯</strong> → <strong>Branch</strong> →
+            <strong>Delete Branch</strong>
+          </li>
+        </ol>
+        <hr />
+        <h3 id="53-reviewing-a-pull-request">5.3 Reviewing a Pull Request</h3>
+        <p>
+          Anyone in the group can review – it does not have to be the same person every time. The
+          only rule is that you do not review your own code.
+        </p>
+        <p><strong>How to review:</strong></p>
+        <ol>
+          <li>Go to the repo on <strong>github.com</strong></li>
+          <li>Click the <strong>Pull requests</strong> tab</li>
+          <li>Click the PR you want to review</li>
+          <li>Click <strong>Files changed</strong> to see the changes</li>
+        </ol>
+        <p><strong>Three options after reviewing:</strong></p>
+        <table>
+          <thead>
+            <tr>
+              <th>Choice</th>
+              <th>When</th>
+              <th>What happens</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Approve</strong></td>
+              <td>Everything looks good</td>
+              <td>PR can be merged</td>
+            </tr>
+            <tr>
+              <td><strong>Request changes</strong></td>
+              <td>Something needs to be fixed</td>
+              <td>Author must make changes</td>
+            </tr>
+            <tr>
+              <td><strong>Comment</strong></td>
+              <td>Questions or suggestions</td>
+              <td>No blocking</td>
+            </tr>
+          </tbody>
+        </table>
+        <hr />
+        <h3 id="54-requesting-changes--example">5.4 Requesting changes – example</h3>
+        <p>
+          <strong>Scenario:</strong> Lisa has created a PR with a file called <code>q.php</code>.
+          Erik thinks the name is unclear.
+        </p>
+        <p><strong>Erik does the following:</strong></p>
+        <ol>
+          <li>In <strong>Files changed</strong>, hover over the line with the filename</li>
+          <li>Click the <strong>+</strong> that appears</li>
+          <li>Write a comment:</li>
+        </ol>
+        <pre><code>Could you rename this file to something more descriptive?
+For example, `search-query.php` or `product-query.php`
+so it is clear what it does.
+</code></pre>
+        <ol start="4">
+          <li>Click <strong>Start a review</strong></li>
+          <li>When you&#39;ve written all comments, click <strong>Finish your review</strong></li>
+          <li>Select <strong>Request changes</strong> and click <strong>Submit review</strong></li>
+        </ol>
+        <p><strong>Lisa now sees:</strong></p>
+        <ul>
+          <li>PR cannot be merged</li>
+          <li>Erik&#39;s comment on the file</li>
+        </ul>
+        <p><strong>Lisa fixes it:</strong></p>
+        <ol>
+          <li>Renames the file locally in VS Code</li>
+          <li>Commit: &quot;Renamed q.php to product-query.php&quot;</li>
+          <li>Pushes to the same branch</li>
+        </ol>
+        <p><strong>Erik gets notified and:</strong></p>
+        <ol>
+          <li>Checks that the change has been made</li>
+          <li>Clicks <strong>Files changed</strong> → <strong>Review changes</strong></li>
+          <li>Selects <strong>Approve</strong></li>
+          <li>Now Lisa (or Erik) can click <strong>Merge pull request</strong></li>
+        </ol>
+        <hr />
+        <h3 id="55-tips-for-good-reviews">5.5 Tips for good reviews</h3>
+        <p><strong>As a reviewer:</strong></p>
+        <ul>
+          <li>Be clear about what needs to change</li>
+          <li>Explain why, not just what</li>
+          <li>Suggest a solution</li>
+          <li>Be kind – you&#39;re learning together!</li>
+        </ul>
+        <p><strong>Examples of good comments:</strong></p>
+        <pre><code>❌ &quot;Bad name&quot;
+✅ &quot;Could you rename this to something more descriptive? Suggestion: user-login.php&quot;
+
+❌ &quot;Doesn&#39;t work&quot;
+✅ &quot;This line will crash if $id is empty. Add an if statement to check first?&quot;
+
+❌ &quot;Wrong&quot;
+✅ &quot;This should be == instead of = (comparison, not assignment)&quot;
+</code></pre>
+        <p><strong>As an author:</strong></p>
+        <ul>
+          <li>Do not take criticism personally – it is about the code</li>
+          <li>Ask if you do not understand the comment</li>
+          <li>Say thanks for the feedback!</li>
+        </ul>
+        <p><strong>Pull Request process</strong></p>
+        <pre><code>  YOU (author)                                 REVIEWER
+  ────────────                                 ────────
+┌─────────────────┐
+│ 1. Work in your │
+│      branch     │
+└────────┬────────┘
+         ▼
+┌─────────────────┐
+│   2. Push to    │
+│      GitHub     │
+└────────┬────────┘
+         ▼
+┌─────────────────┐                      ┌─────────────────┐
+│ 3. Create Pull  │─────────────────────►│ 4. Review code  │
+│     Request     │                      └────────┬────────┘
+└─────────────────┘                               │
+                                                  ▼
+                                  ┌─────────────────────────────────┐
+                                  │           5. DECISION           │
+                                  ├───────────┬───────────┬─────────┤
+                                  │  Approve  │  Comment  │ Request │
+                                  │ → Merge!  │ → Discuss │ changes │
+                                  │           │           │  → Fix  │
+                                  └───────────┴───────────┴─────────┘
+</code></pre>
+        <hr />
+        <h3 id="56-merge-conflicts--when-two-people-change-the-same-file">
+          5.6 Merge conflicts – when two people change the same file
+        </h3>
+        <p>
+          A conflict occurs when two people have changed the same line. Git does not know which
+          version should apply.
+        </p>
+        <p><strong>What a conflict looks like:</strong></p>
+        <p>Lisa and Erik have both changed the navbar in <code>header.php</code>:</p>
+        <pre><code class="language-php">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+// Erik&#39;s version
+&lt;nav&gt;
+    &lt;a href=&quot;index.php&quot;&gt;Home&lt;/a&gt;
+    &lt;a href=&quot;products.php&quot;&gt;Products&lt;/a&gt;
+&lt;/nav&gt;
+=======
+// Lisa&#39;s version
+&lt;nav&gt;
+    &lt;a href=&quot;index.php&quot;&gt;Start&lt;/a&gt;
+    &lt;a href=&quot;contact.php&quot;&gt;Contact&lt;/a&gt;
+&lt;/nav&gt;
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; login-page
+</code></pre>
+        <p><strong>Solution:</strong> Talk to each other and combine:</p>
+        <pre><code class="language-php">&lt;nav&gt;
+    &lt;a href=&quot;index.php&quot;&gt;Home&lt;/a&gt;
+    &lt;a href=&quot;products.php&quot;&gt;Products&lt;/a&gt;
+    &lt;a href=&quot;contact.php&quot;&gt;Contact&lt;/a&gt;
+&lt;/nav&gt;
+</code></pre>
+        <p><strong>How to resolve it:</strong></p>
+        <ol>
+          <li>VS Code highlights the conflict with colors</li>
+          <li>
+            Click one of the options:
+            <ul>
+              <li><strong>Accept Current</strong> – keep your version</li>
+              <li><strong>Accept Incoming</strong> – use the other person&#39;s version</li>
+              <li><strong>Accept Both</strong> – keep both</li>
+            </ul>
+          </li>
+          <li>Or edit manually to the correct version</li>
+          <li>
+            Remove <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>, and
+            <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> if they remain
+          </li>
+          <li>Save the file</li>
+          <li>Stage and commit</li>
+        </ol>
+        <p>
+          <strong>Avoiding conflicts:</strong> Talk with your group about who is working on which
+          file!
+        </p>
+        <hr />
+        <h3 id="57-gitignore--files-that-should-not-be-shared">
+          5.7 .gitignore – files that should not be shared
+        </h3>
+        <p>
+          Some files should not be uploaded to GitHub. Create a file called
+          <code>.gitignore</code> in the root folder (if it does not already exist):
+        </p>
+        <pre><code># System files
+.DS_Store
+Thumbs.db
+
+# Editor settings
+.vscode/
+*.swp
+
+# Sensitive information
+config.local.php
+.env
+
+# Temporary files
+*.log
+*.tmp
+</code></pre>
+        <p>Never put passwords or API keys in Git!</p>
+        <hr />
+        <h2 id="6-problems">6. Problems?</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Problem</th>
+              <th>Solution</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Merge conflict</td>
+              <td>See the &quot;Merge conflicts&quot; section above</td>
+            </tr>
+            <tr>
+              <td>Can not push</td>
+              <td>Pull first, resolve any conflicts, then push</td>
+            </tr>
+            <tr>
+              <td>Accidentally committed to main</td>
+              <td>
+                <strong>⋯</strong> → <strong>Commit</strong> → <strong>Undo Last Commit</strong>,
+                create branch, commit again
+              </td>
+            </tr>
+            <tr>
+              <td>Can not see others&#39; changes</td>
+              <td>Pull from main</td>
+            </tr>
+            <tr>
+              <td>Wrong branch</td>
+              <td>Click the branch name at the bottom and switch</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+      <footer class="site-footer">
+        © 2026 Montathar Faraon · Licensed under the
+        <a href="https://github.com/everydaydesign/git-guide/blob/main/LICENSE">MIT License</a>
+      </footer>
+    </main>
+    <script src="../../../assets/js/site.js" defer></script>
+  </body>
+</html>

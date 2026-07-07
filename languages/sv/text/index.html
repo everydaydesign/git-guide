@@ -1,0 +1,834 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Guide till Git</title>
+    <link rel="stylesheet" href="../../../assets/css/style.css?v=21" />
+    <script>
+      (function () {
+        try {
+          document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <nav class="topbar">
+      <div class="topbar-inner">
+        <a class="topbar-brand" href="../../../" title="Till startsidan">
+          <span class="topbar-mark"
+            ><svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#533afd"
+              stroke-width="1.9"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="6" x2="6" y1="3" y2="15"></line>
+              <circle cx="18" cy="6" r="3"></circle>
+              <circle cx="6" cy="18" r="3"></circle>
+              <path d="M18 9a9 9 0 0 1-9 9"></path></svg
+          ></span>
+          <span class="topbar-brand-text">Guide till Git</span>
+        </a>
+        <a class="topbar-link" href="../">Visuell guide</a>
+        <div class="topbar-right">
+          <details class="topbar-menu">
+            <summary class="topbar-icon" aria-label="Språk" title="Språk">
+              <svg
+                aria-hidden="true"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M2 12h20"></path>
+                <path
+                  d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                ></path>
+              </svg>
+            </summary>
+            <div class="topbar-panel is-right">
+              <a href="../../sv/text/" aria-current="true"
+                ><span class="topbar-flag">🇸🇪</span> Svenska</a
+              ><a href="../../en/text/"><span class="topbar-flag">🇺🇸</span> English</a>
+            </div>
+          </details>
+          <button
+            type="button"
+            class="topbar-icon theme-toggle"
+            data-theme-toggle
+            aria-label="Växla mörkt läge"
+          >
+            <svg
+              class="icon-sun"
+              aria-hidden="true"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="4"></circle>
+              <path
+                d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"
+              ></path></svg
+            ><svg
+              class="icon-moon"
+              aria-hidden="true"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <main class="page">
+      <article class="markdown">
+        <h1 id="guide-till-git">Guide till Git</h1>
+        <h2 id="innehåll">Innehåll</h2>
+        <ul>
+          <li>
+            <a href="#1-om-du-aldrig-anv%C3%A4nt-git-f%C3%B6rut"
+              >1. Om du aldrig använt Git förut</a
+            >
+            <ul>
+              <li><a href="#11-vad-%C3%A4r-git">1.1 Vad är Git?</a></li>
+              <li>
+                <a href="#12-varf%C3%B6r-anv%C3%A4nder-vi-git-i-kursen"
+                  >1.2 Varför använder vi Git i kursen?</a
+                >
+              </li>
+              <li>
+                <a href="#13-vad-f%C3%B6rv%C3%A4ntas-du-kunna-efter%C3%A5t"
+                  >1.3 Vad förväntas du kunna efteråt?</a
+                >
+              </li>
+              <li><a href="#14-vad-g%C3%B6r-du-n%C3%A4r">1.4 Vad gör du när?</a></li>
+            </ul>
+          </li>
+          <li><a href="#2-kom-ig%C3%A5ng-med-grupparbete">2. Kom igång med grupparbete</a></li>
+          <li>
+            <a href="#3-starta-ett-grupprojekt">3. Starta ett grupprojekt</a>
+            <ul>
+              <li><a href="#31-en-person-skapar-repot">3.1 En person skapar repot</a></li>
+              <li><a href="#32-bjud-in-gruppmedlemmar">3.2 Bjud in gruppmedlemmar</a></li>
+              <li><a href="#33-alla-%C3%B6ppnar-projektet">3.3 Alla öppnar projektet</a></li>
+              <li><a href="#34-skapa-din-branch">3.4 Skapa din branch</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#4-grundl%C3%A4ggande-git">4. Grundläggande Git</a>
+            <ul>
+              <li><a href="#41-stage-vs-commit--vad-%C3%A4r-skillnaden">4.1 Stage vs Commit</a></li>
+              <li><a href="#42-spara-%C3%A4ndringar-commit">4.2 Spara ändringar (commit)</a></li>
+              <li><a href="#43-arbetsfl%C3%B6det-i-tre-steg">4.3 Arbetsflödet i tre steg</a></li>
+              <li><a href="#44-%C3%A5ngra-%C3%A4ndringar">4.4 Ångra ändringar</a></li>
+              <li><a href="#45-se-historik">4.5 Se historik</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#5-grupparbete-med-git">5. Grupparbete med Git</a>
+            <ul>
+              <li><a href="#51-push-och-pull--synka-med-github">5.1 Push och Pull</a></li>
+              <li>
+                <a href="#52-pull-requests-pr--granska-innan-ni-sl%C3%A5r-ihop"
+                  >5.2 Pull Requests</a
+                >
+              </li>
+              <li><a href="#53-granska-en-pull-request">5.3 Granska en Pull Request</a></li>
+              <li>
+                <a href="#54-beg%C3%A4r-%C3%A4ndringar--exempel">5.4 Begär ändringar – exempel</a>
+              </li>
+              <li><a href="#55-tips-f%C3%B6r-bra-granskning">5.5 Tips för bra granskning</a></li>
+              <li>
+                <a href="#56-merge-konflikter--n%C3%A4r-tv%C3%A5-%C3%A4ndrar-samma-fil"
+                  >5.6 Merge-konflikter</a
+                >
+              </li>
+              <li><a href="#57-gitignore--filer-som-inte-ska-delas">5.7 .gitignore</a></li>
+            </ul>
+          </li>
+          <li><a href="#6-problem">6. Problem?</a></li>
+        </ul>
+        <hr />
+        <h2 id="1-om-du-har-aldrig-använt-git-förut">1. Om du har aldrig använt Git förut</h2>
+        <h3 id="11-vad-är-git">1.1 Vad är Git?</h3>
+        <p>
+          Git sparar &quot;ögonblicksbilder&quot; av din kod så du kan se historik och ångra
+          ändringar. Istället för att ha filer som <code>projekt_v1.php</code>,
+          <code>projekt_v2_final.php</code>, <code>projekt_v2_final_FINAL.php</code> håller Git koll
+          på alla ändringar automatiskt. Du kan när som helst gå tillbaka till en tidigare version.
+        </p>
+        <h3 id="12-varför-använder-vi-git-i-kursen">1.2 Varför använder vi Git i kursen?</h3>
+        <ul>
+          <li><strong>Säkerhetskopiering</strong> – din kod finns både lokalt och på GitHub.</li>
+          <li>
+            <strong>Samarbete</strong> – flera personer kan jobba i samma projekt utan att skriva
+            över varandras kod.
+          </li>
+          <li><strong>Historik</strong> – du kan se vem som ändrat vad och när.</li>
+          <li><strong>Branschstandard</strong> – nästan alla utvecklare använder Git dagligen.</li>
+        </ul>
+        <h3 id="13-vad-förväntas-du-kunna-efteråt">1.3 Vad förväntas du kunna efteråt?</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Grundläggande</th>
+              <th>Grupparbete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Förstå vad stage och commit betyder</td>
+              <td>Skapa och byta mellan branches</td>
+            </tr>
+            <tr>
+              <td>Spara ändringar med tydliga meddelanden</td>
+              <td>Synka med GitHub (pull/push)</td>
+            </tr>
+            <tr>
+              <td>Ångra ändringar</td>
+              <td>Skapa och granska Pull Requests</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Lösa enkla merge-konflikter</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3 id="14-vad-gör-du-när">1.4 Vad gör du när?</h3>
+        <pre><code>┌─────────────────────────────────────────────────────────────────────────────┐
+│  GÖR EN GÅNG (projektstart)           │  GÖR VARJE ARBETSPASS               │
+│  ──────────────────────────────────   │  ────────────────────────────────   │
+│  □ Skapa repo (en person)             │  □ Byt till main + Pull             │
+│  □ Bjud in gruppmedlemmar             │  □ Skapa/byt till din branch        │
+│  □ Acceptera inbjudan                 │  □ Jobba med din kod                │
+│  □ Skapa din första Codespace         │  □ Stage → Commit → Push            │
+│                                       │  □ Skapa PR + be någon granska      │
+│  KOMMUNIKATION                        │                                     │
+│  ──────────────────────────────────   │                                     │
+│  □ Bestäm vem som gör vad             │                                     │
+│  □ Säg till innan du börjar på en fil │                                     │
+│  □ Granska varandras Pull Requests    │                                     │
+└─────────────────────────────────────────────────────────────────────────────┘
+</code></pre>
+        <h2 id="2-kom-igång-med-grupparbete">2. Kom igång med grupparbete</h2>
+        <pre><code>┌─────────────────────────────────────────────────────────────────────────────┐
+│                        GIT GRUPPARBETE – ÖVERSIKT                           │
+│                                                                             │
+│  1. EN person skapar repot och bjuder in de andra som collaborators         │
+│  2. Alla gör PULL från main för att hämta senaste versionen                 │
+│  3. Varje person skapar en egen BRANCH för sin uppgift                      │
+│  4. När du är klar: PUSH + skapa PULL REQUEST                               │
+│  5. En gruppmedlem GRANSKAR din kod                                         │
+│  6. Efter godkännande: MERGE till main                                      │
+│                                                                             │
+│  Gyllene regeln: Jobba aldrig direkt i main – skapa alltid en branch!       │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+                            ┌──────────────────┐
+                        1.  │   Lisas GitHub   │
+                            │   main branch    │◄────────────────────────────┐
+                            │ (gruppens repo)  │                             │
+                            └────────┬─────────┘                             │
+                                     │                                       │
+        ┌────────────────────────────┼────────────────────────────┐          │
+        │ 2. pull                    │ 2. pull                    │ 2. pull  │
+        ▼                            ▼                            ▼          │
+  ┌────────────────┐          ┌────────────────┐          ┌────────────────┐ │
+  │      Lisa      │          │      Erik      │          │      Anna      │ │
+  │    Codespace   │          │    Codespace   │          │    Codespace   │ │
+  │    (ägare)     │          │ (collaborator) │          │ (collaborator) │ │
+  └───────┬────────┘          └───────┬────────┘          └───────┬────────┘ │
+          │                           │                           │          │
+          ▼                           ▼                           ▼          │
+      3. branch:                  3. branch:                  3. branch:     │
+         contact                     products                    login       │
+          │                           │                           │          │
+          └───────────────────────────┼───────────────────────────┘          │
+                                      │                                      │
+                                      │ 4. push + PR                         │
+                                      ▼                                      │
+                            ┌──────────────────┐                             │
+                        5.  │   Pull Request   │                             │
+                            │   + Granskning   │                             │
+                            └────────┬─────────┘                             │
+                                     │                                       │
+                                     │ 6. Merge                              │
+                                     └───────────────────────────────────────┘
+</code></pre>
+        <h2 id="3-starta-ett-grupprojekt">3. Starta ett grupprojekt</h2>
+        <h3 id="31-en-person-skapar-repot">3.1 En person skapar repot</h3>
+        <p>En person i gruppen skapar projektet:</p>
+        <ol>
+          <li>
+            Gå till mallrepot för ert projekt —
+            <a href="https://github.com/everydaydesign/website">website</a> för HTML/CSS, eller
+            <a href="https://github.com/everydaydesign/web-app">web-app</a> för PHP/MySQL
+          </li>
+          <li>
+            Klicka på <strong>&quot;Use this template&quot;</strong> →
+            <strong>&quot;Create a new repository&quot;</strong>
+          </li>
+          <li>Välj ett namn, t.ex. <code>grupp1-designprojekt</code></li>
+          <li>Välj <strong>Private</strong> (om ni inte vill att andra ska se)</li>
+          <li>Klicka på <strong>Create repository</strong></li>
+        </ol>
+        <h3 id="32-bjud-in-gruppmedlemmar">3.2 Bjud in gruppmedlemmar</h3>
+        <p>Samma person bjuder in resten av gruppen:</p>
+        <ol>
+          <li>Gå till repot på GitHub</li>
+          <li>
+            Klicka på <strong>Settings</strong> → <strong>Collaborators</strong> (i sidomenyn)
+          </li>
+          <li>Klicka på <strong>Add people</strong></li>
+          <li>Sök på gruppmedlemmens GitHub-användarnamn eller e-post</li>
+          <li>Klicka <strong>Add to repository</strong></li>
+          <li>Upprepa för alla i gruppen</li>
+        </ol>
+        <p>Gruppmedlemmarna får ett mejl och måste acceptera inbjudan!</p>
+        <h3 id="33-alla-öppnar-projektet">3.3 Alla öppnar projektet</h3>
+        <p>När alla har accepterat inbjudan:</p>
+        <ol>
+          <li>Gå till repot på <strong>github.com</strong></li>
+          <li>
+            Klicka på <strong>&quot;&lt;&gt; Code&quot;</strong> →
+            <strong>&quot;Codespaces&quot;</strong>
+          </li>
+          <li>Klicka på <strong>&quot;Create codespace on main&quot;</strong></li>
+          <li>Vänta medan miljön byggs (ca 1-2 minuter)</li>
+        </ol>
+        <p>
+          <strong>Viktigt:</strong> Varje person har sin egen Codespace – ni jobbar inte i samma
+          fönster, utan synkar via Git!
+        </p>
+        <p><strong>Nästa gång du ska jobba:</strong></p>
+        <ol>
+          <li>Gå till <a href="https://github.com/codespaces">github.com/codespaces</a></li>
+          <li>Klicka på din befintliga Codespace (skapa inte en ny varje gång!)</li>
+        </ol>
+        <h3 id="34-skapa-din-branch">3.4 Skapa din branch</h3>
+        <p>
+          Innan du börjar koda behöver du skapa en egen branch. En branch är en &quot;kopia&quot; av
+          projektet där du kan jobba utan att påverka andras kod. Jobba aldrig direkt i
+          <code>main</code>!
+        </p>
+        <ol>
+          <li>
+            Titta längst ner till vänster i Codespace – där står det <strong>main</strong> (i
+            statusfältet)
+          </li>
+          <li>Klicka på <strong>main</strong></li>
+          <li>En meny dyker upp högst upp – välj <strong>Create new branch...</strong></li>
+          <li>
+            Skriv ett namn som beskriver din uppgift, t.ex. <code>contact</code> eller
+            <code>products</code>
+          </li>
+          <li>
+            Tryck <strong>Enter</strong> – du är nu på din nya branch (kolla att namnet ändrats
+            längst ner)
+          </li>
+        </ol>
+        <p>
+          Du är nu automatiskt på din nya branch och kan börja jobba. Alla commits du gör hamnar på
+          din branch, inte i main.
+        </p>
+        <p><strong>Bra branch-namn:</strong></p>
+        <pre><code>contact
+products
+database-connection
+startpage
+</code></pre>
+        <p><strong>Varje nytt arbetspass</strong> (när branchen redan finns):</p>
+        <ol>
+          <li>Klicka på branch-namnet längst ner till vänster</li>
+          <li>Välj din branch från listan</li>
+        </ol>
+        <p><strong>Branch-arbetsflöde:</strong></p>
+        <pre><code>main         ●───────●───────────────────────●───────●
+                     │                       ▲
+                     │ 1. Skapa branch       │ 4. Merge (via PR)
+                     ▼                       │
+contact              ●─────●─────●───────────┘
+                           │     │
+                     2. commit  3. commit
+</code></pre>
+        <blockquote>
+          <p><strong>Viktigt: Alla jobbar i samma repo!</strong></p>
+          <p>
+            Gruppmedlemmarna ska <strong>inte</strong> skapa egna repos. Alla öppnar Codespaces på
+            <strong>gruppledararens repo</strong> – det som skapades med &quot;Use this
+            template&quot;. Det är där <code>.devcontainer/</code> finns, som installerar PHP, MySQL
+            och allt ni behöver. Om du skapar ett eget tomt repo får du ingen utvecklingsmiljö.
+          </p>
+          <ul>
+            <li>Gruppledaren skapar repot med <strong>&quot;Use this template&quot;</strong></li>
+            <li>Gruppledaren bjuder in alla som <strong>collaborators</strong></li>
+            <li>Alla öppnar Codespaces på <strong>samma repo</strong></li>
+            <li>Alla skapar egna <strong>branches</strong> i sin Codespace</li>
+          </ul>
+        </blockquote>
+        <hr />
+        <h2 id="4-grundläggande-git">4. Grundläggande Git</h2>
+        <h3 id="41-stage-vs-commit--vad-är-skillnaden">4.1 Stage vs Commit – vad är skillnaden?</h3>
+        <p>Tänk dig att du packar en väska för en resa:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Steg</th>
+              <th>Git-term</th>
+              <th>Beskrivning</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1. Välja kläder</td>
+              <td><strong>Stage</strong></td>
+              <td>Du väljer vilka filer som ska ingå i nästa sparning</td>
+            </tr>
+            <tr>
+              <td>2. Stänga väskan</td>
+              <td><strong>Commit</strong></td>
+              <td>Du sparar en &quot;ögonblicksbild&quot; med ett meddelande</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          <strong>Varför finns stage?</strong> Du kanske har ändrat 5 filer men vill bara spara 2 av
+          dem nu. Med stage väljer du exakt vilka ändringar som hör ihop logiskt – t.ex. &quot;alla
+          ändringar för inloggningssidan&quot; i en commit och &quot;buggfix i
+          kontaktformuläret&quot; i en annan.
+        </p>
+        <h3 id="42-spara-ändringar-commit">4.2 Spara ändringar (commit)</h3>
+        <ol>
+          <li>
+            Klicka på <strong>Source Control</strong>-ikonen i sidofältet (eller
+            <code>Ctrl+Shift+G</code>)
+          </li>
+          <li>Du ser ändrade filer under <strong>Changes</strong></li>
+          <li>
+            Klicka på <strong>+</strong> (plus-tecknet) för stage av filer (välj vilka som ska ingå)
+          </li>
+          <li>Filerna flyttas till <strong>Staged Changes</strong></li>
+          <li>
+            Skriv ett commit-meddelande – eller klicka på <strong>✨</strong> (AI-ikonen) för att
+            generera ett automatiskt
+          </li>
+          <li>Klicka på <strong>✓ Commit</strong></li>
+        </ol>
+        <p>
+          <strong>Tips:</strong> Commit ofta med tydliga meddelanden – det gör det lättare att hitta
+          tillbaka!
+        </p>
+        <h3 id="43-arbetsflödet-i-tre-steg">4.3 Arbetsflödet i tre steg</h3>
+        <pre><code>    1. STAGE              2. COMMIT                  3. PUSH
+  (välj filer)          (spara lokalt)          (dela med gruppen)
+       │                      │                         │
+       ▼                      ▼                         ▼
+┌─────────────┐        ┌───────────────┐         ┌─────────────┐
+│  Klicka +   │───────►│ Skriv medde-  │────────►│ Klicka Sync │
+│  på filer   │        │ lande (eller  │         │ eller Push  │
+│             │        │ ✨ för AI)    │         │             │
+└─────────────┘        │ sedan ✓       │         └─────────────┘
+                       └───────────────┘
+</code></pre>
+        <p><strong>Kom ihåg:</strong> Stage → Commit → Push. Alltid i den ordningen.</p>
+        <h3 id="44-ångra-ändringar">4.4 Ångra ändringar</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Situation</th>
+              <th>Lösning</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Ångra ändringar i en fil (ej commit)</strong></td>
+              <td>Högerklicka på filen → <strong>Discard Changes</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Ta bort fil från staged</strong></td>
+              <td>Klicka på <strong>−</strong> bredvid filen under Staged Changes</td>
+            </tr>
+            <tr>
+              <td><strong>Ångra senaste commit</strong></td>
+              <td>
+                <strong>⋯</strong> → <strong>Commit</strong> → <strong>Undo Last Commit</strong>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Återställ till tidigare version</strong></td>
+              <td>Högerklicka på filen → <strong>Open Timeline</strong> → Välj version</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3 id="45-se-historik">4.5 Se historik</h3>
+        <ol>
+          <li>Högerklicka på en fil i filträdet</li>
+          <li>Välj <strong>Open Timeline</strong></li>
+          <li>Klicka på en tidigare version för att se skillnaden</li>
+        </ol>
+        <hr />
+        <h2 id="5-grupparbete-med-git">5. Grupparbete med Git</h2>
+        <p>
+          När flera personer arbetar i samma projekt behöver ni synkronisera era ändringar via
+          GitHub.
+        </p>
+        <h3 id="51-push-och-pull--synka-med-github">5.1 Push och Pull – synka med GitHub</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Kommando</th>
+              <th>Vad det gör</th>
+              <th>När</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Pull</strong></td>
+              <td>Hämtar andras ändringar från GitHub till dig</td>
+              <td>Alltid innan du börjar jobba</td>
+            </tr>
+            <tr>
+              <td><strong>Push</strong></td>
+              <td>Skickar dina commits till GitHub</td>
+              <td>När du är klar med en ändring</td>
+            </tr>
+          </tbody>
+        </table>
+        <p><strong>Så här gör du:</strong></p>
+        <ol>
+          <li>
+            <strong>Innan du börjar jobba</strong> – klicka på <strong>⋯</strong> →
+            <strong>Pull</strong> (eller <code>Ctrl+Shift+P</code> → &quot;Git: Pull&quot;)
+          </li>
+          <li>
+            <strong>När du är klar</strong> – commit först, sedan <strong>⋯</strong> →
+            <strong>Push</strong>
+          </li>
+        </ol>
+        <p><strong>Gyllene regeln:</strong> Pull innan du börjar, push när du är klar!</p>
+        <pre><code>┌──────────────────────────────────────────┐
+│              GitHub (Remote)             │
+│         main branch på servern           │
+└──────────────────────────────────────────┘
+        │                    ▲
+        │ 1. PULL            │ 2. PUSH
+        │ (hämta)            │ (skicka)
+        ▼                    │
+┌──────────────────────────────────────────┐
+│           Din lokala Codespace           │
+│          din kopia av projektet          │
+└──────────────────────────────────────────┘
+</code></pre>
+        <hr />
+        <h3 id="52-pull-requests-pr--granska-innan-ni-slår-ihop">
+          5.2 Pull Requests (PR) – granska innan ni slår ihop
+        </h3>
+        <p>En Pull Request (PR) låter gruppen granska din kod innan den läggs in i main.</p>
+        <p><strong>Skapa en Pull Request:</strong></p>
+        <ol>
+          <li>Pusha din branch till GitHub</li>
+          <li>Gå till repot på <strong>github.com</strong> → <strong>Code</strong>-fliken</li>
+          <li>
+            Om du ser en gul banner <strong>&quot;Compare &amp; pull request&quot;</strong> – klicka
+            på den
+          </li>
+          <li>
+            <strong>Om ingen banner syns:</strong>
+            <ul>
+              <li>Klicka på <strong>Pull requests</strong>-fliken</li>
+              <li>Klicka på <strong>New pull request</strong> (grön knapp)</li>
+              <li>Välj din branch i <strong>compare</strong>-dropdown</li>
+            </ul>
+          </li>
+          <li>Skriv en kort beskrivning av vad du gjort</li>
+          <li>Klicka på <strong>Create pull request</strong></li>
+          <li>Be en gruppmedlem granska och klicka <strong>Merge pull request</strong></li>
+        </ol>
+        <p>
+          <strong>Tips:</strong> Skriv vad ni ska titta på, t.ex. &quot;Kolla att formuläret
+          validerar korrekt&quot;
+        </p>
+        <p><strong>Efter din PR är mergad:</strong></p>
+        <ol>
+          <li>Byt tillbaka till <code>main</code> (klicka på branch-namnet längst ner)</li>
+          <li>Pull för att hämta dina mergade ändringar</li>
+          <li>
+            Ta bort din gamla branch (valfritt): <strong>⋯</strong> → <strong>Branch</strong> →
+            <strong>Delete Branch</strong>
+          </li>
+        </ol>
+        <hr />
+        <h3 id="53-granska-en-pull-request">5.3 Granska en Pull Request</h3>
+        <p>
+          Vem som helst i gruppen kan granska – det behöver inte vara samma person varje gång. Den
+          enda regeln är att du inte granskar din egen kod.
+        </p>
+        <p><strong>Så här granskar du:</strong></p>
+        <ol>
+          <li>Gå till repot på <strong>github.com</strong></li>
+          <li>Klicka på <strong>Pull requests</strong>-fliken</li>
+          <li>Klicka på den PR du ska granska</li>
+          <li>Klicka på <strong>Files changed</strong> för att se ändringarna</li>
+        </ol>
+        <p><strong>Tre alternativ när du granskat:</strong></p>
+        <table>
+          <thead>
+            <tr>
+              <th>Val</th>
+              <th>När</th>
+              <th>Vad händer</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Approve</strong></td>
+              <td>Allt ser bra ut</td>
+              <td>PR kan mergas</td>
+            </tr>
+            <tr>
+              <td><strong>Request changes</strong></td>
+              <td>Något behöver fixas</td>
+              <td>Författaren måste ändra</td>
+            </tr>
+            <tr>
+              <td><strong>Comment</strong></td>
+              <td>Frågor eller förslag</td>
+              <td>Ingen blockering</td>
+            </tr>
+          </tbody>
+        </table>
+        <hr />
+        <h3 id="54-begär-ändringar--exempel">5.4 Begär ändringar – exempel</h3>
+        <p>
+          <strong>Scenario:</strong> Lisa har skapat en PR med en fil som heter <code>q.php</code>.
+          Erik tycker namnet är otydligt.
+        </p>
+        <p><strong>Erik gör så här:</strong></p>
+        <ol>
+          <li>I <strong>Files changed</strong>, hovra över raden med filnamnet</li>
+          <li>Klicka på <strong>+</strong> som dyker upp</li>
+          <li>Skriv en kommentar:</li>
+        </ol>
+        <pre><code>Kan du döpa om filen till något mer beskrivande?
+T.ex. `search-query.php` eller `product-query.php`
+så förstår man vad den gör.
+</code></pre>
+        <ol start="4">
+          <li>Klicka på <strong>Start a review</strong></li>
+          <li>När du skrivit alla kommentarer, klicka på <strong>Finish your review</strong></li>
+          <li>Välj <strong>Request changes</strong> och klicka <strong>Submit review</strong></li>
+        </ol>
+        <p><strong>Lisa ser nu:</strong></p>
+        <ul>
+          <li>PR kan inte mergas</li>
+          <li>Eriks kommentar på filen</li>
+        </ul>
+        <p><strong>Lisa fixar det:</strong></p>
+        <ol>
+          <li>Byter namn på filen lokalt i VS Code</li>
+          <li>Commit: &quot;Döpte om q.php till product-query.php&quot;</li>
+          <li>Pushar till samma branch</li>
+        </ol>
+        <p><strong>Erik får notis och:</strong></p>
+        <ol>
+          <li>Kollar att ändringen är gjord</li>
+          <li>Klickar <strong>Files changed</strong> → <strong>Review changes</strong></li>
+          <li>Väljer <strong>Approve</strong></li>
+          <li>Nu kan Lisa (eller Erik) klicka <strong>Merge pull request</strong></li>
+        </ol>
+        <hr />
+        <h3 id="55-tips-för-bra-granskning">5.5 Tips för bra granskning</h3>
+        <p><strong>Som granskare:</strong></p>
+        <ul>
+          <li>Var tydlig med vad som behöver ändras</li>
+          <li>Förklara varför, inte bara vad</li>
+          <li>Ge förslag på lösning</li>
+          <li>Var snäll – ni lär er tillsammans!</li>
+        </ul>
+        <p><strong>Exempel på bra kommentarer:</strong></p>
+        <pre><code>❌ &quot;Dåligt namn&quot;
+✅ &quot;Kan du döpa om till något mer beskrivande? Förslag: user-login.php&quot;
+
+❌ &quot;Funkar inte&quot;
+✅ &quot;Den här raden kraschar om $id är tom. Lägg till en if-sats som kollar först?&quot;
+
+❌ &quot;Fel&quot;
+✅ &quot;Här ska det vara == istället för = (jämförelse, inte tilldelning)&quot;
+</code></pre>
+        <p><strong>Som författare:</strong></p>
+        <ul>
+          <li>Ta inte kritik personligt – det handlar om koden</li>
+          <li>Fråga om du inte förstår kommentaren</li>
+          <li>Tacka för feedbacken!</li>
+        </ul>
+        <p><strong>Pull Request-processen</strong></p>
+        <pre><code>DU (författare)                              GRANSKARE
+───────────────                              ─────────
+┌─────────────────┐
+│  1. Jobba i din │
+│      branch     │
+└────────┬────────┘
+         ▼
+┌─────────────────┐
+│  2. Push till   │
+│      GitHub     │
+└────────┬────────┘
+         ▼
+┌─────────────────┐                      ┌─────────────────┐
+│  3. Skapa Pull  │─────────────────────►│ 4. Granska kod  │
+│     Request     │                      └────────┬────────┘
+└─────────────────┘                               │
+                                                  ▼
+                                  ┌─────────────────────────────────┐
+                                  │            5. BESLUT            │
+                                  ├───────────┬───────────┬─────────┤
+                                  │  Approve  │  Comment  │ Request │
+                                  │ → Merge!  │→ Diskutera│ changes │
+                                  │           │           │ → Fixa  │
+                                  └───────────┴───────────┴─────────┘
+</code></pre>
+        <hr />
+        <h3 id="56-merge-konflikter--när-två-ändrar-samma-fil">
+          5.6 Merge-konflikter – när två ändrar samma fil
+        </h3>
+        <p>
+          En konflikt uppstår när två personer ändrat samma rad. Git vet inte vilken version som ska
+          gälla.
+        </p>
+        <p><strong>Så ser en konflikt ut:</strong></p>
+        <p>Lisa och Erik har båda ändrat navbaren i <code>header.php</code>:</p>
+        <pre><code class="language-php">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+// Eriks version
+&lt;nav&gt;
+    &lt;a href=&quot;index.php&quot;&gt;Hem&lt;/a&gt;
+    &lt;a href=&quot;products.php&quot;&gt;Produkter&lt;/a&gt;
+&lt;/nav&gt;
+=======
+// Lisas version
+&lt;nav&gt;
+    &lt;a href=&quot;index.php&quot;&gt;Startsida&lt;/a&gt;
+    &lt;a href=&quot;contact.php&quot;&gt;Kontakt&lt;/a&gt;
+&lt;/nav&gt;
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; login-page
+</code></pre>
+        <p><strong>Lösning:</strong> Prata med varandra och kombinera:</p>
+        <pre><code class="language-php">&lt;nav&gt;
+    &lt;a href=&quot;index.php&quot;&gt;Hem&lt;/a&gt;
+    &lt;a href=&quot;products.php&quot;&gt;Produkter&lt;/a&gt;
+    &lt;a href=&quot;contact.php&quot;&gt;Kontakt&lt;/a&gt;
+&lt;/nav&gt;
+</code></pre>
+        <p><strong>Så löser du den:</strong></p>
+        <ol>
+          <li>VS Code markerar konflikten med färger</li>
+          <li>
+            Klicka på ett alternativ:
+            <ul>
+              <li><strong>Accept Current</strong> – behåll din version</li>
+              <li><strong>Accept Incoming</strong> – använd den andras version</li>
+              <li><strong>Accept Both</strong> – behåll båda</li>
+            </ul>
+          </li>
+          <li>Eller redigera manuellt till rätt version</li>
+          <li>
+            Ta bort <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code> och
+            <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> om de finns kvar
+          </li>
+          <li>Spara filen</li>
+          <li>Stage och commit</li>
+        </ol>
+        <p>
+          <strong>Undvik konflikter:</strong> Prata med gruppen om vem som jobbar med vilken fil!
+        </p>
+        <hr />
+        <h3 id="57-gitignore--filer-som-inte-ska-delas">
+          5.7 .gitignore – filer som inte ska delas
+        </h3>
+        <p>
+          Vissa filer ska inte laddas upp till GitHub. Skapa en fil som heter
+          <code>.gitignore</code> i rotmappen (om den inte redan finns):
+        </p>
+        <pre><code># Systemfiler
+.DS_Store
+Thumbs.db
+
+# Editor-inställningar
+.vscode/
+*.swp
+
+# Känslig information
+config.local.php
+.env
+
+# Tillfälliga filer
+*.log
+*.tmp
+</code></pre>
+        <p>Lägg aldrig lösenord eller API-nycklar i Git!</p>
+        <hr />
+        <h2 id="6-problem">6. Problem?</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Problem</th>
+              <th>Lösning</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Merge-konflikt</td>
+              <td>Se avsnittet &quot;Merge-konflikter&quot; ovan</td>
+            </tr>
+            <tr>
+              <td>Kan inte pusha</td>
+              <td>Pull först, lösa eventuella konflikter, sedan push</td>
+            </tr>
+            <tr>
+              <td>Commit till main av misstag</td>
+              <td>
+                <strong>⋯</strong> → <strong>Commit</strong> → <strong>Undo Last Commit</strong>,
+                skapa branch, commit igen
+              </td>
+            </tr>
+            <tr>
+              <td>Ser inte andras ändringar</td>
+              <td>Pull från main</td>
+            </tr>
+            <tr>
+              <td>Fel branch</td>
+              <td>Klicka på branch-namnet längst ner och byt</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+      <footer class="site-footer">
+        © 2026 Montathar Faraon · Licensed under the
+        <a href="https://github.com/everydaydesign/git-guide/blob/main/LICENSE">MIT-licensen</a>
+      </footer>
+    </main>
+    <script src="../../../assets/js/site.js" defer></script>
+  </body>
+</html>
