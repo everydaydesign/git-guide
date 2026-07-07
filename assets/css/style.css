@@ -2156,6 +2156,27 @@ h3 {
   color: var(--mute-2);
 }
 
+/* Theme toggle pinned to the picker's top-right */
+.picker-theme {
+  position: absolute;
+  top: 22px;
+  right: 24px;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--mute);
+  cursor: pointer;
+}
+
+.picker-theme:hover {
+  color: var(--ink);
+  border-color: var(--border-muted);
+}
+
 .picker-title {
   font-size: 34px;
   font-weight: 300;
