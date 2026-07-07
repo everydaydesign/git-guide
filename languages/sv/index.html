@@ -4,136 +4,136 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Git-guide för grupparbete</title>
-    <link rel="stylesheet" href="../../assets/css/style.css?v=8">
+    <link rel="stylesheet" href="../../assets/css/style.css?v=13">
   </head>
   <body>
-    <svg aria-hidden="true" width="0" height="0" class="abs"><defs>
+    <svg aria-hidden="true" width="0" height="0" class="svg-defs"><defs>
   <marker id="ah" markerWidth="9" markerHeight="9" refX="4.5" refY="7.6" orient="auto"><path d="M1 1.4L4.5 7.2L8 1.4" fill="none" stroke="#c3ccd8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></marker>
 </defs></svg>
-    <div class="box">
+    <div class="page">
       <!-- identity -->
-      <header class="row"><span class="icon-box"><svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="box-2"><line x1="6" x2="6" y1="3" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg></span> <span class="text-ink">Git-guide för grupparbete</span></header>
+      <header class="masthead"><span class="masthead-mark"><svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="masthead-mark-glyph"><line x1="6" x2="6" y1="3" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg></span> <span class="masthead-title">Git-guide för grupparbete</span></header>
       <main>
         <section aria-labelledby="overview">
-          <div class="box-3">
-            <div class="eyebrow">Samarbeta utan att skriva över varandra</div>
+          <div class="hero">
+            <div class="hero-kicker">Samarbeta utan att skriva över varandra</div>
             <h1 class="hero-title" id="overview">Så fungerar Git</h1>
-            <p class="lede">Git sparar <em class="emphasis">ögonblicksbilder</em> av er kod, så att flera personer kan arbeta i samma projekt utan att skriva över varandra. Här är hela bilden, från din första commit till en mergad Pull Request.</p>
+            <p class="hero-lede">Git sparar <em class="emphasis">ögonblicksbilder</em> av er kod, så att flera personer kan arbeta i samma projekt utan att skriva över varandra. Här är hela bilden, från din första commit till en mergad Pull Request.</p>
           </div>
-          <div class="row-2">
-            <div class="card">
-              <div class="eyebrow-2">Utan Git</div>
-              <div class="mono text-muted">projekt.php<br/> projekt_v2.php<br/> projekt_final.php<br/> <span class="text-danger">projekt_final_FINAL.php</span></div>
-              <div class="text-muted-2">…vilken gäller egentligen?</div>
+          <div class="hero-compare">
+            <div class="hero-chaos">
+              <div class="hero-chaos-kicker">Utan Git</div>
+              <div class="mono hero-chaos-files">projekt.php<br/> projekt_v2.php<br/> projekt_final.php<br/> <span class="text-danger">projekt_final_FINAL.php</span></div>
+              <div class="hero-chaos-note">…vilken gäller egentligen?</div>
             </div>
-            <div class="row-3"><svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#a8b4c4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></div>
-            <div class="panel-dark">
-              <div class="eyebrow-3">Med Git</div>
-              <div class="stack">
-                <div class="row-4"><span class="dot"></span><span class="text-on-dark">Uppdaterade navbar</span><span class="num mono text-lilac">nyss</span></div>
-                <div class="box-4"></div>
-                <div class="row-4"><span class="dot"></span><span class="text-lilac-2">Fixade validering</span><span class="num mono text-lilac">2h</span></div>
-                <div class="box-4"></div>
-                <div class="row-4"><span class="dot"></span><span class="text-lilac-2">Lade till kontaktformulär</span><span class="num mono text-lilac">igår</span></div>
+            <div class="flow-arrow"><svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#a8b4c4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></div>
+            <div class="hero-order">
+              <div class="hero-order-kicker">Med Git</div>
+              <div class="hero-order-log">
+                <div class="row-center"><span class="hero-order-dot"></span><span class="hero-order-msg">Uppdaterade navbar</span><span class="num mono hero-order-time">nyss</span></div>
+                <div class="hero-order-divider"></div>
+                <div class="row-center"><span class="hero-order-dot"></span><span class="hero-order-msg-dim">Fixade validering</span><span class="num mono hero-order-time">2h</span></div>
+                <div class="hero-order-divider"></div>
+                <div class="row-center"><span class="hero-order-dot"></span><span class="hero-order-msg-dim">Lade till kontaktformulär</span><span class="num mono hero-order-time">igår</span></div>
               </div>
-              <div class="text-lilac-3">En fil. All historik sparad automatiskt.</div>
+              <div class="hero-order-foot">En fil. All historik sparad automatiskt.</div>
             </div>
           </div>
         </section>
-        <section class="box-5" aria-labelledby="sec-1">
-          <div class="row-5">
-            <span class="num text-brand">01</span>
-            <div class="eyebrow-4">Grunden</div>
+        <section class="section" aria-labelledby="sec-1">
+          <div class="section-head">
+            <span class="num section-num">01</span>
+            <div class="section-kicker">Grunden</div>
           </div>
           <h2 class="section-title" id="sec-1">En tidsmaskin för er kod</h2>
-          <p class="lede-2">I stället för att spara kopior som <span class="mono text">v1</span>, <span class="mono text">v2_final</span>, <span class="mono text">FINAL</span> håller Git koll på varje ändring åt dig. <br/>Du kan alltid gå tillbaka till en tidigare version — och se vem som ändrat vad, och när.</p>
-          <div class="row-6">
+          <p class="section-lede">I stället för att spara kopior som <span class="mono code-md">v1</span>, <span class="mono code-md">v2_final</span>, <span class="mono code-md">FINAL</span> håller Git koll på varje ändring åt dig. <br/>Du kan alltid gå tillbaka till en tidigare version — och se vem som ändrat vad, och när.</p>
+          <div class="compare-row">
             <!-- utan git -->
-            <div class="card-2 col-card">
-              <div class="box-6"><span class="dot-2"></span> <span class="eyebrow-5">Den gamla vägen</span></div>
-              <div class="box-7 col-body">
-                <div class="stack-2">
-                  <div class="row-7"><svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#b7c1ce" stroke-width="1.6"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path><path d="M14 3v5h5"></path></svg><span class="mono text-muted-3">projekt.php</span></div>
-                  <div class="row-7"><svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#b7c1ce" stroke-width="1.6"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path><path d="M14 3v5h5"></path></svg><span class="mono text-muted-3">projekt_v2.php</span></div>
-                  <div class="row-7"><svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#b7c1ce" stroke-width="1.6"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path><path d="M14 3v5h5"></path></svg><span class="mono text-muted-3">projekt_klar.php</span></div>
-                  <div class="row-7"><svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#ea2261" stroke-width="1.7"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path><path d="M14 3v5h5"></path></svg><span class="mono text-danger-2">projekt_klar_FINAL.php</span></div>
+            <div class="compare-card col-card">
+              <div class="card-head"><span class="dot-danger"></span> <span class="card-kicker-danger">Den gamla vägen</span></div>
+              <div class="card-body col-body">
+                <div class="file-list">
+                  <div class="list-row"><svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#b7c1ce" stroke-width="1.6"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path><path d="M14 3v5h5"></path></svg><span class="mono filename">projekt.php</span></div>
+                  <div class="list-row"><svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#b7c1ce" stroke-width="1.6"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path><path d="M14 3v5h5"></path></svg><span class="mono filename">projekt_v2.php</span></div>
+                  <div class="list-row"><svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#b7c1ce" stroke-width="1.6"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path><path d="M14 3v5h5"></path></svg><span class="mono filename">projekt_klar.php</span></div>
+                  <div class="list-row"><svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#ea2261" stroke-width="1.7"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path><path d="M14 3v5h5"></path></svg><span class="mono filename-danger">projekt_klar_FINAL.php</span></div>
                 </div>
-                <div class="row-8"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea2261" stroke-width="1.8" class="box-8"><path d="M10.3 3.9 2.4 18a2 2 0 0 0 1.7 3h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path><path d="M12 9v4M12 17h.01"></path></svg> <span class="text-danger-3">Manuella kopior. Ingen vet vilken som är senast — och två personer skriver lätt över varandra.</span></div>
+                <div class="callout-danger"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea2261" stroke-width="1.8" class="callout-icon"><path d="M10.3 3.9 2.4 18a2 2 0 0 0 1.7 3h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path><path d="M12 9v4M12 17h.01"></path></svg> <span class="callout-danger-text">Manuella kopior. Ingen vet vilken som är senast — och två personer skriver lätt över varandra.</span></div>
               </div>
             </div>
             <!-- med git -->
-            <div class="card-2">
-              <div class="box-6">
-                <span class="dot-3"></span>
-                <span class="eyebrow-6">Med Git</span>
-                <div class="box-9"></div>
-                <span class="mono text-muted-4">projekt.php</span>
+            <div class="compare-card">
+              <div class="card-head">
+                <span class="dot-success"></span>
+                <span class="card-kicker-success">Med Git</span>
+                <div class="spacer"></div>
+                <span class="mono meta">projekt.php</span>
               </div>
-              <div class="box-7">
-                <div class="box-10">
-                  <div class="abs-2"></div>
-                  <div class="box-11">
+              <div class="card-body">
+                <div class="timeline">
+                  <div class="timeline-line"></div>
+                  <div class="timeline-item">
                     <span class="avatar"></span>
                     <div>
-                      <div class="text-ink-2">Uppdaterade navbar</div>
-                      <div class="num text-muted-4">Anna · nyss</div>
+                      <div class="timeline-title">Uppdaterade navbar</div>
+                      <div class="num meta">Anna · nyss</div>
                     </div>
                   </div>
-                  <div class="box-11">
-                    <span class="avatar-2"></span>
+                  <div class="timeline-item">
+                    <span class="avatar-muted"></span>
                     <div>
-                      <div class="text-ink-3">Fixade validering</div>
-                      <div class="num text-muted-4">Erik · 2 tim sedan</div>
+                      <div class="timeline-title-dim">Fixade validering</div>
+                      <div class="num meta">Erik · 2 tim sedan</div>
                     </div>
                   </div>
-                  <div class="box-11">
-                    <span class="avatar-2"></span>
+                  <div class="timeline-item">
+                    <span class="avatar-muted"></span>
                     <div>
-                      <div class="text-ink-3">Lade till kontaktformulär</div>
-                      <div class="num text-muted-4">Lisa · igår</div>
+                      <div class="timeline-title-dim">Lade till kontaktformulär</div>
+                      <div class="num meta">Lisa · igår</div>
                     </div>
                   </div>
                 </div>
-                <div class="row-9"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1F8A5B" stroke-width="2" class="box-8"><path d="m5 12 4.5 4.5L19 7"></path></svg> <span class="text-success">Varje sparning är en ögonblicksbild med namn, tid och meddelande. Gå tillbaka när du vill.</span></div>
+                <div class="callout-success"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1F8A5B" stroke-width="2" class="callout-icon"><path d="m5 12 4.5 4.5L19 7"></path></svg> <span class="callout-success-text">Varje sparning är en ögonblicksbild med namn, tid och meddelande. Gå tillbaka när du vill.</span></div>
               </div>
             </div>
           </div>
           <!-- three benefits -->
-          <ul class="grid">
-            <li class="row-10">
-              <span class="icon-box-2"><svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.7"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"></path></svg></span>
+          <ul class="benefit-grid">
+            <li class="benefit-item">
+              <span class="benefit-icon"><svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.7"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"></path></svg></span>
               <div>
-                <h3 class="text-2">Säkerhetskopiering</h3>
-                <div class="text-mute">Finns lokalt och på GitHub</div>
+                <h3 class="benefit-title">Säkerhetskopiering</h3>
+                <div class="benefit-desc">Finns lokalt och på GitHub</div>
               </div>
             </li>
-            <li class="row-10">
-              <span class="icon-box-2"><svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.7"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span>
+            <li class="benefit-item">
+              <span class="benefit-icon"><svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.7"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span>
               <div>
-                <h3 class="text-2">Samarbete</h3>
-                <div class="text-mute">Flera i samma projekt</div>
+                <h3 class="benefit-title">Samarbete</h3>
+                <div class="benefit-desc">Flera i samma projekt</div>
               </div>
             </li>
-            <li class="row-10">
-              <span class="icon-box-2"><svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.7"><path d="M3 3v5h5"></path><path d="M3.05 13A9 9 0 1 0 6 5.3L3 8"></path><path d="M12 7v5l4 2"></path></svg></span>
+            <li class="benefit-item">
+              <span class="benefit-icon"><svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.7"><path d="M3 3v5h5"></path><path d="M3.05 13A9 9 0 1 0 6 5.3L3 8"></path><path d="M12 7v5l4 2"></path></svg></span>
               <div>
-                <h3 class="text-2">Historik</h3>
-                <div class="text-mute">Vem ändrade vad, och när</div>
+                <h3 class="benefit-title">Historik</h3>
+                <div class="benefit-desc">Vem ändrade vad, och när</div>
               </div>
             </li>
           </ul>
         </section>
-        <section class="box-5" aria-labelledby="sec-2">
-          <div class="row-5">
-            <span class="num text-brand">02</span>
-            <div class="eyebrow-4">Stora bilden</div>
+        <section class="section" aria-labelledby="sec-2">
+          <div class="section-head">
+            <span class="num section-num">02</span>
+            <div class="section-kicker">Stora bilden</div>
           </div>
-          <h2 class="section-title-2" id="sec-2">Så flödar koden i en grupp</h2>
-          <p class="lede-3">En person skapar repot och bjuder in de andra. <br/>Alla hämtar (<b class="text-ink-4">pull</b>) senaste versionen, jobbar var och en på sin egen <b class="text-ink-4">branch</b>, och skickar tillbaka sitt arbete via en <b class="text-ink-4">Pull Request</b> som granskas innan den slås ihop.</p>
-          <div class="card-3" role="img" aria-label="Diagram: gruppens arbetsflöde i sex steg runt det gemensamma repot — pull, branch, commit, push, pull request och merge.">
-            <div class="box-12">
+          <h2 class="section-title-wide" id="sec-2">Så flödar koden i en grupp</h2>
+          <p class="section-lede-wide">En person skapar repot och bjuder in de andra. <br/>Alla hämtar (<b class="strong-ink">pull</b>) senaste versionen, jobbar var och en på sin egen <b class="strong-ink">branch</b>, och skickar tillbaka sitt arbete via en <b class="strong-ink">Pull Request</b> som granskas innan den slås ihop.</p>
+          <div class="diagram-card" role="img" aria-label="Diagram: gruppens arbetsflöde i sex steg runt det gemensamma repot — pull, branch, commit, push, pull request och merge.">
+            <div class="ring">
               <!-- ring arrows -->
-              <svg aria-hidden="true" viewBox="0 0 932 600" class="abs-3">
+              <svg aria-hidden="true" viewBox="0 0 932 600" class="ring-arcs">
           <defs><marker id="cw" markerWidth="11" markerHeight="11" refX="6" refY="3.2" orient="auto" markerUnits="userSpaceOnUse"><path d="M0.4 0.4L6 3.2L0.4 6Z" fill="#aab4c2"></path></marker></defs>
           <g fill="none" stroke="#d3dae2" stroke-width="2.2" marker-end="url(#cw)">
             <path d="M521.1 97.7 A200 200 0 0 1 604.9 146.1"></path>
@@ -145,159 +145,159 @@
           </g>
         </svg>
               <!-- center hub -->
-              <div class="abs-4">
-                <svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#a5a1ff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="box-13"><path d="M17.5 19a4.5 4.5 0 0 0 0-9 6 6 0 0 0-11.5 2A3.5 3.5 0 0 0 6 19z"></path></svg>
-                <div class="text-on-dark-2">Gruppens repo</div>
-                <div class="mono text-lilac-4">main · på GitHub</div>
-                <div class="box-14"></div>
-                <div class="text-lilac-5">Lisa · Erik · Anna arbetar var för sig och synkar via cirkeln</div>
+              <div class="ring-hub">
+                <svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#a5a1ff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="ring-hub-icon"><path d="M17.5 19a4.5 4.5 0 0 0 0-9 6 6 0 0 0-11.5 2A3.5 3.5 0 0 0 6 19z"></path></svg>
+                <div class="ring-hub-title">Gruppens repo</div>
+                <div class="mono ring-hub-sub">main · på GitHub</div>
+                <div class="ring-hub-divider"></div>
+                <div class="ring-hub-note">Lisa · Erik · Anna arbetar var för sig och synkar via cirkeln</div>
               </div>
               <!-- node 1 · pull -->
-              <div class="flow-node"><svg aria-hidden="true" width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5"></path><path d="M5 21h14"></path></svg></div>
-              <div class="abs-5">
-                <div class="text-ink-5">1 · Pull</div>
-                <div class="text-muted-5">hämta från main</div>
+              <div class="ring-node-1"><svg aria-hidden="true" width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5"></path><path d="M5 21h14"></path></svg></div>
+              <div class="ring-label-1">
+                <div class="ring-label-title">1 · Pull</div>
+                <div class="ring-label-sub">hämta från main</div>
               </div>
               <!-- node 2 · branch -->
-              <div class="flow-node-2"><svg aria-hidden="true" width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><line x1="6" x2="6" y1="3" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg></div>
-              <div class="abs-6">
-                <div class="text-ink-5">2 · Branch</div>
-                <div class="text-muted-5">din egen arbetsyta</div>
+              <div class="ring-node-2"><svg aria-hidden="true" width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><line x1="6" x2="6" y1="3" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg></div>
+              <div class="ring-label-2">
+                <div class="ring-label-title">2 · Branch</div>
+                <div class="ring-label-sub">din egen arbetsyta</div>
               </div>
               <!-- node 3 · commit -->
-              <div class="flow-node-3"><svg aria-hidden="true" width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><line x1="3" x2="9" y1="12" y2="12"></line><line x1="15" x2="21" y1="12" y2="12"></line></svg></div>
-              <div class="abs-7">
-                <div class="text-ink-5">3 · Commit</div>
-                <div class="text-muted-5">jobba &amp; spara</div>
+              <div class="ring-node-3"><svg aria-hidden="true" width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><line x1="3" x2="9" y1="12" y2="12"></line><line x1="15" x2="21" y1="12" y2="12"></line></svg></div>
+              <div class="ring-label-3">
+                <div class="ring-label-title">3 · Commit</div>
+                <div class="ring-label-sub">jobba &amp; spara</div>
               </div>
               <!-- node 4 · push -->
-              <div class="flow-node-4"><svg aria-hidden="true" width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V9M7 13l5-5 5 5"></path><path d="M5 5h14"></path></svg></div>
-              <div class="abs-8">
-                <div class="text-ink-5">4 · Push</div>
-                <div class="text-muted-5">skicka upp din branch</div>
+              <div class="ring-node-4"><svg aria-hidden="true" width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V9M7 13l5-5 5 5"></path><path d="M5 5h14"></path></svg></div>
+              <div class="ring-label-4">
+                <div class="ring-label-title">4 · Push</div>
+                <div class="ring-label-sub">skicka upp din branch</div>
               </div>
               <!-- node 5 · pull request -->
-              <div class="flow-node-5"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M6 9v6"></path><path d="M13 6h3a2 2 0 0 1 2 2v7"></path><path d="m15.5 13.5 2.5 2.5 2.5-2.5"></path></svg></div>
-              <div class="abs-9">
-                <div class="text-ink-5">5 · Pull Request</div>
-                <div class="text-muted-5">någon granskar</div>
+              <div class="ring-node-5"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M6 9v6"></path><path d="M13 6h3a2 2 0 0 1 2 2v7"></path><path d="m15.5 13.5 2.5 2.5 2.5-2.5"></path></svg></div>
+              <div class="ring-label-5">
+                <div class="ring-label-title">5 · Pull Request</div>
+                <div class="ring-label-sub">någon granskar</div>
               </div>
               <!-- node 6 · merge -->
-              <div class="flow-node-6"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1F8A5B" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><path d="M6 21V9a9 9 0 0 0 9 9"></path></svg></div>
-              <div class="abs-10">
-                <div class="text-success-2">6 · Merge</div>
-                <div class="text-muted-5">in i main → börja om</div>
+              <div class="ring-node-6"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1F8A5B" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><path d="M6 21V9a9 9 0 0 0 9 9"></path></svg></div>
+              <div class="ring-label-6">
+                <div class="ring-label-title-success">6 · Merge</div>
+                <div class="ring-label-sub">in i main → börja om</div>
               </div>
             </div>
           </div>
           <!-- golden rule -->
-          <div class="row-11">
-            <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9b6829" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="box-15"><path d="m12 2 2.4 7.4H22l-6 4.5 2.3 7.1-6.3-4.6L5.7 21 8 14 2 9.4h7.6z"></path></svg>
-            <p class="text-warn"><b class="text-warn-2">Gyllene regeln:</b> jobba aldrig direkt i <span class="mono text-3">main</span> — skapa alltid en egen branch.</p>
+          <div class="golden-rule">
+            <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9b6829" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="rule-icon"><path d="m12 2 2.4 7.4H22l-6 4.5 2.3 7.1-6.3-4.6L5.7 21 8 14 2 9.4h7.6z"></path></svg>
+            <p class="rule-text"><b class="rule-label">Gyllene regeln:</b> jobba aldrig direkt i <span class="mono code-sm">main</span> — skapa alltid en egen branch.</p>
           </div>
         </section>
-        <section class="box-5" aria-labelledby="sec-3">
-          <div class="row-5">
-            <span class="num text-brand">03</span>
-            <div class="eyebrow-4">Grundläggande</div>
+        <section class="section" aria-labelledby="sec-3">
+          <div class="section-head">
+            <span class="num section-num">03</span>
+            <div class="section-kicker">Grundläggande</div>
           </div>
-          <h2 class="section-title-3" id="sec-3">Stage och commit — som att packa en väska</h2>
-          <p class="lede-4">Först <b class="text-ink-4">väljer</b> du vad som ska med (stage). Sen <b class="text-ink-4">stänger</b> du väskan och sätter en etikett (commit). Två steg, av en anledning.</p>
-          <div class="row-6">
+          <h2 class="section-title-tight" id="sec-3">Stage och commit — som att packa en väska</h2>
+          <p class="section-lede-tight">Först <b class="strong-ink">väljer</b> du vad som ska med (stage). Sen <b class="strong-ink">stänger</b> du väskan och sätter en etikett (commit). Två steg, av en anledning.</p>
+          <div class="compare-row">
             <!-- stage -->
-            <div class="card-2">
-              <div class="row-12">
-                <span class="icon-box-3"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.6"><path d="M5 21V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v14"></path><path d="M9 5V3h6v2"></path><path d="M9 11h6M9 15h6"></path></svg></span>
+            <div class="compare-card">
+              <div class="step-head">
+                <span class="step-icon"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.6"><path d="M5 21V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v14"></path><path d="M9 5V3h6v2"></path><path d="M9 11h6M9 15h6"></path></svg></span>
                 <div>
-                  <div class="eyebrow-7">Steg 1 · Stage</div>
-                  <div class="text-4">Välj vad som ska med</div>
+                  <div class="step-kicker">Steg 1 · Stage</div>
+                  <div class="step-title">Välj vad som ska med</div>
                 </div>
               </div>
-              <div class="box-16">
-                <div class="text-mute-2">Som att välja kläder till väskan — du plockar vilka ändrade filer som hör ihop i just den här sparningen.</div>
+              <div class="step-desc-wrap">
+                <div class="step-desc">Som att välja kläder till väskan — du plockar vilka ändrade filer som hör ihop i just den här sparningen.</div>
               </div>
-              <div class="box-17">
-                <div class="box-18">
-                  <div class="row-13"><span class="icon-box-4"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6"><path d="m5 12 4.5 4.5L19 7"></path></svg></span><span class="mono text-ink-6">login.php</span><span class="box-19">staged</span></div>
-                  <div class="row-14"><span class="icon-box-4"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6"><path d="m5 12 4.5 4.5L19 7"></path></svg></span><span class="mono text-ink-6">style.css</span><span class="box-19">staged</span></div>
-                  <div class="row-15"><span class="icon-box-5"><svg aria-hidden="true" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2.4"><path d="M12 5v14M5 12h14"></path></svg></span><span class="mono text-muted-6">test.php</span><span class="box-20">ej vald</span></div>
+              <div class="step-demo">
+                <div class="file-panel">
+                  <div class="file-panel-row"><span class="check-tile"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6"><path d="m5 12 4.5 4.5L19 7"></path></svg></span><span class="mono file-panel-name">login.php</span><span class="tag-staged">staged</span></div>
+                  <div class="file-panel-row-mid"><span class="check-tile"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6"><path d="m5 12 4.5 4.5L19 7"></path></svg></span><span class="mono file-panel-name">style.css</span><span class="tag-staged">staged</span></div>
+                  <div class="file-panel-row-off"><span class="plus-tile"><svg aria-hidden="true" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2.4"><path d="M12 5v14M5 12h14"></path></svg></span><span class="mono file-panel-name-off">test.php</span><span class="tag-off">ej vald</span></div>
                 </div>
               </div>
             </div>
-            <div class="row-3"><svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#a8b4c4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></div>
+            <div class="flow-arrow"><svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#a8b4c4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></div>
             <!-- commit -->
-            <div class="card-2">
-              <div class="row-12">
-                <span class="icon-box-3"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.7"><circle cx="12" cy="12" r="3"></circle><line x1="3" x2="9" y1="12" y2="12"></line><line x1="15" x2="21" y1="12" y2="12"></line></svg></span>
+            <div class="compare-card">
+              <div class="step-head">
+                <span class="step-icon"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.7"><circle cx="12" cy="12" r="3"></circle><line x1="3" x2="9" y1="12" y2="12"></line><line x1="15" x2="21" y1="12" y2="12"></line></svg></span>
                 <div>
-                  <div class="eyebrow-7">Steg 2 · Commit</div>
-                  <div class="text-4">Stäng väskan, sätt etikett</div>
+                  <div class="step-kicker">Steg 2 · Commit</div>
+                  <div class="step-title">Stäng väskan, sätt etikett</div>
                 </div>
               </div>
-              <div class="box-16">
-                <div class="text-mute-2">Du sparar en ögonblicksbild av de valda filerna — med ett meddelande som beskriver vad du gjort.</div>
+              <div class="step-desc-wrap">
+                <div class="step-desc">Du sparar en ögonblicksbild av de valda filerna — med ett meddelande som beskriver vad du gjort.</div>
               </div>
-              <div class="box-17">
-                <div class="box-21">
-                  <div class="text-muted-7">COMMIT-MEDDELANDE</div>
-                  <div class="box-22">Lade till inloggningssida</div>
-                  <div class="row-16">
-                    <h3 class="box-23"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="m5 12 4.5 4.5L19 7"></path></svg>Commit</h3>
-                    <span class="text-muted-8">sparar 2 filer lokalt</span>
+              <div class="step-demo">
+                <div class="commit-box">
+                  <div class="commit-label">COMMIT-MEDDELANDE</div>
+                  <div class="commit-input">Lade till inloggningssida</div>
+                  <div class="commit-actions">
+                    <h3 class="commit-btn"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="m5 12 4.5 4.5L19 7"></path></svg>Commit</h3>
+                    <span class="hint">sparar 2 filer lokalt</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <!-- why stage -->
-          <div class="row-17">
-            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.8" class="box-8"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5M12 16h.01"></path></svg>
-            <p class="text-mute-3"><b class="text-ink-4">Varför två steg?</b> Du kanske har ändrat fem filer men vill bara spara de två som hör ihop just nu. Med stage väljer du exakt vad som ska ingå — så att varje commit blir en logisk, begriplig ändring.</p>
+          <div class="callout-info">
+            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.8" class="callout-icon"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5M12 16h.01"></path></svg>
+            <p class="callout-info-text"><b class="strong-ink">Varför två steg?</b> Du kanske har ändrat fem filer men vill bara spara de två som hör ihop just nu. Med stage väljer du exakt vad som ska ingå — så att varje commit blir en logisk, begriplig ändring.</p>
           </div>
         </section>
-        <section class="box-5" aria-labelledby="sec-4">
-          <div class="row-5">
-            <span class="num text-brand">04</span>
-            <div class="eyebrow-4">Ordningen</div>
+        <section class="section" aria-labelledby="sec-4">
+          <div class="section-head">
+            <span class="num section-num">04</span>
+            <div class="section-kicker">Ordningen</div>
           </div>
           <h2 class="section-title" id="sec-4">Tre steg, alltid i samma ordning</h2>
-          <p class="lede-5">Stage och commit sker <b class="text-ink-4">lokalt</b> hos dig. Push är det som delar arbetet med gruppen på GitHub.</p>
-          <div class="row-18">
+          <p class="section-lede-narrow">Stage och commit sker <b class="strong-ink">lokalt</b> hos dig. Push är det som delar arbetet med gruppen på GitHub.</p>
+          <div class="step-row">
             <!-- stage -->
-            <div class="card-4">
-              <div class="row-19"><span class="num text-muted-9">1</span><span class="icon-box-6"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.8"><path d="M12 5v14M5 12h14"></path></svg></span></div>
-              <h3 class="text-5">Stage</h3>
-              <div class="text-mute-4">Klicka <b class="text-ink-4">+</b> på filerna du vill spara.</div>
+            <div class="step-card">
+              <div class="step-card-head"><span class="num step-num">1</span><span class="step-card-icon"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.8"><path d="M12 5v14M5 12h14"></path></svg></span></div>
+              <h3 class="step-card-title">Stage</h3>
+              <div class="step-card-desc">Klicka <b class="strong-ink">+</b> på filerna du vill spara.</div>
             </div>
-            <div class="row-3"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c3ccd8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></div>
+            <div class="flow-arrow"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c3ccd8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></div>
             <!-- commit -->
-            <div class="card-4">
-              <div class="row-19"><span class="num text-muted-9">2</span><span class="icon-box-6"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.7"><circle cx="12" cy="12" r="3"></circle><line x1="3" x2="9" y1="12" y2="12"></line><line x1="15" x2="21" y1="12" y2="12"></line></svg></span></div>
-              <h3 class="text-5">Commit</h3>
-              <div class="text-mute-4">Skriv ett meddelande, klicka <b class="text-ink-4">✓</b>. Sparat lokalt.</div>
+            <div class="step-card">
+              <div class="step-card-head"><span class="num step-num">2</span><span class="step-card-icon"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.7"><circle cx="12" cy="12" r="3"></circle><line x1="3" x2="9" y1="12" y2="12"></line><line x1="15" x2="21" y1="12" y2="12"></line></svg></span></div>
+              <h3 class="step-card-title">Commit</h3>
+              <div class="step-card-desc">Skriv ett meddelande, klicka <b class="strong-ink">✓</b>. Sparat lokalt.</div>
             </div>
-            <div class="row-3"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c3ccd8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></div>
+            <div class="flow-arrow"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c3ccd8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></div>
             <!-- push -->
-            <div class="panel-dark-2">
-              <div class="row-19"><span class="num text-lilac-6">3</span><span class="icon-box-7"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a5a1ff" stroke-width="1.7"><path d="M12 21V9M7 13l5-5 5 5"></path><path d="M5 4h14"></path></svg></span></div>
-              <h3 class="text-on-dark-3">Push</h3>
-              <div class="text-lilac-7">Klicka <b class="text-on-dark-4">Sync</b> — delar med gruppen på GitHub.</div>
+            <div class="step-card-dark">
+              <div class="step-card-head"><span class="num step-num-dark">3</span><span class="step-card-icon-dark"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a5a1ff" stroke-width="1.7"><path d="M12 21V9M7 13l5-5 5 5"></path><path d="M5 4h14"></path></svg></span></div>
+              <h3 class="step-card-title-dark">Push</h3>
+              <div class="step-card-desc-dark">Klicka <b class="strong-on-dark">Sync</b> — delar med gruppen på GitHub.</div>
             </div>
           </div>
           <!-- lokal / github brackets -->
-          <div class="row-20">
-            <div class="box-24"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="1.7"><rect x="3" y="4" width="18" height="12" rx="2"></rect><path d="M2 20h20"></path></svg><span class="eyebrow-8">Lokalt hos dig</span></div>
-            <div class="box-25"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#7b78c9" stroke-width="1.7"><path d="M17.5 19a4.5 4.5 0 0 0 0-9 6 6 0 0 0-11.5 2A3.5 3.5 0 0 0 6 19z"></path></svg><span class="eyebrow-9">GitHub</span></div>
+          <div class="scope-row">
+            <div class="scope-local"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="1.7"><rect x="3" y="4" width="18" height="12" rx="2"></rect><path d="M2 20h20"></path></svg><span class="scope-label">Lokalt hos dig</span></div>
+            <div class="scope-remote"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#7b78c9" stroke-width="1.7"><path d="M17.5 19a4.5 4.5 0 0 0 0-9 6 6 0 0 0-11.5 2A3.5 3.5 0 0 0 6 19z"></path></svg><span class="scope-label-remote">GitHub</span></div>
           </div>
         </section>
-        <section class="box-5" aria-labelledby="sec-5">
-          <div class="row-5">
-            <span class="num text-brand">05</span>
-            <div class="eyebrow-4">Branches</div>
+        <section class="section" aria-labelledby="sec-5">
+          <div class="section-head">
+            <span class="num section-num">05</span>
+            <div class="section-kicker">Branches</div>
           </div>
-          <h2 class="section-title-3" id="sec-5">En egen arbetsyta, skild från main</h2>
-          <p class="lede-4">En branch är en kopia av projektet där du kan jobba fritt utan att påverka andras kod. När du är klar slås din branch ihop med <span class="mono text">main</span> via en Pull Request.</p>
-          <div class="card-5"><svg role="img" aria-label="Diagram: en egen gren (branch) skapas från main, får två commits, och slås sedan ihop tillbaka till main via en pull request." viewBox="0 0 680 172" class="box-26">
+          <h2 class="section-title-tight" id="sec-5">En egen arbetsyta, skild från main</h2>
+          <p class="section-lede-tight">En branch är en kopia av projektet där du kan jobba fritt utan att påverka andras kod. När du är klar slås din branch ihop med <span class="mono code-md">main</span> via en Pull Request.</p>
+          <div class="branch-card"><svg role="img" aria-label="Diagram: en egen gren (branch) skapas från main, får två commits, och slås sedan ihop tillbaka till main via en pull request." viewBox="0 0 680 172" class="branch-diagram">
         <!-- main line -->
         <path d="M32 50 H648" fill="none" stroke="#1c1e54" stroke-width="2.5"></path>
         <!-- branch curve out and back -->
@@ -318,16 +318,16 @@
         <text x="362" y="149" fill="#533afd" font-size="12.5" font-weight="600" text-anchor="middle" class="mono">contact</text>
         <text x="536" y="34" fill="#1F8A5B" font-size="11.5" font-weight="600" text-anchor="middle">4. merge (via PR)</text>
       </svg></div>
-          <div class="row-21">
+          <div class="branch-aside">
             <!-- golden rule -->
-            <div class="box-27">
-              <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#9b6829" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="box-15"><path d="m12 2 2.4 7.4H22l-6 4.5 2.3 7.1-6.3-4.6L5.7 21 8 14 2 9.4h7.6z"></path></svg>
-              <p class="text-warn-3"><b class="text-warn-2">Gyllene regeln:</b> jobba aldrig direkt i <span class="mono text-warn-4">main</span>. Skapa alltid en branch först.</p>
+            <div class="golden-rule-inline">
+              <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#9b6829" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="rule-icon"><path d="m12 2 2.4 7.4H22l-6 4.5 2.3 7.1-6.3-4.6L5.7 21 8 14 2 9.4h7.6z"></path></svg>
+              <p class="rule-text-inline"><b class="rule-label">Gyllene regeln:</b> jobba aldrig direkt i <span class="mono rule-code">main</span>. Skapa alltid en branch först.</p>
             </div>
             <!-- branch names -->
-            <div class="panel">
-              <div class="eyebrow-10">Bra branch-namn</div>
-              <ul class="row-22">
+            <div class="names-panel">
+              <div class="names-panel-label">Bra branch-namn</div>
+              <ul class="chip-row">
                 <li class="mono chip">contact</li>
                 <li class="mono chip">products</li>
                 <li class="mono chip">login</li>
@@ -336,160 +336,160 @@
             </div>
           </div>
         </section>
-        <section class="box-5" aria-labelledby="sec-6">
-          <div class="row-5">
-            <span class="num text-brand">06</span>
-            <div class="eyebrow-4">Synka</div>
+        <section class="section" aria-labelledby="sec-6">
+          <div class="section-head">
+            <span class="num section-num">06</span>
+            <div class="section-kicker">Synka</div>
           </div>
           <h2 class="section-title" id="sec-6">Hämta först, skicka sen</h2>
-          <p class="lede-2"><b class="text-ink-4">Pull</b> hämtar andras ändringar från GitHub till dig. <b class="text-ink-4">Push</b> skickar dina commits upp. Du synkar alltid åt båda hållen.</p>
-          <div class="card-6">
-            <div class="row-23">
+          <p class="section-lede"><b class="strong-ink">Pull</b> hämtar andras ändringar från GitHub till dig. <b class="strong-ink">Push</b> skickar dina commits upp. Du synkar alltid åt båda hållen.</p>
+          <div class="sync-card">
+            <div class="sync-row">
               <!-- github -->
-              <div class="panel-dark-3">
-                <span class="icon-box-8"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a5a1ff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 0 0 0-9 6 6 0 0 0-11.5 2A3.5 3.5 0 0 0 6 19z"></path></svg></span>
+              <div class="sync-remote">
+                <span class="sync-icon-dark"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a5a1ff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 0 0 0-9 6 6 0 0 0-11.5 2A3.5 3.5 0 0 0 6 19z"></path></svg></span>
                 <div>
-                  <h3 class="text-on-dark-5">GitHub</h3>
-                  <div class="text-lilac-8"><span class="mono text-6">main</span> på servern · delad</div>
+                  <h3 class="sync-remote-title">GitHub</h3>
+                  <div class="sync-remote-sub"><span class="mono code-xs">main</span> på servern · delad</div>
                 </div>
               </div>
               <!-- arrows -->
-              <div class="stack-3">
-                <div class="row-24">
+              <div class="sync-arrows">
+                <div class="sync-arrow-row">
                   <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5"></path><path d="M5 21h14"></path></svg>
-                  <h3 class="text-brand-2">Pull</h3>
-                  <span class="text-muted-8">hämta</span>
+                  <h3 class="sync-arrow-label">Pull</h3>
+                  <span class="hint">hämta</span>
                 </div>
-                <div class="row-24">
+                <div class="sync-arrow-row">
                   <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V9M7 13l5-5 5 5"></path><path d="M5 5h14"></path></svg>
-                  <h3 class="text-brand-2">Push</h3>
-                  <span class="text-muted-8">skicka</span>
+                  <h3 class="sync-arrow-label">Push</h3>
+                  <span class="hint">skicka</span>
                 </div>
               </div>
               <!-- local -->
-              <div class="box-28">
-                <span class="icon-box-9"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.6"><rect x="3" y="4" width="18" height="12" rx="2"></rect><path d="M2 20h20"></path></svg></span>
+              <div class="sync-local">
+                <span class="sync-icon"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.6"><rect x="3" y="4" width="18" height="12" rx="2"></rect><path d="M2 20h20"></path></svg></span>
                 <div>
-                  <h3 class="text-ink-7">Din Codespace</h3>
-                  <div class="text-mute-5">din kopia · lokal</div>
+                  <h3 class="sync-local-title">Din Codespace</h3>
+                  <div class="sync-local-sub">din kopia · lokal</div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="row-11">
-            <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9b6829" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="box-15"><path d="m12 2 2.4 7.4H22l-6 4.5 2.3 7.1-6.3-4.6L5.7 21 8 14 2 9.4h7.6z"></path></svg>
-            <p class="text-warn"><b class="text-warn-2">Gyllene regeln:</b> pull innan du börjar, push när du är klar.</p>
+          <div class="golden-rule">
+            <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9b6829" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="rule-icon"><path d="m12 2 2.4 7.4H22l-6 4.5 2.3 7.1-6.3-4.6L5.7 21 8 14 2 9.4h7.6z"></path></svg>
+            <p class="rule-text"><b class="rule-label">Gyllene regeln:</b> pull innan du börjar, push när du är klar.</p>
           </div>
         </section>
-        <section class="box-5" aria-labelledby="sec-7">
-          <div class="row-5">
-            <span class="num text-brand">07</span>
-            <div class="eyebrow-4">Granskning</div>
+        <section class="section" aria-labelledby="sec-7">
+          <div class="section-head">
+            <span class="num section-num">07</span>
+            <div class="section-kicker">Granskning</div>
           </div>
-          <h2 class="section-title-2" id="sec-7">Ingen kod går in i main ogranskad</h2>
-          <p class="lede-4">En Pull Request låter gruppen läsa din kod innan den slås ihop. En annan person granskar — den enda regeln är att du inte granskar din egen kod.</p>
-          <div class="card-7">
+          <h2 class="section-title-wide" id="sec-7">Ingen kod går in i main ogranskad</h2>
+          <p class="section-lede-tight">En Pull Request låter gruppen läsa din kod innan den slås ihop. En annan person granskar — den enda regeln är att du inte granskar din egen kod.</p>
+          <div class="review-card">
             <!-- flow row -->
-            <div class="row-4">
-              <div class="box-29">
-                <div class="grid-2"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><line x1="6" x2="6" y1="3" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg></div>
-                <h3 class="text-7">Jobba i din branch</h3>
-                <div class="text-muted-10">Du (författare)</div>
+            <div class="row-center">
+              <div class="review-step">
+                <div class="review-step-icon"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><line x1="6" x2="6" y1="3" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg></div>
+                <h3 class="review-step-title">Jobba i din branch</h3>
+                <div class="review-step-sub">Du (författare)</div>
               </div>
-              <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#cdd5e0" stroke-width="1.7" class="box-15"><path d="M4 12h13M12 6l6 6-6 6"></path></svg>
-              <div class="box-29">
-                <div class="grid-2"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V9M7 13l5-5 5 5"></path><path d="M5 5h14"></path></svg></div>
-                <h3 class="text-7">Push till GitHub</h3>
-                <div class="text-muted-10">din branch laddas upp</div>
+              <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#cdd5e0" stroke-width="1.7" class="rule-icon"><path d="M4 12h13M12 6l6 6-6 6"></path></svg>
+              <div class="review-step">
+                <div class="review-step-icon"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V9M7 13l5-5 5 5"></path><path d="M5 5h14"></path></svg></div>
+                <h3 class="review-step-title">Push till GitHub</h3>
+                <div class="review-step-sub">din branch laddas upp</div>
               </div>
-              <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#cdd5e0" stroke-width="1.7" class="box-15"><path d="M4 12h13M12 6l6 6-6 6"></path></svg>
-              <div class="box-29">
-                <div class="grid-2"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M6 9v6"></path><path d="M13 6h3a2 2 0 0 1 2 2v7"></path></svg></div>
-                <h3 class="text-7">Skapa Pull Request</h3>
-                <div class="text-muted-10">beskriv vad du gjort</div>
+              <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#cdd5e0" stroke-width="1.7" class="rule-icon"><path d="M4 12h13M12 6l6 6-6 6"></path></svg>
+              <div class="review-step">
+                <div class="review-step-icon"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M6 9v6"></path><path d="M13 6h3a2 2 0 0 1 2 2v7"></path></svg></div>
+                <h3 class="review-step-title">Skapa Pull Request</h3>
+                <div class="review-step-sub">beskriv vad du gjort</div>
               </div>
-              <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#cdd5e0" stroke-width="1.7" class="box-15"><path d="M4 12h13M12 6l6 6-6 6"></path></svg>
-              <div class="box-29">
-                <div class="grid-2"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1F8A5B" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"></path><circle cx="12" cy="12" r="3"></circle></svg></div>
-                <h3 class="text-7">Granskare läser</h3>
-                <div class="text-muted-10">en annan gruppmedlem</div>
+              <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#cdd5e0" stroke-width="1.7" class="rule-icon"><path d="M4 12h13M12 6l6 6-6 6"></path></svg>
+              <div class="review-step">
+                <div class="review-step-icon"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1F8A5B" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"></path><circle cx="12" cy="12" r="3"></circle></svg></div>
+                <h3 class="review-step-title">Granskare läser</h3>
+                <div class="review-step-sub">en annan gruppmedlem</div>
               </div>
             </div>
             <!-- decision -->
-            <div class="box-30">
-              <div class="eyebrow-11">Granskarens beslut</div>
-              <ul class="grid-3">
-                <li class="box-31">
-                  <div class="row-25"><span class="icon-box-10"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6"><path d="m5 12 4.5 4.5L19 7"></path></svg></span><span class="text-success-3">Approve</span></div>
-                  <div class="text-success-4">Allt ser bra ut → PR:n kan mergas till main.</div>
+            <div class="review-decision">
+              <div class="review-decision-label">Granskarens beslut</div>
+              <ul class="decision-grid">
+                <li class="decision-approve">
+                  <div class="decision-head"><span class="decision-icon-success"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6"><path d="m5 12 4.5 4.5L19 7"></path></svg></span><span class="decision-title-success">Approve</span></div>
+                  <div class="decision-text-success">Allt ser bra ut → PR:n kan mergas till main.</div>
                 </li>
-                <li class="box-32">
-                  <div class="row-25"><span class="icon-box-11"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></span><span class="text-brand-3">Comment</span></div>
-                  <div class="text-lilac-9">Frågor eller förslag → diskutera, ingen blockering.</div>
+                <li class="decision-comment">
+                  <div class="decision-head"><span class="decision-icon-brand"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></span><span class="decision-title-brand">Comment</span></div>
+                  <div class="decision-text-brand">Frågor eller förslag → diskutera, ingen blockering.</div>
                 </li>
-                <li class="box-33">
-                  <div class="row-25"><span class="icon-box-12"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2"><path d="M3 12a9 9 0 1 0 9-9 9 9 0 0 0-7 3.5"></path><path d="M3 3v4h4"></path></svg></span><span class="text-warn-5">Request changes</span></div>
-                  <div class="text-warn-6">Något behöver fixas → författaren ändrar och pushar igen.</div>
+                <li class="decision-changes">
+                  <div class="decision-head"><span class="decision-icon-warn"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2"><path d="M3 12a9 9 0 1 0 9-9 9 9 0 0 0-7 3.5"></path><path d="M3 3v4h4"></path></svg></span><span class="decision-title-warn">Request changes</span></div>
+                  <div class="decision-text-warn">Något behöver fixas → författaren ändrar och pushar igen.</div>
                 </li>
               </ul>
             </div>
           </div>
         </section>
-        <section class="box-5" aria-labelledby="sec-8">
-          <div class="row-5">
-            <span class="num text-brand">08</span>
-            <div class="eyebrow-4">När det krockar</div>
+        <section class="section" aria-labelledby="sec-8">
+          <div class="section-head">
+            <span class="num section-num">08</span>
+            <div class="section-kicker">När det krockar</div>
           </div>
-          <h2 class="section-title-3" id="sec-8">När två ändrar samma rad</h2>
-          <p class="lede-4">En konflikt uppstår när två personer ändrat exakt samma rad. Git vet inte vilken version som ska gälla — så du får välja. Oftast är svaret att <b class="text-ink-4">kombinera båda</b>.</p>
-          <div class="row-26">
+          <h2 class="section-title-tight" id="sec-8">När två ändrar samma rad</h2>
+          <p class="section-lede-tight">En konflikt uppstår när två personer ändrat exakt samma rad. Git vet inte vilken version som ska gälla — så du får välja. Oftast är svaret att <b class="strong-ink">kombinera båda</b>.</p>
+          <div class="conflict-row">
             <!-- the conflict -->
-            <div class="card-8">
-              <div class="box-6"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea2261" stroke-width="1.8"><path d="M10.3 3.9 2.4 18a2 2 0 0 0 1.7 3h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path><path d="M12 9v4M12 17h.01"></path></svg> <span class="eyebrow-12">Konflikt i</span> <span class="mono text-mute-6">header.php</span></div>
-              <div class="mono box-34">
+            <div class="conflict-card">
+              <div class="card-head"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea2261" stroke-width="1.8"><path d="M10.3 3.9 2.4 18a2 2 0 0 0 1.7 3h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path><path d="M12 9v4M12 17h.01"></path></svg> <span class="conflict-kicker">Konflikt i</span> <span class="mono conflict-file">header.php</span></div>
+              <div class="mono conflict-code">
                 <div class="text-danger">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD (Erik)</div>
-                <div class="box-35">&lt;a href="products.php"&gt;Produkter&lt;/a&gt;</div>
-                <div class="text-muted-11">=======</div>
-                <div class="box-36">&lt;a href="contact.php"&gt;Kontakt&lt;/a&gt;</div>
-                <div class="text-brand-4">&gt;&gt;&gt;&gt;&gt;&gt;&gt; login (Lisa)</div>
+                <div class="conflict-ours">&lt;a href="products.php"&gt;Produkter&lt;/a&gt;</div>
+                <div class="conflict-sep">=======</div>
+                <div class="conflict-theirs">&lt;a href="contact.php"&gt;Kontakt&lt;/a&gt;</div>
+                <div class="conflict-theirs-label">&gt;&gt;&gt;&gt;&gt;&gt;&gt; login (Lisa)</div>
               </div>
             </div>
-            <div class="row-3"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#a8b4c4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></div>
+            <div class="flow-arrow"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#a8b4c4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></div>
             <!-- resolution -->
-            <div class="card-9">
-              <div class="box-6"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1F8A5B" stroke-width="2"><path d="m5 12 4.5 4.5L19 7"></path></svg> <span class="eyebrow-13">Lösning · behåll båda</span></div>
-              <div class="mono box-37">&lt;nav&gt;<br/> <span class="box-38">  &lt;a href="products.php"&gt;Produkter&lt;/a&gt;</span><br/> <span class="box-38">  &lt;a href="contact.php"&gt;Kontakt&lt;/a&gt;</span><br/> &lt;/nav&gt;</div>
-              <div class="box-39">Ta bort <span class="mono text-8">&lt;&lt;&lt;</span>, <span class="mono text-8">===</span> och <span class="mono text-8">&gt;&gt;&gt;</span>, spara, och committa.</div>
+            <div class="resolve-card">
+              <div class="card-head"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1F8A5B" stroke-width="2"><path d="m5 12 4.5 4.5L19 7"></path></svg> <span class="resolve-kicker">Lösning · behåll båda</span></div>
+              <div class="mono resolve-code">&lt;nav&gt;<br/> <span class="resolve-line">  &lt;a href="products.php"&gt;Produkter&lt;/a&gt;</span><br/> <span class="resolve-line">  &lt;a href="contact.php"&gt;Kontakt&lt;/a&gt;</span><br/> &lt;/nav&gt;</div>
+              <div class="resolve-note">Ta bort <span class="mono code-2xs">&lt;&lt;&lt;</span>, <span class="mono code-2xs">===</span> och <span class="mono code-2xs">&gt;&gt;&gt;</span>, spara, och committa.</div>
             </div>
           </div>
-          <div class="row-27">
-            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#64748d" stroke-width="1.8" class="box-15"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"></path></svg>
-            <p class="text-mute-7"><b class="text-ink-4">Undvik konflikter:</b> prata i gruppen om vem som jobbar med vilken fil — och tillämpa funktionaliteten pull ofta.</p>
+          <div class="callout-muted">
+            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#64748d" stroke-width="1.8" class="rule-icon"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"></path></svg>
+            <p class="callout-muted-text"><b class="strong-ink">Undvik konflikter:</b> prata i gruppen om vem som jobbar med vilken fil — och tillämpa funktionaliteten pull ofta.</p>
           </div>
         </section>
-        <section class="box-40" aria-labelledby="sec-9">
-          <h2 class="section-title-4" id="sec-9">Snabb checklista</h2>
-          <div class="row-28">
-            <div class="card-10">
-              <div class="eyebrow-14">Gör en gång · projektstart</div>
-              <ul class="stack-4">
-                <li class="row-7"><span class="icon-box-13"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="2.4"><path d="m5 12 4.5 4.5L19 7"></path></svg></span><span class="text-ink-8">En person skapar repot (Use this template)</span></li>
-                <li class="row-7"><span class="icon-box-13"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="2.4"><path d="m5 12 4.5 4.5L19 7"></path></svg></span><span class="text-ink-8">Bjud in gruppen som collaborators</span></li>
-                <li class="row-7"><span class="icon-box-13"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="2.4"><path d="m5 12 4.5 4.5L19 7"></path></svg></span><span class="text-ink-8">Alla accepterar och skapar sin Codespace</span></li>
-                <li class="row-7"><span class="icon-box-13"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="2.4"><path d="m5 12 4.5 4.5L19 7"></path></svg></span><span class="text-ink-8">Bestäm vem som gör vad</span></li>
+        <section class="closing" aria-labelledby="sec-9">
+          <h2 class="section-title-sm" id="sec-9">Snabb checklista</h2>
+          <div class="checklist-row">
+            <div class="checklist-card">
+              <div class="checklist-label">Gör en gång · projektstart</div>
+              <ul class="checklist-list">
+                <li class="list-row"><span class="checklist-check"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="2.4"><path d="m5 12 4.5 4.5L19 7"></path></svg></span><span class="checklist-item">En person skapar repot (Use this template)</span></li>
+                <li class="list-row"><span class="checklist-check"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="2.4"><path d="m5 12 4.5 4.5L19 7"></path></svg></span><span class="checklist-item">Bjud in gruppen som collaborators</span></li>
+                <li class="list-row"><span class="checklist-check"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="2.4"><path d="m5 12 4.5 4.5L19 7"></path></svg></span><span class="checklist-item">Alla accepterar och skapar sin Codespace</span></li>
+                <li class="list-row"><span class="checklist-check"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="2.4"><path d="m5 12 4.5 4.5L19 7"></path></svg></span><span class="checklist-item">Bestäm vem som gör vad</span></li>
               </ul>
             </div>
-            <div class="panel-dark-4">
-              <div class="eyebrow-15">Gör varje arbetspass</div>
-              <ul class="stack-4">
-                <li class="row-7"><span class="icon-box-14"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#a5a1ff" stroke-width="2.4"><path d="m5 12 4.5 4.5L19 7"></path></svg></span><span class="text-on-dark-6">Byt till main + Pull</span></li>
-                <li class="row-7"><span class="icon-box-14"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#a5a1ff" stroke-width="2.4"><path d="m5 12 4.5 4.5L19 7"></path></svg></span><span class="text-on-dark-6">Skapa / byt till din branch</span></li>
-                <li class="row-7"><span class="icon-box-14"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#a5a1ff" stroke-width="2.4"><path d="m5 12 4.5 4.5L19 7"></path></svg></span><span class="text-on-dark-6">Stage → Commit → Push</span></li>
-                <li class="row-7"><span class="icon-box-14"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#a5a1ff" stroke-width="2.4"><path d="m5 12 4.5 4.5L19 7"></path></svg></span><span class="text-on-dark-6">Skapa PR + be någon granska</span></li>
+            <div class="checklist-card-dark">
+              <div class="checklist-label-dark">Gör varje arbetspass</div>
+              <ul class="checklist-list">
+                <li class="list-row"><span class="checklist-check-dark"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#a5a1ff" stroke-width="2.4"><path d="m5 12 4.5 4.5L19 7"></path></svg></span><span class="checklist-item-dark">Byt till main + Pull</span></li>
+                <li class="list-row"><span class="checklist-check-dark"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#a5a1ff" stroke-width="2.4"><path d="m5 12 4.5 4.5L19 7"></path></svg></span><span class="checklist-item-dark">Skapa / byt till din branch</span></li>
+                <li class="list-row"><span class="checklist-check-dark"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#a5a1ff" stroke-width="2.4"><path d="m5 12 4.5 4.5L19 7"></path></svg></span><span class="checklist-item-dark">Stage → Commit → Push</span></li>
+                <li class="list-row"><span class="checklist-check-dark"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#a5a1ff" stroke-width="2.4"><path d="m5 12 4.5 4.5L19 7"></path></svg></span><span class="checklist-item-dark">Skapa PR + be någon granska</span></li>
               </ul>
             </div>
           </div>
-          <p class="lede-6">Kort sagt: <b class="text-9">pull, branch, jobba, commit, push, PR, granska, merge.</b> Följ cirkeln så jobbar hela gruppen i samma projekt — utan att någon skriver över någon annan.</p>
+          <p class="closing-statement">Kort sagt: <b class="strong-plain">pull, branch, jobba, commit, push, PR, granska, merge.</b> Följ cirkeln så jobbar hela gruppen i samma projekt — utan att någon skriver över någon annan.</p>
         </section>
       </main>
       <footer class="site-footer">© 2026 Montathar Faraon · Licensierad under <a href="https://github.com/everydaydesign/github-guide/blob/main/LICENSE">MIT-licensen</a> · Senast uppdaterad 2026-07-07</footer>
