@@ -168,6 +168,7 @@ h3 {
 .masthead {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 10px;
   padding: 30px 0 0;
 }
@@ -191,6 +192,49 @@ h3 {
   font-size: 18px;
   font-weight: 600;
   color: #0d253d;
+}
+
+/* Brand links home to the language picker */
+.masthead-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.masthead-brand:hover .masthead-title {
+  color: #533afd;
+}
+
+/* Language switcher — small segmented control */
+.masthead-nav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px;
+  border: 1px solid #e3e8ee;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.masthead-nav .lang {
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #64748d;
+  text-decoration: none;
+}
+
+.masthead-nav .lang:hover {
+  color: #0d253d;
+  background: #f6f9fc;
+}
+
+.masthead-nav .lang-current {
+  color: #533afd;
+  background: #eef0ff;
 }
 
 /* -----------------------------------------------------------------------------
