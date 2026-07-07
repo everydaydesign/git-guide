@@ -4,7 +4,7 @@ En guide för studenter om hur man använder Git och GitHub i grupparbeten — f
 
 ## Öppna guiden / Open the guide
 
-🌐 **[https://everydaydesign.github.io/github-guide](https://everydaydesign.github.io/github-guide/)**
+🌐 **[https://everydaydesign.github.io/git-guide](https://everydaydesign.github.io/git-guide/)**
 
 Välj språk (🇸🇪 svenska / 🇺🇸 engelska) och format (visuell eller textbaserad) på startsidan.
 Choose language and format (visual or text-based) on the landing page.
