@@ -337,6 +337,12 @@ h3 {
   color: #fff;
 }
 
+/* Current page (e.g. Text guide on the text page) */
+.topbar-link[aria-current] {
+  color: #fff;
+  font-weight: 600;
+}
+
 /* Nav menus in the bar (Sections + language) — pure-CSS <details> */
 .topbar-menu {
   position: relative;
