@@ -205,6 +205,18 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Smooth in-page navigation (TOC + Sections menu), respecting reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Anchor targets land below the sticky 64px navbar (and reveal their kicker) */
+:where(.hero-title, .section-title, .section-title-wide, .section-title-tight, .section-title-sm) {
+  scroll-margin-top: 100px;
+}
+
 a {
   color: #533afd;
   text-decoration: none;
