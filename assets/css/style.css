@@ -188,10 +188,11 @@
   --chip-bg: #232a38;
 }
 
-:root[data-theme="dark"] a {
+/* Lighten links in dark mode — content areas only, not the nav/TOC chrome */
+:root[data-theme="dark"] :where(.page, .picker) a {
   color: #8b7bff;
 }
-:root[data-theme="dark"] a:hover {
+:root[data-theme="dark"] :where(.page, .picker) a:hover {
   color: #a99bff;
 }
 
@@ -266,7 +267,7 @@ h3 {
   max-width: 1080px;
   margin: 0 auto;
   padding: 0 40px;
-  height: 56px;
+  height: 64px;
   display: flex;
   align-items: center;
   gap: 22px;
@@ -900,8 +901,8 @@ h3 {
 .timeline-line {
   position: absolute;
   left: 14px;
-  top: 20px;
-  bottom: 20px;
+  top: 11px;
+  bottom: 24px;
   width: 2px;
   background: var(--hairline);
 }
@@ -909,9 +910,13 @@ h3 {
 .timeline-item {
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 14px;
-  padding: 5px 0;
+  padding-bottom: 14px;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
 }
 
 .avatar {
@@ -2238,4 +2243,56 @@ h3 {
 .picker-format-hint {
   font-size: 12px;
   color: var(--mute);
+}
+
+/* -----------------------------------------------------------------------------
+   17. "On this page" TOC — fixed in the right gutter on wide viewports
+   -------------------------------------------------------------------------- */
+.toc {
+  display: none;
+}
+
+@media (min-width: 1500px) {
+  .toc {
+    display: block;
+    position: fixed;
+    top: 96px;
+    left: calc(50% + 540px + 20px);
+    width: 176px;
+    max-height: calc(100vh - 132px);
+    overflow-y: auto;
+  }
+}
+
+.toc-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+
+.toc-links {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid var(--hairline);
+}
+
+.toc-links a {
+  padding: 5px 0 5px 14px;
+  margin-left: -1px;
+  border-left: 2px solid transparent;
+  font-size: 12.5px;
+  line-height: 1.4;
+  color: var(--mute);
+  text-decoration: none;
+}
+
+.toc-links a:hover {
+  color: var(--ink);
+}
+
+.toc-links a.toc-active {
+  color: #533afd;
+  border-left-color: #533afd;
+  font-weight: 500;
 }
