@@ -120,8 +120,12 @@ a:hover {
 }
 
 /* Inline helpers, mixed into other classes in the markup */
-.num  { font-variant-numeric: tabular-nums; }
-.mono { font-family: ui-monospace, 'SF Mono', Menlo, monospace; }
+.num {
+  font-variant-numeric: tabular-nums;
+}
+.mono {
+  font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+}
 
 /* Keep list/heading semantics without their default look */
 ul {
@@ -366,9 +370,15 @@ h3 {
   letter-spacing: -1.1px;
   margin: 0 0 14px;
 }
-.section-title       { max-width: 760px; }
-.section-title-wide  { max-width: 800px; }
-.section-title-tight { max-width: 780px; }
+.section-title {
+  max-width: 760px;
+}
+.section-title-wide {
+  max-width: 800px;
+}
+.section-title-tight {
+  max-width: 780px;
+}
 
 .section-title-sm {
   font-size: 26px;
@@ -387,10 +397,22 @@ h3 {
   font-weight: 300;
   color: #273951;
 }
-.section-lede        { max-width: 720px; margin: 0 0 34px; }
-.section-lede-wide   { max-width: 740px; margin: 0 0 36px; }
-.section-lede-tight  { max-width: 740px; margin: 0 0 34px; }
-.section-lede-narrow { max-width: 720px; margin: 0 0 30px; }
+.section-lede {
+  max-width: 720px;
+  margin: 0 0 34px;
+}
+.section-lede-wide {
+  max-width: 740px;
+  margin: 0 0 36px;
+}
+.section-lede-tight {
+  max-width: 740px;
+  margin: 0 0 34px;
+}
+.section-lede-narrow {
+  max-width: 720px;
+  margin: 0 0 30px;
+}
 
 
 /* -----------------------------------------------------------------------------
@@ -479,14 +501,32 @@ h3 {
 }
 
 /* Inline-code sizing (always paired with .mono) */
-.code-md  { font-size: 14px; }
-.code-sm  { font-size: 13px; }
-.code-xs  { font-size: 12px; }
-.code-2xs { font-size: 11px; }
+.code-md {
+  font-size: 14px;
+}
+.code-sm {
+  font-size: 13px;
+}
+.code-xs {
+  font-size: 12px;
+}
+.code-2xs {
+  font-size: 11px;
+}
 
 /* Status dots */
-.dot-danger  { width: 8px; height: 8px; border-radius: 50%; background: #ea2261; }
-.dot-success { width: 8px; height: 8px; border-radius: 50%; background: #1f8a5b; }
+.dot-danger {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ea2261;
+}
+.dot-success {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #1f8a5b;
+}
 
 /* Emphasised danger text (used in the hero and conflict code) */
 .text-danger {
@@ -762,11 +802,26 @@ h3 {
   display: grid;
   place-items: center;
 }
-.ring-node-1 { left: 466px; top: 90px; }
-.ring-node-2 { left: 639px; top: 190px; }
-.ring-node-3 { left: 639px; top: 390px; }
-.ring-node-4 { left: 466px; top: 490px; }
-.ring-node-5 { left: 293px; top: 390px; }
+.ring-node-1 {
+  left: 466px;
+  top: 90px;
+}
+.ring-node-2 {
+  left: 639px;
+  top: 190px;
+}
+.ring-node-3 {
+  left: 639px;
+  top: 390px;
+}
+.ring-node-4 {
+  left: 466px;
+  top: 490px;
+}
+.ring-node-5 {
+  left: 293px;
+  top: 390px;
+}
 .ring-node-6 {
   left: 293px;
   top: 190px;
@@ -784,12 +839,48 @@ h3 {
 .ring-label-6 {
   position: absolute;
 }
-.ring-label-1 { left: 466px; top: 20px;  transform: translate(-50%, -50%);  text-align: center; width: 150px; }
-.ring-label-2 { left: 696px; top: 190px; transform: translate(0, -50%);     text-align: left;   width: 150px; }
-.ring-label-3 { left: 696px; top: 390px; transform: translate(0, -50%);     text-align: left;   width: 150px; }
-.ring-label-4 { left: 466px; top: 560px; transform: translate(-50%, -50%);  text-align: center; width: 150px; }
-.ring-label-5 { left: 238px; top: 390px; transform: translate(-100%, -50%); text-align: right;  width: 160px; }
-.ring-label-6 { left: 238px; top: 190px; transform: translate(-100%, -50%); text-align: right;  width: 160px; }
+.ring-label-1 {
+  left: 466px;
+  top: 20px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 150px;
+}
+.ring-label-2 {
+  left: 696px;
+  top: 190px;
+  transform: translate(0, -50%);
+  text-align: left;
+  width: 150px;
+}
+.ring-label-3 {
+  left: 696px;
+  top: 390px;
+  transform: translate(0, -50%);
+  text-align: left;
+  width: 150px;
+}
+.ring-label-4 {
+  left: 466px;
+  top: 560px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 150px;
+}
+.ring-label-5 {
+  left: 238px;
+  top: 390px;
+  transform: translate(-100%, -50%);
+  text-align: right;
+  width: 160px;
+}
+.ring-label-6 {
+  left: 238px;
+  top: 190px;
+  transform: translate(-100%, -50%);
+  text-align: right;
+  width: 160px;
+}
 
 .ring-label-title {
   font-size: 13.5px;
