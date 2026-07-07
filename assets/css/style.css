@@ -237,6 +237,85 @@ h3 {
   background: #eef0ff;
 }
 
+/* Right-side masthead group: sections menu + language switcher */
+.masthead-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Sections dropdown — pure-CSS <details> menu */
+.nav-menu {
+  position: relative;
+}
+
+.nav-menu-trigger {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  border: 1px solid #e3e8ee;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #64748d;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.nav-menu-trigger::-webkit-details-marker {
+  display: none;
+}
+
+.nav-menu-trigger:hover {
+  color: #0d253d;
+  background: #f6f9fc;
+}
+
+.nav-menu[open] .nav-menu-trigger {
+  color: #533afd;
+  border-color: #533afd;
+}
+
+.nav-menu-caret {
+  transition: transform 0.15s ease;
+}
+
+.nav-menu[open] .nav-menu-caret {
+  transform: rotate(180deg);
+}
+
+.nav-menu-panel {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  min-width: 190px;
+  padding: 6px;
+  border: 1px solid #e3e8ee;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 12px 30px -12px rgba(13, 37, 61, 0.24);
+}
+
+.nav-menu-panel a {
+  padding: 7px 10px;
+  border-radius: 5px;
+  font-size: 13px;
+  color: #273951;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav-menu-panel a:hover {
+  color: #533afd;
+  background: #f6f9fc;
+}
+
 /* -----------------------------------------------------------------------------
    4. Hero / overview — "How Git works" (without-Git vs with-Git)
    -------------------------------------------------------------------------- */
