@@ -124,7 +124,7 @@ Git sparar "ögonblicksbilder" av din kod så du kan se historik och ångra änd
 
 En person i gruppen skapar projektet:
 
-1. Gå till mallrepot
+1. Gå till [mallrepot](https://github.com/everydaydesign/web-app) (Hoppa över detta steg om du inte arbetar med PHP/MySQL, skapa istället ett nytt repository)
 2. Klicka på **"Use this template"** → **"Create a new repository"**
 3. Välj ett namn, t.ex. `grupp1-designprojekt`
 4. Välj **Private** (om ni inte vill att andra ska se)
