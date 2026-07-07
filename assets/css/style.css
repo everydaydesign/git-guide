@@ -2171,16 +2171,15 @@ h3 {
   place-items: center;
   width: 36px;
   height: 36px;
-  border: 1px solid var(--hairline);
-  border-radius: 8px;
-  background: var(--surface);
+  padding: 0;
+  border: none;
+  background: none;
   color: var(--mute);
   cursor: pointer;
 }
 
 .picker-theme:hover {
   color: var(--ink);
-  border-color: var(--border-muted);
 }
 
 .picker-title {
