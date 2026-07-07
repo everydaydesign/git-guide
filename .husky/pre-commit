@@ -1,1 +1,9 @@
+# Keep the rendered text guides in sync with their markdown source: if any
+# docs/*.md is staged, regenerate languages/*/text/index.html and stage them
+# so the committed HTML can never drift from the markdown.
+if git diff --cached --name-only --diff-filter=ACMR | grep -q '^docs/.*\.md$'; then
+  npm run --silent build:text
+  git add languages/en/text/index.html languages/sv/text/index.html
+fi
+
 npx lint-staged
