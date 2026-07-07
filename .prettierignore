@@ -1,8 +1,4 @@
 node_modules
 
-# Dense, hand-tuned inline-SVG markup — Prettier would explode each attribute
-# onto its own line (509 -> ~1900 lines). Keep the HTML as authored.
-*.html
-
 # Long-form translated guides — leave prose formatting to the author.
 docs/

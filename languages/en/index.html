@@ -1,60 +1,145 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Git guide for group work</title>
-    <link rel="stylesheet" href="../../assets/css/style.css?v=13">
+    <link rel="stylesheet" href="../../assets/css/style.css?v=13" />
   </head>
   <body>
-    <svg aria-hidden="true" width="0" height="0" class="svg-defs"><defs>
-  <marker id="ah" markerWidth="9" markerHeight="9" refX="4.5" refY="7.6" orient="auto"><path d="M1 1.4L4.5 7.2L8 1.4" fill="none" stroke="#c3ccd8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></marker>
-</defs></svg>
+    <svg aria-hidden="true" width="0" height="0" class="svg-defs">
+      <defs>
+        <marker id="ah" markerWidth="9" markerHeight="9" refX="4.5" refY="7.6" orient="auto">
+          <path
+            d="M1 1.4L4.5 7.2L8 1.4"
+            fill="none"
+            stroke="#c3ccd8"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+        </marker>
+      </defs>
+    </svg>
     <div class="page">
       <!-- identity -->
       <header class="masthead">
-        <a class="masthead-brand" href="../../" title="Back to start"><span class="masthead-mark"><svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="masthead-mark-glyph"><line x1="6" x2="6" y1="3" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg></span> <span class="masthead-title">Git guide for group work</span></a>
+        <a class="masthead-brand" href="../../" title="Back to start"
+          ><span class="masthead-mark"
+            ><svg
+              aria-hidden="true"
+              width="17"
+              height="17"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#fff"
+              stroke-width="1.9"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="masthead-mark-glyph"
+            >
+              <line x1="6" x2="6" y1="3" y2="15"></line>
+              <circle cx="18" cy="6" r="3"></circle>
+              <circle cx="6" cy="18" r="3"></circle>
+              <path d="M18 9a9 9 0 0 1-9 9"></path></svg
+          ></span>
+          <span class="masthead-title">Git guide for group work</span></a
+        >
         <div class="masthead-actions">
-        <details class="nav-menu">
-          <summary class="nav-menu-trigger">Sections <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-menu-caret"><path d="m6 9 6 6 6-6"></path></svg></summary>
-          <div class="nav-menu-panel">
-            <a href="#overview">How Git works</a>
-            <a href="#sec-1">01 The basics</a>
-            <a href="#sec-2">02 The big picture</a>
-            <a href="#sec-3">03 Fundamentals</a>
-            <a href="#sec-4">04 The order</a>
-            <a href="#sec-5">05 Branches</a>
-            <a href="#sec-6">06 Sync</a>
-            <a href="#sec-7">07 Review</a>
-            <a href="#sec-8">08 When it clashes</a>
-            <a href="#sec-9">Quick checklist</a>
-          </div>
-        </details>
-        <nav class="masthead-nav" aria-label="Language"><a class="lang" href="../sv/">Svenska</a> <span class="lang lang-current" aria-current="true">English</span></nav>
-      </div>
+          <details class="nav-menu">
+            <summary class="nav-menu-trigger">
+              Sections
+              <svg
+                aria-hidden="true"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="nav-menu-caret"
+              >
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </summary>
+            <div class="nav-menu-panel">
+              <a href="#overview">How Git works</a>
+              <a href="#sec-1">01 The basics</a>
+              <a href="#sec-2">02 The big picture</a>
+              <a href="#sec-3">03 Fundamentals</a>
+              <a href="#sec-4">04 The order</a>
+              <a href="#sec-5">05 Branches</a>
+              <a href="#sec-6">06 Sync</a>
+              <a href="#sec-7">07 Review</a>
+              <a href="#sec-8">08 When it clashes</a>
+              <a href="#sec-9">Quick checklist</a>
+            </div>
+          </details>
+          <nav class="masthead-nav" aria-label="Language">
+            <a class="lang" href="../sv/">Svenska</a>
+            <span class="lang lang-current" aria-current="true">English</span>
+          </nav>
+        </div>
       </header>
       <main>
         <section aria-labelledby="overview">
           <div class="hero">
             <div class="hero-kicker">Collaborate without overwriting each other</div>
             <h1 class="hero-title" id="overview">How Git works</h1>
-            <p class="hero-lede">Git saves <em class="emphasis">snapshots</em> of your code, so several people can work in the same project without overwriting each other. Here is the whole picture, from your first commit to a merged Pull Request.</p>
+            <p class="hero-lede">
+              Git saves <em class="emphasis">snapshots</em> of your code, so several people can work
+              in the same project without overwriting each other. Here is the whole picture, from
+              your first commit to a merged Pull Request.
+            </p>
           </div>
           <div class="hero-compare">
             <div class="hero-chaos">
               <div class="hero-chaos-kicker">Without Git</div>
-              <div class="mono hero-chaos-files">project.php<br/> project_v2.php<br/> project_final.php<br/> <span class="text-danger">project_final_FINAL.php</span></div>
+              <div class="mono hero-chaos-files">
+                project.php<br />
+                project_v2.php<br />
+                project_final.php<br />
+                <span class="text-danger">project_final_FINAL.php</span>
+              </div>
               <div class="hero-chaos-note">…which one is it, really?</div>
             </div>
-            <div class="flow-arrow"><svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#a8b4c4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></div>
+            <div class="flow-arrow">
+              <svg
+                aria-hidden="true"
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#a8b4c4"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6"></path>
+              </svg>
+            </div>
             <div class="hero-order">
               <div class="hero-order-kicker">With Git</div>
               <div class="hero-order-log">
-                <div class="row-center"><span class="hero-order-dot"></span><span class="hero-order-msg">Updated navbar</span><span class="num mono hero-order-time">just now</span></div>
+                <div class="row-center">
+                  <span class="hero-order-dot"></span
+                  ><span class="hero-order-msg">Updated navbar</span
+                  ><span class="num mono hero-order-time">just now</span>
+                </div>
                 <div class="hero-order-divider"></div>
-                <div class="row-center"><span class="hero-order-dot"></span><span class="hero-order-msg-dim">Fixed validation</span><span class="num mono hero-order-time">2h</span></div>
+                <div class="row-center">
+                  <span class="hero-order-dot"></span
+                  ><span class="hero-order-msg-dim">Fixed validation</span
+                  ><span class="num mono hero-order-time">2h</span>
+                </div>
                 <div class="hero-order-divider"></div>
-                <div class="row-center"><span class="hero-order-dot"></span><span class="hero-order-msg-dim">Added contact form</span><span class="num mono hero-order-time">yesterday</span></div>
+                <div class="row-center">
+                  <span class="hero-order-dot"></span
+                  ><span class="hero-order-msg-dim">Added contact form</span
+                  ><span class="num mono hero-order-time">yesterday</span>
+                </div>
               </div>
               <div class="hero-order-foot">One file. All history saved automatically.</div>
             </div>
@@ -66,19 +151,98 @@
             <div class="section-kicker">The basics</div>
           </div>
           <h2 class="section-title" id="sec-1">A time machine for your code</h2>
-          <p class="section-lede">Instead of saving copies like <span class="mono code-md">v1</span>, <span class="mono code-md">v2_final</span>, <span class="mono code-md">FINAL</span> Git keeps track of every change for you. <br/>You can always go back to an earlier version — and see who changed what, and when.</p>
+          <p class="section-lede">
+            Instead of saving copies like <span class="mono code-md">v1</span>,
+            <span class="mono code-md">v2_final</span>, <span class="mono code-md">FINAL</span> Git
+            keeps track of every change for you. <br />You can always go back to an earlier version
+            — and see who changed what, and when.
+          </p>
           <div class="compare-row">
             <!-- utan git -->
             <div class="compare-card col-card">
-              <div class="card-head"><span class="dot-danger"></span> <span class="card-kicker-danger">The old way</span></div>
+              <div class="card-head">
+                <span class="dot-danger"></span> <span class="card-kicker-danger">The old way</span>
+              </div>
               <div class="card-body col-body">
                 <div class="file-list">
-                  <div class="list-row"><svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#b7c1ce" stroke-width="1.6"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path><path d="M14 3v5h5"></path></svg><span class="mono filename">project.php</span></div>
-                  <div class="list-row"><svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#b7c1ce" stroke-width="1.6"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path><path d="M14 3v5h5"></path></svg><span class="mono filename">project_v2.php</span></div>
-                  <div class="list-row"><svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#b7c1ce" stroke-width="1.6"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path><path d="M14 3v5h5"></path></svg><span class="mono filename">project_done.php</span></div>
-                  <div class="list-row"><svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#ea2261" stroke-width="1.7"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path><path d="M14 3v5h5"></path></svg><span class="mono filename-danger">project_done_FINAL.php</span></div>
+                  <div class="list-row">
+                    <svg
+                      aria-hidden="true"
+                      width="17"
+                      height="17"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#b7c1ce"
+                      stroke-width="1.6"
+                    >
+                      <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path>
+                      <path d="M14 3v5h5"></path></svg
+                    ><span class="mono filename">project.php</span>
+                  </div>
+                  <div class="list-row">
+                    <svg
+                      aria-hidden="true"
+                      width="17"
+                      height="17"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#b7c1ce"
+                      stroke-width="1.6"
+                    >
+                      <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path>
+                      <path d="M14 3v5h5"></path></svg
+                    ><span class="mono filename">project_v2.php</span>
+                  </div>
+                  <div class="list-row">
+                    <svg
+                      aria-hidden="true"
+                      width="17"
+                      height="17"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#b7c1ce"
+                      stroke-width="1.6"
+                    >
+                      <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path>
+                      <path d="M14 3v5h5"></path></svg
+                    ><span class="mono filename">project_done.php</span>
+                  </div>
+                  <div class="list-row">
+                    <svg
+                      aria-hidden="true"
+                      width="17"
+                      height="17"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#ea2261"
+                      stroke-width="1.7"
+                    >
+                      <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path>
+                      <path d="M14 3v5h5"></path></svg
+                    ><span class="mono filename-danger">project_done_FINAL.php</span>
+                  </div>
                 </div>
-                <div class="callout-danger"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea2261" stroke-width="1.8" class="callout-icon"><path d="M10.3 3.9 2.4 18a2 2 0 0 0 1.7 3h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path><path d="M12 9v4M12 17h.01"></path></svg> <span class="callout-danger-text">Manual copies. Nobody knows which is the latest — and two people easily overwrite each other.</span></div>
+                <div class="callout-danger">
+                  <svg
+                    aria-hidden="true"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#ea2261"
+                    stroke-width="1.8"
+                    class="callout-icon"
+                  >
+                    <path
+                      d="M10.3 3.9 2.4 18a2 2 0 0 0 1.7 3h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"
+                    ></path>
+                    <path d="M12 9v4M12 17h.01"></path>
+                  </svg>
+                  <span class="callout-danger-text"
+                    >Manual copies. Nobody knows which is the latest — and two people easily
+                    overwrite each other.</span
+                  >
+                </div>
               </div>
             </div>
             <!-- med git -->
@@ -114,28 +278,83 @@
                     </div>
                   </div>
                 </div>
-                <div class="callout-success"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1F8A5B" stroke-width="2" class="callout-icon"><path d="m5 12 4.5 4.5L19 7"></path></svg> <span class="callout-success-text">Every save is a snapshot with a name, time and message. Go back whenever you want.</span></div>
+                <div class="callout-success">
+                  <svg
+                    aria-hidden="true"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#1F8A5B"
+                    stroke-width="2"
+                    class="callout-icon"
+                  >
+                    <path d="m5 12 4.5 4.5L19 7"></path>
+                  </svg>
+                  <span class="callout-success-text"
+                    >Every save is a snapshot with a name, time and message. Go back whenever you
+                    want.</span
+                  >
+                </div>
               </div>
             </div>
           </div>
           <!-- three benefits -->
           <ul class="benefit-grid">
             <li class="benefit-item">
-              <span class="benefit-icon"><svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.7"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"></path></svg></span>
+              <span class="benefit-icon"
+                ><svg
+                  aria-hidden="true"
+                  width="19"
+                  height="19"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#533afd"
+                  stroke-width="1.7"
+                >
+                  <path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"></path></svg
+              ></span>
               <div>
                 <h3 class="benefit-title">Backup</h3>
                 <div class="benefit-desc">Kept locally and on GitHub</div>
               </div>
             </li>
             <li class="benefit-item">
-              <span class="benefit-icon"><svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.7"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span>
+              <span class="benefit-icon"
+                ><svg
+                  aria-hidden="true"
+                  width="19"
+                  height="19"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#533afd"
+                  stroke-width="1.7"
+                >
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+              ></span>
               <div>
                 <h3 class="benefit-title">Collaboration</h3>
                 <div class="benefit-desc">Several in the same project</div>
               </div>
             </li>
             <li class="benefit-item">
-              <span class="benefit-icon"><svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.7"><path d="M3 3v5h5"></path><path d="M3.05 13A9 9 0 1 0 6 5.3L3 8"></path><path d="M12 7v5l4 2"></path></svg></span>
+              <span class="benefit-icon"
+                ><svg
+                  aria-hidden="true"
+                  width="19"
+                  height="19"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#533afd"
+                  stroke-width="1.7"
+                >
+                  <path d="M3 3v5h5"></path>
+                  <path d="M3.05 13A9 9 0 1 0 6 5.3L3 8"></path>
+                  <path d="M12 7v5l4 2"></path></svg
+              ></span>
               <div>
                 <h3 class="benefit-title">History</h3>
                 <div class="benefit-desc">Who changed what, and when</div>
@@ -149,61 +368,196 @@
             <div class="section-kicker">The big picture</div>
           </div>
           <h2 class="section-title-wide" id="sec-2">How code flows in a group</h2>
-          <p class="section-lede-wide">One person creates the repo and invites the others. <br/>Everyone pulls (<b class="strong-ink">pull</b>) the latest version, each works on their own <b class="strong-ink">branch</b>, and sends their work back via a <b class="strong-ink">Pull Request</b> that is reviewed before it is merged.</p>
-          <div class="diagram-card" role="img" aria-label="Diagram: the group's workflow in six steps around the shared repo — pull, branch, commit, push, pull request and merge.">
+          <p class="section-lede-wide">
+            One person creates the repo and invites the others. <br />Everyone pulls (<b
+              class="strong-ink"
+              >pull</b
+            >) the latest version, each works on their own <b class="strong-ink">branch</b>, and
+            sends their work back via a <b class="strong-ink">Pull Request</b> that is reviewed
+            before it is merged.
+          </p>
+          <div
+            class="diagram-card"
+            role="img"
+            aria-label="Diagram: the group's workflow in six steps around the shared repo — pull, branch, commit, push, pull request and merge."
+          >
             <div class="ring">
               <!-- ring arrows -->
               <svg aria-hidden="true" viewBox="0 0 932 600" class="ring-arcs">
-          <defs><marker id="cw" markerWidth="11" markerHeight="11" refX="6" refY="3.2" orient="auto" markerUnits="userSpaceOnUse"><path d="M0.4 0.4L6 3.2L0.4 6Z" fill="#aab4c2"></path></marker></defs>
-          <g fill="none" stroke="#d3dae2" stroke-width="2.2" marker-end="url(#cw)">
-            <path d="M521.1 97.7 A200 200 0 0 1 604.9 146.1"></path>
-            <path d="M660.1 241.6 A200 200 0 0 1 660.1 338.4"></path>
-            <path d="M604.9 433.9 A200 200 0 0 1 521.1 482.3"></path>
-            <path d="M410.9 482.3 A200 200 0 0 1 327.1 433.9"></path>
-            <path d="M271.9 338.4 A200 200 0 0 1 271.9 241.6"></path>
-            <path d="M327.1 146.1 A200 200 0 0 1 410.9 97.7"></path>
-          </g>
-        </svg>
+                <defs>
+                  <marker
+                    id="cw"
+                    markerWidth="11"
+                    markerHeight="11"
+                    refX="6"
+                    refY="3.2"
+                    orient="auto"
+                    markerUnits="userSpaceOnUse"
+                  >
+                    <path d="M0.4 0.4L6 3.2L0.4 6Z" fill="#aab4c2"></path>
+                  </marker>
+                </defs>
+                <g fill="none" stroke="#d3dae2" stroke-width="2.2" marker-end="url(#cw)">
+                  <path d="M521.1 97.7 A200 200 0 0 1 604.9 146.1"></path>
+                  <path d="M660.1 241.6 A200 200 0 0 1 660.1 338.4"></path>
+                  <path d="M604.9 433.9 A200 200 0 0 1 521.1 482.3"></path>
+                  <path d="M410.9 482.3 A200 200 0 0 1 327.1 433.9"></path>
+                  <path d="M271.9 338.4 A200 200 0 0 1 271.9 241.6"></path>
+                  <path d="M327.1 146.1 A200 200 0 0 1 410.9 97.7"></path>
+                </g>
+              </svg>
               <!-- center hub -->
               <div class="ring-hub">
-                <svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#a5a1ff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="ring-hub-icon"><path d="M17.5 19a4.5 4.5 0 0 0 0-9 6 6 0 0 0-11.5 2A3.5 3.5 0 0 0 6 19z"></path></svg>
+                <svg
+                  aria-hidden="true"
+                  width="26"
+                  height="26"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#a5a1ff"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="ring-hub-icon"
+                >
+                  <path d="M17.5 19a4.5 4.5 0 0 0 0-9 6 6 0 0 0-11.5 2A3.5 3.5 0 0 0 6 19z"></path>
+                </svg>
                 <div class="ring-hub-title">The group repo</div>
                 <div class="mono ring-hub-sub">main · on GitHub</div>
                 <div class="ring-hub-divider"></div>
-                <div class="ring-hub-note">Lisa · Erik · Anna each work separately and sync via the circle</div>
+                <div class="ring-hub-note">
+                  Lisa · Erik · Anna each work separately and sync via the circle
+                </div>
               </div>
               <!-- node 1 · pull -->
-              <div class="ring-node-1"><svg aria-hidden="true" width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5"></path><path d="M5 21h14"></path></svg></div>
+              <div class="ring-node-1">
+                <svg
+                  aria-hidden="true"
+                  width="27"
+                  height="27"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#533afd"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 3v12M7 11l5 5 5-5"></path>
+                  <path d="M5 21h14"></path>
+                </svg>
+              </div>
               <div class="ring-label-1">
                 <div class="ring-label-title">1 · Pull</div>
                 <div class="ring-label-sub">get from main</div>
               </div>
               <!-- node 2 · branch -->
-              <div class="ring-node-2"><svg aria-hidden="true" width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><line x1="6" x2="6" y1="3" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg></div>
+              <div class="ring-node-2">
+                <svg
+                  aria-hidden="true"
+                  width="27"
+                  height="27"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#533afd"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="6" x2="6" y1="3" y2="15"></line>
+                  <circle cx="18" cy="6" r="3"></circle>
+                  <circle cx="6" cy="18" r="3"></circle>
+                  <path d="M18 9a9 9 0 0 1-9 9"></path>
+                </svg>
+              </div>
               <div class="ring-label-2">
                 <div class="ring-label-title">2 · Branch</div>
                 <div class="ring-label-sub">your own workspace</div>
               </div>
               <!-- node 3 · commit -->
-              <div class="ring-node-3"><svg aria-hidden="true" width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><line x1="3" x2="9" y1="12" y2="12"></line><line x1="15" x2="21" y1="12" y2="12"></line></svg></div>
+              <div class="ring-node-3">
+                <svg
+                  aria-hidden="true"
+                  width="27"
+                  height="27"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#533afd"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <line x1="3" x2="9" y1="12" y2="12"></line>
+                  <line x1="15" x2="21" y1="12" y2="12"></line>
+                </svg>
+              </div>
               <div class="ring-label-3">
                 <div class="ring-label-title">3 · Commit</div>
                 <div class="ring-label-sub">work &amp; save</div>
               </div>
               <!-- node 4 · push -->
-              <div class="ring-node-4"><svg aria-hidden="true" width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V9M7 13l5-5 5 5"></path><path d="M5 5h14"></path></svg></div>
+              <div class="ring-node-4">
+                <svg
+                  aria-hidden="true"
+                  width="27"
+                  height="27"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#533afd"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 21V9M7 13l5-5 5 5"></path>
+                  <path d="M5 5h14"></path>
+                </svg>
+              </div>
               <div class="ring-label-4">
                 <div class="ring-label-title">4 · Push</div>
                 <div class="ring-label-sub">push up your branch</div>
               </div>
               <!-- node 5 · pull request -->
-              <div class="ring-node-5"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M6 9v6"></path><path d="M13 6h3a2 2 0 0 1 2 2v7"></path><path d="m15.5 13.5 2.5 2.5 2.5-2.5"></path></svg></div>
+              <div class="ring-node-5">
+                <svg
+                  aria-hidden="true"
+                  width="26"
+                  height="26"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#533afd"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="6" cy="6" r="3"></circle>
+                  <circle cx="6" cy="18" r="3"></circle>
+                  <path d="M6 9v6"></path>
+                  <path d="M13 6h3a2 2 0 0 1 2 2v7"></path>
+                  <path d="m15.5 13.5 2.5 2.5 2.5-2.5"></path>
+                </svg>
+              </div>
               <div class="ring-label-5">
                 <div class="ring-label-title">5 · Pull Request</div>
                 <div class="ring-label-sub">someone reviews</div>
               </div>
               <!-- node 6 · merge -->
-              <div class="ring-node-6"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1F8A5B" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><path d="M6 21V9a9 9 0 0 0 9 9"></path></svg></div>
+              <div class="ring-node-6">
+                <svg
+                  aria-hidden="true"
+                  width="26"
+                  height="26"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#1F8A5B"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="18" cy="18" r="3"></circle>
+                  <circle cx="6" cy="6" r="3"></circle>
+                  <path d="M6 21V9a9 9 0 0 0 9 9"></path>
+                </svg>
+              </div>
               <div class="ring-label-6">
                 <div class="ring-label-title-success">6 · Merge</div>
                 <div class="ring-label-sub">into main → start over</div>
@@ -212,13 +566,51 @@
           </div>
           <!-- which template feeds the group repo -->
           <div class="callout-info">
-            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.8" class="callout-icon"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5M12 16h.01"></path></svg>
-            <p class="callout-info-text"><b class="strong-ink">Which template?</b> The group repo is created from a template — <a href="https://github.com/everydaydesign/website" target="_blank" rel="noopener">website</a> for HTML/CSS, or <a href="https://github.com/everydaydesign/web-app" target="_blank" rel="noopener">web-app</a> for PHP/MySQL.</p>
+            <svg
+              aria-hidden="true"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#533afd"
+              stroke-width="1.8"
+              class="callout-icon"
+            >
+              <circle cx="12" cy="12" r="9"></circle>
+              <path d="M12 8v5M12 16h.01"></path>
+            </svg>
+            <p class="callout-info-text">
+              <b class="strong-ink">Which template?</b> The group repo is created from a template —
+              <a href="https://github.com/everydaydesign/website" target="_blank" rel="noopener"
+                >website</a
+              >
+              for HTML/CSS, or
+              <a href="https://github.com/everydaydesign/web-app" target="_blank" rel="noopener"
+                >web-app</a
+              >
+              for PHP/MySQL.
+            </p>
           </div>
           <!-- golden rule -->
           <div class="golden-rule">
-            <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9b6829" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="rule-icon"><path d="m12 2 2.4 7.4H22l-6 4.5 2.3 7.1-6.3-4.6L5.7 21 8 14 2 9.4h7.6z"></path></svg>
-            <p class="rule-text"><b class="rule-label">Golden rule:</b> never work directly in <span class="mono code-sm">main</span> — always create your own branch.</p>
+            <svg
+              aria-hidden="true"
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#9b6829"
+              stroke-width="1.9"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="rule-icon"
+            >
+              <path d="m12 2 2.4 7.4H22l-6 4.5 2.3 7.1-6.3-4.6L5.7 21 8 14 2 9.4h7.6z"></path>
+            </svg>
+            <p class="rule-text">
+              <b class="rule-label">Golden rule:</b> never work directly in
+              <span class="mono code-sm">main</span> — always create your own branch.
+            </p>
           </div>
         </section>
         <section class="section" aria-labelledby="sec-3">
@@ -227,47 +619,151 @@
             <div class="section-kicker">Fundamentals</div>
           </div>
           <h2 class="section-title-tight" id="sec-3">Stage and commit — like packing a bag</h2>
-          <p class="section-lede-tight">First, <b class="strong-ink">choose</b> what to include (stage). Then <b class="strong-ink">close</b> the bag and put a label on it (commit). Two steps, for a reason.</p>
+          <p class="section-lede-tight">
+            First, <b class="strong-ink">choose</b> what to include (stage). Then
+            <b class="strong-ink">close</b> the bag and put a label on it (commit). Two steps, for a
+            reason.
+          </p>
           <div class="compare-row">
             <!-- stage -->
             <div class="compare-card">
               <div class="step-head">
-                <span class="step-icon"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.6"><path d="M5 21V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v14"></path><path d="M9 5V3h6v2"></path><path d="M9 11h6M9 15h6"></path></svg></span>
+                <span class="step-icon"
+                  ><svg
+                    aria-hidden="true"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#533afd"
+                    stroke-width="1.6"
+                  >
+                    <path d="M5 21V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v14"></path>
+                    <path d="M9 5V3h6v2"></path>
+                    <path d="M9 11h6M9 15h6"></path></svg
+                ></span>
                 <div>
                   <div class="step-kicker">Step 1 · Stage</div>
                   <div class="step-title">Choose what to include</div>
                 </div>
               </div>
               <div class="step-desc-wrap">
-                <div class="step-desc">Like choosing clothes for the bag — you pick which changed files belong together in this particular save.</div>
+                <div class="step-desc">
+                  Like choosing clothes for the bag — you pick which changed files belong together
+                  in this particular save.
+                </div>
               </div>
               <div class="step-demo">
                 <div class="file-panel">
-                  <div class="file-panel-row"><span class="check-tile"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6"><path d="m5 12 4.5 4.5L19 7"></path></svg></span><span class="mono file-panel-name">login.php</span><span class="tag-staged">staged</span></div>
-                  <div class="file-panel-row-mid"><span class="check-tile"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6"><path d="m5 12 4.5 4.5L19 7"></path></svg></span><span class="mono file-panel-name">style.css</span><span class="tag-staged">staged</span></div>
-                  <div class="file-panel-row-off"><span class="plus-tile"><svg aria-hidden="true" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2.4"><path d="M12 5v14M5 12h14"></path></svg></span><span class="mono file-panel-name-off">test.php</span><span class="tag-off">not selected</span></div>
+                  <div class="file-panel-row">
+                    <span class="check-tile"
+                      ><svg
+                        aria-hidden="true"
+                        width="12"
+                        height="12"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#fff"
+                        stroke-width="2.6"
+                      >
+                        <path d="m5 12 4.5 4.5L19 7"></path></svg></span
+                    ><span class="mono file-panel-name">login.php</span
+                    ><span class="tag-staged">staged</span>
+                  </div>
+                  <div class="file-panel-row-mid">
+                    <span class="check-tile"
+                      ><svg
+                        aria-hidden="true"
+                        width="12"
+                        height="12"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#fff"
+                        stroke-width="2.6"
+                      >
+                        <path d="m5 12 4.5 4.5L19 7"></path></svg></span
+                    ><span class="mono file-panel-name">style.css</span
+                    ><span class="tag-staged">staged</span>
+                  </div>
+                  <div class="file-panel-row-off">
+                    <span class="plus-tile"
+                      ><svg
+                        aria-hidden="true"
+                        width="11"
+                        height="11"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#94a3b8"
+                        stroke-width="2.4"
+                      >
+                        <path d="M12 5v14M5 12h14"></path></svg></span
+                    ><span class="mono file-panel-name-off">test.php</span
+                    ><span class="tag-off">not selected</span>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="flow-arrow"><svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#a8b4c4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></div>
+            <div class="flow-arrow">
+              <svg
+                aria-hidden="true"
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#a8b4c4"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6"></path>
+              </svg>
+            </div>
             <!-- commit -->
             <div class="compare-card">
               <div class="step-head">
-                <span class="step-icon"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.7"><circle cx="12" cy="12" r="3"></circle><line x1="3" x2="9" y1="12" y2="12"></line><line x1="15" x2="21" y1="12" y2="12"></line></svg></span>
+                <span class="step-icon"
+                  ><svg
+                    aria-hidden="true"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#533afd"
+                    stroke-width="1.7"
+                  >
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <line x1="3" x2="9" y1="12" y2="12"></line>
+                    <line x1="15" x2="21" y1="12" y2="12"></line></svg
+                ></span>
                 <div>
                   <div class="step-kicker">Step 2 · Commit</div>
                   <div class="step-title">Close the bag, add a label</div>
                 </div>
               </div>
               <div class="step-desc-wrap">
-                <div class="step-desc">You save a snapshot of the selected files — with a message describing what you did.</div>
+                <div class="step-desc">
+                  You save a snapshot of the selected files — with a message describing what you
+                  did.
+                </div>
               </div>
               <div class="step-demo">
                 <div class="commit-box">
                   <div class="commit-label">COMMIT MESSAGE</div>
                   <div class="commit-input">Added login page</div>
                   <div class="commit-actions">
-                    <h3 class="commit-btn"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="m5 12 4.5 4.5L19 7"></path></svg>Commit</h3>
+                    <h3 class="commit-btn">
+                      <svg
+                        aria-hidden="true"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#fff"
+                        stroke-width="2.4"
+                      >
+                        <path d="m5 12 4.5 4.5L19 7"></path></svg
+                      >Commit
+                    </h3>
                     <span class="hint">saves 2 files locally</span>
                   </div>
                 </div>
@@ -276,8 +772,24 @@
           </div>
           <!-- why stage -->
           <div class="callout-info">
-            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.8" class="callout-icon"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5M12 16h.01"></path></svg>
-            <p class="callout-info-text"><b class="strong-ink">Why two steps?</b> You might have changed five files but only want to save the two that belong together right now. With stage you choose exactly what to include — so that every commit is a logical, understandable change.</p>
+            <svg
+              aria-hidden="true"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#533afd"
+              stroke-width="1.8"
+              class="callout-icon"
+            >
+              <circle cx="12" cy="12" r="9"></circle>
+              <path d="M12 8v5M12 16h.01"></path>
+            </svg>
+            <p class="callout-info-text">
+              <b class="strong-ink">Why two steps?</b> You might have changed five files but only
+              want to save the two that belong together right now. With stage you choose exactly
+              what to include — so that every commit is a logical, understandable change.
+            </p>
           </div>
         </section>
         <section class="section" aria-labelledby="sec-4">
@@ -286,33 +798,142 @@
             <div class="section-kicker">The order</div>
           </div>
           <h2 class="section-title" id="sec-4">Three steps, always in the same order</h2>
-          <p class="section-lede-narrow">Stage and commit happen <b class="strong-ink">locally</b> on your machine. Push is what shares the work with the group on GitHub.</p>
+          <p class="section-lede-narrow">
+            Stage and commit happen <b class="strong-ink">locally</b> on your machine. Push is what
+            shares the work with the group on GitHub.
+          </p>
           <div class="step-row">
             <!-- stage -->
             <div class="step-card">
-              <div class="step-card-head"><span class="num step-num">1</span><span class="step-card-icon"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.8"><path d="M12 5v14M5 12h14"></path></svg></span></div>
+              <div class="step-card-head">
+                <span class="num step-num">1</span
+                ><span class="step-card-icon"
+                  ><svg
+                    aria-hidden="true"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#533afd"
+                    stroke-width="1.8"
+                  >
+                    <path d="M12 5v14M5 12h14"></path></svg
+                ></span>
+              </div>
               <h3 class="step-card-title">Stage</h3>
-              <div class="step-card-desc">Click <b class="strong-ink">+</b> on the files you want to save.</div>
+              <div class="step-card-desc">
+                Click <b class="strong-ink">+</b> on the files you want to save.
+              </div>
             </div>
-            <div class="flow-arrow"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c3ccd8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></div>
+            <div class="flow-arrow">
+              <svg
+                aria-hidden="true"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#c3ccd8"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6"></path>
+              </svg>
+            </div>
             <!-- commit -->
             <div class="step-card">
-              <div class="step-card-head"><span class="num step-num">2</span><span class="step-card-icon"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.7"><circle cx="12" cy="12" r="3"></circle><line x1="3" x2="9" y1="12" y2="12"></line><line x1="15" x2="21" y1="12" y2="12"></line></svg></span></div>
+              <div class="step-card-head">
+                <span class="num step-num">2</span
+                ><span class="step-card-icon"
+                  ><svg
+                    aria-hidden="true"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#533afd"
+                    stroke-width="1.7"
+                  >
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <line x1="3" x2="9" y1="12" y2="12"></line>
+                    <line x1="15" x2="21" y1="12" y2="12"></line></svg
+                ></span>
+              </div>
               <h3 class="step-card-title">Commit</h3>
-              <div class="step-card-desc">Write a message, click <b class="strong-ink">✓</b>. Saved locally.</div>
+              <div class="step-card-desc">
+                Write a message, click <b class="strong-ink">✓</b>. Saved locally.
+              </div>
             </div>
-            <div class="flow-arrow"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c3ccd8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></div>
+            <div class="flow-arrow">
+              <svg
+                aria-hidden="true"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#c3ccd8"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6"></path>
+              </svg>
+            </div>
             <!-- push -->
             <div class="step-card-dark">
-              <div class="step-card-head"><span class="num step-num-dark">3</span><span class="step-card-icon-dark"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a5a1ff" stroke-width="1.7"><path d="M12 21V9M7 13l5-5 5 5"></path><path d="M5 4h14"></path></svg></span></div>
+              <div class="step-card-head">
+                <span class="num step-num-dark">3</span
+                ><span class="step-card-icon-dark"
+                  ><svg
+                    aria-hidden="true"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#a5a1ff"
+                    stroke-width="1.7"
+                  >
+                    <path d="M12 21V9M7 13l5-5 5 5"></path>
+                    <path d="M5 4h14"></path></svg
+                ></span>
+              </div>
               <h3 class="step-card-title-dark">Push</h3>
-              <div class="step-card-desc-dark">Click <b class="strong-on-dark">Sync</b> — shares with the group on GitHub.</div>
+              <div class="step-card-desc-dark">
+                Click <b class="strong-on-dark">Sync</b> — shares with the group on GitHub.
+              </div>
             </div>
           </div>
           <!-- lokal / github brackets -->
           <div class="scope-row">
-            <div class="scope-local"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="1.7"><rect x="3" y="4" width="18" height="12" rx="2"></rect><path d="M2 20h20"></path></svg><span class="scope-label">Local, on your machine</span></div>
-            <div class="scope-remote"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#7b78c9" stroke-width="1.7"><path d="M17.5 19a4.5 4.5 0 0 0 0-9 6 6 0 0 0-11.5 2A3.5 3.5 0 0 0 6 19z"></path></svg><span class="scope-label-remote">GitHub</span></div>
+            <div class="scope-local">
+              <svg
+                aria-hidden="true"
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#94a3b8"
+                stroke-width="1.7"
+              >
+                <rect x="3" y="4" width="18" height="12" rx="2"></rect>
+                <path d="M2 20h20"></path></svg
+              ><span class="scope-label">Local, on your machine</span>
+            </div>
+            <div class="scope-remote">
+              <svg
+                aria-hidden="true"
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#7b78c9"
+                stroke-width="1.7"
+              >
+                <path
+                  d="M17.5 19a4.5 4.5 0 0 0 0-9 6 6 0 0 0-11.5 2A3.5 3.5 0 0 0 6 19z"
+                ></path></svg
+              ><span class="scope-label-remote">GitHub</span>
+            </div>
           </div>
         </section>
         <section class="section" aria-labelledby="sec-5">
@@ -321,33 +942,107 @@
             <div class="section-kicker">Branches</div>
           </div>
           <h2 class="section-title-tight" id="sec-5">Your own workspace, separate from main</h2>
-          <p class="section-lede-tight">A branch is a copy of the project where you can work freely without affecting others' code. When you are done, your branch is merged with <span class="mono code-md">main</span> via a Pull Request.</p>
-          <div class="branch-card"><svg role="img" aria-label="Diagram: a separate branch is created from main, receives two commits, then is merged back into main via a pull request." viewBox="0 0 680 172" class="branch-diagram">
-        <!-- main line -->
-        <path d="M32 50 H648" fill="none" stroke="#1c1e54" stroke-width="2.5"></path>
-        <!-- branch curve out and back -->
-        <path d="M188 50 C230 50 230 122 272 122 H452 C494 122 494 50 536 50" fill="none" stroke="#533afd" stroke-width="2.5"></path>
-        <!-- main dots -->
-        <circle cx="32" cy="50" r="7.5" fill="#1c1e54"></circle>
-        <circle cx="188" cy="50" r="7.5" fill="#1c1e54"></circle>
-        <circle cx="536" cy="50" r="7.5" fill="#1c1e54"></circle>
-        <circle cx="648" cy="50" r="7.5" fill="#1c1e54"></circle>
-        <!-- branch commit dots -->
-        <circle cx="312" cy="122" r="7.5" fill="#533afd"></circle>
-        <circle cx="412" cy="122" r="7.5" fill="#533afd"></circle>
-        <!-- labels -->
-        <text x="32" y="30" fill="#8a97a8" font-size="12.5" font-weight="600" text-anchor="middle" class="mono">main</text>
-        <text x="188" y="34" fill="#64748d" font-size="11.5" text-anchor="middle" font-weight="600">1. create branch</text>
-        <text x="312" y="108" fill="#94a3b8" font-size="11" text-anchor="middle">2. commit</text>
-        <text x="412" y="108" fill="#94a3b8" font-size="11" text-anchor="middle">3. commit</text>
-        <text x="362" y="149" fill="#533afd" font-size="12.5" font-weight="600" text-anchor="middle" class="mono">contact</text>
-        <text x="536" y="34" fill="#1F8A5B" font-size="11.5" font-weight="600" text-anchor="middle">4. merge (via PR)</text>
-      </svg></div>
+          <p class="section-lede-tight">
+            A branch is a copy of the project where you can work freely without affecting others'
+            code. When you are done, your branch is merged with
+            <span class="mono code-md">main</span> via a Pull Request.
+          </p>
+          <div class="branch-card">
+            <svg
+              role="img"
+              aria-label="Diagram: a separate branch is created from main, receives two commits, then is merged back into main via a pull request."
+              viewBox="0 0 680 172"
+              class="branch-diagram"
+            >
+              <!-- main line -->
+              <path d="M32 50 H648" fill="none" stroke="#1c1e54" stroke-width="2.5"></path>
+              <!-- branch curve out and back -->
+              <path
+                d="M188 50 C230 50 230 122 272 122 H452 C494 122 494 50 536 50"
+                fill="none"
+                stroke="#533afd"
+                stroke-width="2.5"
+              ></path>
+              <!-- main dots -->
+              <circle cx="32" cy="50" r="7.5" fill="#1c1e54"></circle>
+              <circle cx="188" cy="50" r="7.5" fill="#1c1e54"></circle>
+              <circle cx="536" cy="50" r="7.5" fill="#1c1e54"></circle>
+              <circle cx="648" cy="50" r="7.5" fill="#1c1e54"></circle>
+              <!-- branch commit dots -->
+              <circle cx="312" cy="122" r="7.5" fill="#533afd"></circle>
+              <circle cx="412" cy="122" r="7.5" fill="#533afd"></circle>
+              <!-- labels -->
+              <text
+                x="32"
+                y="30"
+                fill="#8a97a8"
+                font-size="12.5"
+                font-weight="600"
+                text-anchor="middle"
+                class="mono"
+              >
+                main
+              </text>
+              <text
+                x="188"
+                y="34"
+                fill="#64748d"
+                font-size="11.5"
+                text-anchor="middle"
+                font-weight="600"
+              >
+                1. create branch
+              </text>
+              <text x="312" y="108" fill="#94a3b8" font-size="11" text-anchor="middle">
+                2. commit
+              </text>
+              <text x="412" y="108" fill="#94a3b8" font-size="11" text-anchor="middle">
+                3. commit
+              </text>
+              <text
+                x="362"
+                y="149"
+                fill="#533afd"
+                font-size="12.5"
+                font-weight="600"
+                text-anchor="middle"
+                class="mono"
+              >
+                contact
+              </text>
+              <text
+                x="536"
+                y="34"
+                fill="#1F8A5B"
+                font-size="11.5"
+                font-weight="600"
+                text-anchor="middle"
+              >
+                4. merge (via PR)
+              </text>
+            </svg>
+          </div>
           <div class="branch-aside">
             <!-- golden rule -->
             <div class="golden-rule-inline">
-              <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#9b6829" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="rule-icon"><path d="m12 2 2.4 7.4H22l-6 4.5 2.3 7.1-6.3-4.6L5.7 21 8 14 2 9.4h7.6z"></path></svg>
-              <p class="rule-text-inline"><b class="rule-label">Golden rule:</b> never work directly in <span class="mono rule-code">main</span>. Always create a branch first.</p>
+              <svg
+                aria-hidden="true"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#9b6829"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="rule-icon"
+              >
+                <path d="m12 2 2.4 7.4H22l-6 4.5 2.3 7.1-6.3-4.6L5.7 21 8 14 2 9.4h7.6z"></path>
+              </svg>
+              <p class="rule-text-inline">
+                <b class="rule-label">Golden rule:</b> never work directly in
+                <span class="mono rule-code">main</span>. Always create a branch first.
+              </p>
             </div>
             <!-- branch names -->
             <div class="names-panel">
@@ -367,33 +1062,92 @@
             <div class="section-kicker">Sync</div>
           </div>
           <h2 class="section-title" id="sec-6">Pull first, push after</h2>
-          <p class="section-lede"><b class="strong-ink">Pull</b> pulls others' changes from GitHub to you. <b class="strong-ink">Push</b> pushes your commits up. You always sync in both directions.</p>
+          <p class="section-lede">
+            <b class="strong-ink">Pull</b> pulls others' changes from GitHub to you.
+            <b class="strong-ink">Push</b> pushes your commits up. You always sync in both
+            directions.
+          </p>
           <div class="sync-card">
             <div class="sync-row">
               <!-- github -->
               <div class="sync-remote">
-                <span class="sync-icon-dark"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a5a1ff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 0 0 0-9 6 6 0 0 0-11.5 2A3.5 3.5 0 0 0 6 19z"></path></svg></span>
+                <span class="sync-icon-dark"
+                  ><svg
+                    aria-hidden="true"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#a5a1ff"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M17.5 19a4.5 4.5 0 0 0 0-9 6 6 0 0 0-11.5 2A3.5 3.5 0 0 0 6 19z"
+                    ></path></svg
+                ></span>
                 <div>
                   <h3 class="sync-remote-title">GitHub</h3>
-                  <div class="sync-remote-sub"><span class="mono code-xs">main</span> on the server · shared</div>
+                  <div class="sync-remote-sub">
+                    <span class="mono code-xs">main</span> on the server · shared
+                  </div>
                 </div>
               </div>
               <!-- arrows -->
               <div class="sync-arrows">
                 <div class="sync-arrow-row">
-                  <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5"></path><path d="M5 21h14"></path></svg>
+                  <svg
+                    aria-hidden="true"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#533afd"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M12 3v12M7 11l5 5 5-5"></path>
+                    <path d="M5 21h14"></path>
+                  </svg>
                   <h3 class="sync-arrow-label">Pull</h3>
                   <span class="hint">pull</span>
                 </div>
                 <div class="sync-arrow-row">
-                  <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V9M7 13l5-5 5 5"></path><path d="M5 5h14"></path></svg>
+                  <svg
+                    aria-hidden="true"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#533afd"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M12 21V9M7 13l5-5 5 5"></path>
+                    <path d="M5 5h14"></path>
+                  </svg>
                   <h3 class="sync-arrow-label">Push</h3>
                   <span class="hint">push</span>
                 </div>
               </div>
               <!-- local -->
               <div class="sync-local">
-                <span class="sync-icon"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.6"><rect x="3" y="4" width="18" height="12" rx="2"></rect><path d="M2 20h20"></path></svg></span>
+                <span class="sync-icon"
+                  ><svg
+                    aria-hidden="true"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#533afd"
+                    stroke-width="1.6"
+                  >
+                    <rect x="3" y="4" width="18" height="12" rx="2"></rect>
+                    <path d="M2 20h20"></path></svg
+                ></span>
                 <div>
                   <h3 class="sync-local-title">Your Codespace</h3>
                   <div class="sync-local-sub">your copy · local</div>
@@ -402,8 +1156,23 @@
             </div>
           </div>
           <div class="golden-rule">
-            <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9b6829" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="rule-icon"><path d="m12 2 2.4 7.4H22l-6 4.5 2.3 7.1-6.3-4.6L5.7 21 8 14 2 9.4h7.6z"></path></svg>
-            <p class="rule-text"><b class="rule-label">Golden rule:</b> pull before you start, push when you are done.</p>
+            <svg
+              aria-hidden="true"
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#9b6829"
+              stroke-width="1.9"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="rule-icon"
+            >
+              <path d="m12 2 2.4 7.4H22l-6 4.5 2.3 7.1-6.3-4.6L5.7 21 8 14 2 9.4h7.6z"></path>
+            </svg>
+            <p class="rule-text">
+              <b class="rule-label">Golden rule:</b> pull before you start, push when you are done.
+            </p>
           </div>
         </section>
         <section class="section" aria-labelledby="sec-7">
@@ -412,30 +1181,130 @@
             <div class="section-kicker">Review</div>
           </div>
           <h2 class="section-title-wide" id="sec-7">No code enters main unreviewed</h2>
-          <p class="section-lede-tight">A Pull Request lets the group read your code before it is merged. Another person reviews — the only rule is that you don't review your own code.</p>
+          <p class="section-lede-tight">
+            A Pull Request lets the group read your code before it is merged. Another person reviews
+            — the only rule is that you don't review your own code.
+          </p>
           <div class="review-card">
             <!-- flow row -->
             <div class="row-center">
               <div class="review-step">
-                <div class="review-step-icon"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><line x1="6" x2="6" y1="3" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg></div>
+                <div class="review-step-icon">
+                  <svg
+                    aria-hidden="true"
+                    width="26"
+                    height="26"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#533afd"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="6" x2="6" y1="3" y2="15"></line>
+                    <circle cx="18" cy="6" r="3"></circle>
+                    <circle cx="6" cy="18" r="3"></circle>
+                    <path d="M18 9a9 9 0 0 1-9 9"></path>
+                  </svg>
+                </div>
                 <h3 class="review-step-title">Work in your branch</h3>
                 <div class="review-step-sub">You (author)</div>
               </div>
-              <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#cdd5e0" stroke-width="1.7" class="rule-icon"><path d="M4 12h13M12 6l6 6-6 6"></path></svg>
+              <svg
+                aria-hidden="true"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#cdd5e0"
+                stroke-width="1.7"
+                class="rule-icon"
+              >
+                <path d="M4 12h13M12 6l6 6-6 6"></path>
+              </svg>
               <div class="review-step">
-                <div class="review-step-icon"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V9M7 13l5-5 5 5"></path><path d="M5 5h14"></path></svg></div>
+                <div class="review-step-icon">
+                  <svg
+                    aria-hidden="true"
+                    width="26"
+                    height="26"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#533afd"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M12 21V9M7 13l5-5 5 5"></path>
+                    <path d="M5 5h14"></path>
+                  </svg>
+                </div>
                 <h3 class="review-step-title">Push to GitHub</h3>
                 <div class="review-step-sub">your branch is uploaded</div>
               </div>
-              <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#cdd5e0" stroke-width="1.7" class="rule-icon"><path d="M4 12h13M12 6l6 6-6 6"></path></svg>
+              <svg
+                aria-hidden="true"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#cdd5e0"
+                stroke-width="1.7"
+                class="rule-icon"
+              >
+                <path d="M4 12h13M12 6l6 6-6 6"></path>
+              </svg>
               <div class="review-step">
-                <div class="review-step-icon"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M6 9v6"></path><path d="M13 6h3a2 2 0 0 1 2 2v7"></path></svg></div>
+                <div class="review-step-icon">
+                  <svg
+                    aria-hidden="true"
+                    width="26"
+                    height="26"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#533afd"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="6" cy="6" r="3"></circle>
+                    <circle cx="6" cy="18" r="3"></circle>
+                    <path d="M6 9v6"></path>
+                    <path d="M13 6h3a2 2 0 0 1 2 2v7"></path>
+                  </svg>
+                </div>
                 <h3 class="review-step-title">Create Pull Request</h3>
                 <div class="review-step-sub">describe what you did</div>
               </div>
-              <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#cdd5e0" stroke-width="1.7" class="rule-icon"><path d="M4 12h13M12 6l6 6-6 6"></path></svg>
+              <svg
+                aria-hidden="true"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#cdd5e0"
+                stroke-width="1.7"
+                class="rule-icon"
+              >
+                <path d="M4 12h13M12 6l6 6-6 6"></path>
+              </svg>
               <div class="review-step">
-                <div class="review-step-icon"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1F8A5B" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"></path><circle cx="12" cy="12" r="3"></circle></svg></div>
+                <div class="review-step-icon">
+                  <svg
+                    aria-hidden="true"
+                    width="26"
+                    height="26"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#1F8A5B"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                </div>
                 <h3 class="review-step-title">Reviewer reads</h3>
                 <div class="review-step-sub">another group member</div>
               </div>
@@ -445,16 +1314,64 @@
               <div class="review-decision-label">The reviewer's decision</div>
               <ul class="decision-grid">
                 <li class="decision-approve">
-                  <div class="decision-head"><span class="decision-icon-success"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6"><path d="m5 12 4.5 4.5L19 7"></path></svg></span><span class="decision-title-success">Approve</span></div>
-                  <div class="decision-text-success">Everything looks good → the PR can be merged into main.</div>
+                  <div class="decision-head">
+                    <span class="decision-icon-success"
+                      ><svg
+                        aria-hidden="true"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#fff"
+                        stroke-width="2.6"
+                      >
+                        <path d="m5 12 4.5 4.5L19 7"></path></svg></span
+                    ><span class="decision-title-success">Approve</span>
+                  </div>
+                  <div class="decision-text-success">
+                    Everything looks good → the PR can be merged into main.
+                  </div>
                 </li>
                 <li class="decision-comment">
-                  <div class="decision-head"><span class="decision-icon-brand"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></span><span class="decision-title-brand">Comment</span></div>
-                  <div class="decision-text-brand">Questions or suggestions → discuss, no blocking.</div>
+                  <div class="decision-head">
+                    <span class="decision-icon-brand"
+                      ><svg
+                        aria-hidden="true"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#fff"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                        ></path></svg></span
+                    ><span class="decision-title-brand">Comment</span>
+                  </div>
+                  <div class="decision-text-brand">
+                    Questions or suggestions → discuss, no blocking.
+                  </div>
                 </li>
                 <li class="decision-changes">
-                  <div class="decision-head"><span class="decision-icon-warn"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2"><path d="M3 12a9 9 0 1 0 9-9 9 9 0 0 0-7 3.5"></path><path d="M3 3v4h4"></path></svg></span><span class="decision-title-warn">Request changes</span></div>
-                  <div class="decision-text-warn">Something needs fixing → the author changes and pushes again.</div>
+                  <div class="decision-head">
+                    <span class="decision-icon-warn"
+                      ><svg
+                        aria-hidden="true"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#fff"
+                        stroke-width="2.2"
+                      >
+                        <path d="M3 12a9 9 0 1 0 9-9 9 9 0 0 0-7 3.5"></path>
+                        <path d="M3 3v4h4"></path></svg></span
+                    ><span class="decision-title-warn">Request changes</span>
+                  </div>
+                  <div class="decision-text-warn">
+                    Something needs fixing → the author changes and pushes again.
+                  </div>
                 </li>
               </ul>
             </div>
@@ -466,11 +1383,32 @@
             <div class="section-kicker">When it clashes</div>
           </div>
           <h2 class="section-title-tight" id="sec-8">When two people change the same line</h2>
-          <p class="section-lede-tight">A conflict happens when two people have changed exactly the same line. Git doesn't know which version should win — so you have to choose. Usually the answer is to <b class="strong-ink">combine both</b>.</p>
+          <p class="section-lede-tight">
+            A conflict happens when two people have changed exactly the same line. Git doesn't know
+            which version should win — so you have to choose. Usually the answer is to
+            <b class="strong-ink">combine both</b>.
+          </p>
           <div class="conflict-row">
             <!-- the conflict -->
             <div class="conflict-card">
-              <div class="card-head"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea2261" stroke-width="1.8"><path d="M10.3 3.9 2.4 18a2 2 0 0 0 1.7 3h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path><path d="M12 9v4M12 17h.01"></path></svg> <span class="conflict-kicker">Conflict in</span> <span class="mono conflict-file">header.php</span></div>
+              <div class="card-head">
+                <svg
+                  aria-hidden="true"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#ea2261"
+                  stroke-width="1.8"
+                >
+                  <path
+                    d="M10.3 3.9 2.4 18a2 2 0 0 0 1.7 3h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"
+                  ></path>
+                  <path d="M12 9v4M12 17h.01"></path>
+                </svg>
+                <span class="conflict-kicker">Conflict in</span>
+                <span class="mono conflict-file">header.php</span>
+              </div>
               <div class="mono conflict-code">
                 <div class="text-danger">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD (Erik)</div>
                 <div class="conflict-ours">&lt;a href="products.php"&gt;Products&lt;/a&gt;</div>
@@ -479,17 +1417,69 @@
                 <div class="conflict-theirs-label">&gt;&gt;&gt;&gt;&gt;&gt;&gt; login (Lisa)</div>
               </div>
             </div>
-            <div class="flow-arrow"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#a8b4c4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></div>
+            <div class="flow-arrow">
+              <svg
+                aria-hidden="true"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#a8b4c4"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6"></path>
+              </svg>
+            </div>
             <!-- resolution -->
             <div class="resolve-card">
-              <div class="card-head"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1F8A5B" stroke-width="2"><path d="m5 12 4.5 4.5L19 7"></path></svg> <span class="resolve-kicker">Solution · keep both</span></div>
-              <div class="mono resolve-code">&lt;nav&gt;<br/> <span class="resolve-line">  &lt;a href="products.php"&gt;Products&lt;/a&gt;</span><br/> <span class="resolve-line">  &lt;a href="contact.php"&gt;Contact&lt;/a&gt;</span><br/> &lt;/nav&gt;</div>
-              <div class="resolve-note">Remove <span class="mono code-2xs">&lt;&lt;&lt;</span>, <span class="mono code-2xs">===</span> and <span class="mono code-2xs">&gt;&gt;&gt;</span>, save, and commit.</div>
+              <div class="card-head">
+                <svg
+                  aria-hidden="true"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#1F8A5B"
+                  stroke-width="2"
+                >
+                  <path d="m5 12 4.5 4.5L19 7"></path>
+                </svg>
+                <span class="resolve-kicker">Solution · keep both</span>
+              </div>
+              <div class="mono resolve-code">
+                &lt;nav&gt;<br />
+                <span class="resolve-line">  &lt;a href="products.php"&gt;Products&lt;/a&gt;</span
+                ><br />
+                <span class="resolve-line">  &lt;a href="contact.php"&gt;Contact&lt;/a&gt;</span
+                ><br />
+                &lt;/nav&gt;
+              </div>
+              <div class="resolve-note">
+                Remove <span class="mono code-2xs">&lt;&lt;&lt;</span>,
+                <span class="mono code-2xs">===</span> and
+                <span class="mono code-2xs">&gt;&gt;&gt;</span>, save, and commit.
+              </div>
             </div>
           </div>
           <div class="callout-muted">
-            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#64748d" stroke-width="1.8" class="rule-icon"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"></path></svg>
-            <p class="callout-muted-text"><b class="strong-ink">Avoid conflicts:</b> talk within the group about who works on which file — and pull often.</p>
+            <svg
+              aria-hidden="true"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#64748d"
+              stroke-width="1.8"
+              class="rule-icon"
+            >
+              <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"></path>
+            </svg>
+            <p class="callout-muted-text">
+              <b class="strong-ink">Avoid conflicts:</b> talk within the group about who works on
+              which file — and pull often.
+            </p>
           </div>
         </section>
         <section class="closing" aria-labelledby="sec-9">
@@ -498,26 +1488,155 @@
             <div class="checklist-card">
               <div class="checklist-label">Do once · project start</div>
               <ul class="checklist-list">
-                <li class="list-row"><span class="checklist-check"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="2.4"><path d="m5 12 4.5 4.5L19 7"></path></svg></span><span class="checklist-item">One person creates the repo from a template — <a href="https://github.com/everydaydesign/website" target="_blank" rel="noopener">website</a> for HTML/CSS, or <a href="https://github.com/everydaydesign/web-app" target="_blank" rel="noopener">web-app</a> for PHP/MySQL</span></li>
-                <li class="list-row"><span class="checklist-check"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="2.4"><path d="m5 12 4.5 4.5L19 7"></path></svg></span><span class="checklist-item">Invite the group as collaborators</span></li>
-                <li class="list-row"><span class="checklist-check"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="2.4"><path d="m5 12 4.5 4.5L19 7"></path></svg></span><span class="checklist-item">Everyone accepts and creates their Codespace</span></li>
-                <li class="list-row"><span class="checklist-check"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="2.4"><path d="m5 12 4.5 4.5L19 7"></path></svg></span><span class="checklist-item">Decide who does what</span></li>
+                <li class="list-row">
+                  <span class="checklist-check"
+                    ><svg
+                      aria-hidden="true"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#533afd"
+                      stroke-width="2.4"
+                    >
+                      <path d="m5 12 4.5 4.5L19 7"></path></svg></span
+                  ><span class="checklist-item"
+                    >One person creates the repo from a template —
+                    <a
+                      href="https://github.com/everydaydesign/website"
+                      target="_blank"
+                      rel="noopener"
+                      >website</a
+                    >
+                    for HTML/CSS, or
+                    <a
+                      href="https://github.com/everydaydesign/web-app"
+                      target="_blank"
+                      rel="noopener"
+                      >web-app</a
+                    >
+                    for PHP/MySQL</span
+                  >
+                </li>
+                <li class="list-row">
+                  <span class="checklist-check"
+                    ><svg
+                      aria-hidden="true"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#533afd"
+                      stroke-width="2.4"
+                    >
+                      <path d="m5 12 4.5 4.5L19 7"></path></svg></span
+                  ><span class="checklist-item">Invite the group as collaborators</span>
+                </li>
+                <li class="list-row">
+                  <span class="checklist-check"
+                    ><svg
+                      aria-hidden="true"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#533afd"
+                      stroke-width="2.4"
+                    >
+                      <path d="m5 12 4.5 4.5L19 7"></path></svg></span
+                  ><span class="checklist-item">Everyone accepts and creates their Codespace</span>
+                </li>
+                <li class="list-row">
+                  <span class="checklist-check"
+                    ><svg
+                      aria-hidden="true"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#533afd"
+                      stroke-width="2.4"
+                    >
+                      <path d="m5 12 4.5 4.5L19 7"></path></svg></span
+                  ><span class="checklist-item">Decide who does what</span>
+                </li>
               </ul>
             </div>
             <div class="checklist-card-dark">
               <div class="checklist-label-dark">Do every work session</div>
               <ul class="checklist-list">
-                <li class="list-row"><span class="checklist-check-dark"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#a5a1ff" stroke-width="2.4"><path d="m5 12 4.5 4.5L19 7"></path></svg></span><span class="checklist-item-dark">Switch to main + Pull</span></li>
-                <li class="list-row"><span class="checklist-check-dark"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#a5a1ff" stroke-width="2.4"><path d="m5 12 4.5 4.5L19 7"></path></svg></span><span class="checklist-item-dark">Create / switch to your branch</span></li>
-                <li class="list-row"><span class="checklist-check-dark"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#a5a1ff" stroke-width="2.4"><path d="m5 12 4.5 4.5L19 7"></path></svg></span><span class="checklist-item-dark">Stage → Commit → Push</span></li>
-                <li class="list-row"><span class="checklist-check-dark"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#a5a1ff" stroke-width="2.4"><path d="m5 12 4.5 4.5L19 7"></path></svg></span><span class="checklist-item-dark">Create PR + ask someone to review</span></li>
+                <li class="list-row">
+                  <span class="checklist-check-dark"
+                    ><svg
+                      aria-hidden="true"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#a5a1ff"
+                      stroke-width="2.4"
+                    >
+                      <path d="m5 12 4.5 4.5L19 7"></path></svg></span
+                  ><span class="checklist-item-dark">Switch to main + Pull</span>
+                </li>
+                <li class="list-row">
+                  <span class="checklist-check-dark"
+                    ><svg
+                      aria-hidden="true"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#a5a1ff"
+                      stroke-width="2.4"
+                    >
+                      <path d="m5 12 4.5 4.5L19 7"></path></svg></span
+                  ><span class="checklist-item-dark">Create / switch to your branch</span>
+                </li>
+                <li class="list-row">
+                  <span class="checklist-check-dark"
+                    ><svg
+                      aria-hidden="true"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#a5a1ff"
+                      stroke-width="2.4"
+                    >
+                      <path d="m5 12 4.5 4.5L19 7"></path></svg></span
+                  ><span class="checklist-item-dark">Stage → Commit → Push</span>
+                </li>
+                <li class="list-row">
+                  <span class="checklist-check-dark"
+                    ><svg
+                      aria-hidden="true"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#a5a1ff"
+                      stroke-width="2.4"
+                    >
+                      <path d="m5 12 4.5 4.5L19 7"></path></svg></span
+                  ><span class="checklist-item-dark">Create PR + ask someone to review</span>
+                </li>
               </ul>
             </div>
           </div>
-          <p class="closing-statement">In short: <b class="strong-plain">pull, branch, work, commit, push, PR, review, merge.</b> Follow the circle and the whole group works in the same project — without anyone overwriting anyone else.</p>
+          <p class="closing-statement">
+            In short:
+            <b class="strong-plain">pull, branch, work, commit, push, PR, review, merge.</b> Follow
+            the circle and the whole group works in the same project — without anyone overwriting
+            anyone else.
+          </p>
         </section>
       </main>
-      <footer class="site-footer">© 2026 Montathar Faraon · Licensed under the <a href="https://github.com/everydaydesign/github-guide/blob/main/LICENSE">MIT License</a> · Last updated 2026-07-07</footer>
+      <footer class="site-footer">
+        © 2026 Montathar Faraon · Licensed under the
+        <a href="https://github.com/everydaydesign/github-guide/blob/main/LICENSE">MIT License</a> ·
+        Last updated 2026-07-07
+      </footer>
       <!-- HERO -->
       <!-- hero strip: kaos → ordning -->
       <!-- ===== SCENE 01 — Vad är Git ===== -->

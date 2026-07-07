@@ -10,7 +10,7 @@
     "prepare": "husky"
   },
   "lint-staged": {
-    "*.{css,js,json,md}": "prettier --write"
+    "*.{css,js,json,md,html}": "prettier --write"
   },
   "devDependencies": {
     "husky": "^9.1.7",
