@@ -124,7 +124,7 @@ Git saves "snapshots" of your code so you can view history and undo changes. Ins
 
 One person in the group creates the project:
 
-1. Go to the template repo [here](https://github.com/everydaydesign/web-app) (Skip this step if you are not working with PHP/MySQL, instead create a new repository)
+1. Go to the template repo for your project — [website](https://github.com/everydaydesign/website) for HTML/CSS, or [web-app](https://github.com/everydaydesign/web-app) for PHP/MySQL
 2. Click **"Use this template"** → **"Create a new repository"**
 3. Choose a name, e.g., `group1-design-project`
 4. Select **Private** (if you do not want others to see it)
