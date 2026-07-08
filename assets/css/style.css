@@ -412,12 +412,10 @@ h3 {
 }
 
 .topbar-icon:hover {
-  background: rgba(148, 160, 179, 0.18);
   color: #fff;
 }
 
 .topbar-menu[open] > .topbar-icon {
-  background: rgba(148, 160, 179, 0.26);
   color: #fff;
 }
 
