@@ -312,6 +312,13 @@ h3 {
 
 /* Plain nav link in the bar (Home). Dark overrides beat the global dark <a>
    rule so bar links stay light on the always-navy bar. */
+/* Tight group of primary nav links (Home / Visual guide / Text guide) */
+.topbar-links {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
 .topbar-link {
   display: flex;
   align-items: center;
