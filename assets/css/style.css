@@ -404,8 +404,8 @@ h3 {
 .topbar-icon {
   display: grid;
   place-items: center;
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
   padding: 0;
   border: none;
   border-radius: 6px;
