@@ -17,7 +17,8 @@
      13. Scene 07 — Pull requests / review
      14. Scene 08 — Merge conflicts
      15. Closing checklist + footer
-     16. Language picker (landing page)
+     16. "On this page" TOC
+     17. Text guide — rendered markdown
 
    Colour:
      Theme-aware colours are CSS custom properties, defined in the :root and
@@ -189,10 +190,10 @@
 }
 
 /* Lighten links in dark mode — content areas only, not the nav/TOC chrome */
-:root[data-theme="dark"] :where(.page, .picker) a {
+:root[data-theme="dark"] :where(.page) a {
   color: #8b7bff;
 }
-:root[data-theme="dark"] :where(.page, .picker) a:hover {
+:root[data-theme="dark"] :where(.page) a:hover {
   color: #a99bff;
 }
 
@@ -2144,152 +2145,7 @@ h3 {
 }
 
 /* -----------------------------------------------------------------------------
-   16. Language picker (root landing page — index.html)
-   -------------------------------------------------------------------------- */
-.picker {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 34px;
-  padding: 48px 40px;
-  text-align: center;
-}
-
-/* Copyright pinned to the bottom-left, clear of the centred content */
-.picker-footer {
-  position: absolute;
-  left: 40px;
-  bottom: 24px;
-  font-size: 12px;
-  color: var(--mute-2);
-}
-
-/* Theme toggle pinned to the picker's top-right */
-.picker-theme {
-  position: absolute;
-  top: 22px;
-  right: 24px;
-  display: grid;
-  place-items: center;
-  width: 36px;
-  height: 36px;
-  padding: 0;
-  border: none;
-  background: none;
-  color: var(--mute);
-  cursor: pointer;
-}
-
-.picker-theme:hover {
-  color: var(--ink);
-}
-
-.picker-title {
-  font-size: 34px;
-  font-weight: 300;
-  letter-spacing: -1px;
-  color: var(--ink);
-  margin: 0;
-}
-
-.picker-sub {
-  font-size: 15px;
-  color: var(--mute);
-  margin: 8px 0 0;
-}
-
-.picker-langs {
-  display: flex;
-  align-items: stretch;
-  gap: 36px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.picker-divider {
-  width: 1px;
-  background: var(--divider);
-  align-self: stretch;
-}
-
-.picker-lang {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 14px;
-}
-
-.picker-lang-head {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.picker-lang-flag {
-  font-size: 26px;
-  line-height: 1;
-}
-
-.picker-lang-name {
-  font-size: 17px;
-  font-weight: 600;
-  color: var(--ink);
-}
-
-.picker-formats {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: center;
-}
-
-.picker-format {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 11px;
-  width: 172px;
-  padding: 24px 22px;
-  background: var(--surface);
-  border: 1px solid var(--hairline);
-  border-radius: 6px;
-  box-shadow:
-    0 1px 2px rgba(13, 37, 61, 0.04),
-    0 18px 40px -26px rgba(13, 37, 61, 0.24);
-  text-decoration: none;
-  transition: border-color 0.15s ease;
-}
-
-.picker-format:hover {
-  border-color: #533afd;
-}
-
-/* Round icon badge (eye / document) — a full circle */
-.picker-format-icon {
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  background: var(--surface-tile);
-  display: grid;
-  place-items: center;
-}
-
-.picker-format-label {
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--ink);
-}
-
-.picker-format-hint {
-  font-size: 12px;
-  color: var(--mute);
-}
-
-/* -----------------------------------------------------------------------------
-   17. "On this page" TOC — fixed in the right gutter on wide viewports
+   16. "On this page" TOC — fixed in the right gutter on wide viewports
    -------------------------------------------------------------------------- */
 .toc {
   display: none;
@@ -2344,7 +2200,7 @@ h3 {
 }
 
 /* -----------------------------------------------------------------------------
-   18. Text guide — rendered markdown (docs/*.md via scripts/build-text.mjs)
+   17. Text guide — rendered markdown (docs/*.md via scripts/build-text.mjs)
    -------------------------------------------------------------------------- */
 .markdown {
   max-width: 800px;
