@@ -23,6 +23,7 @@ const LANGS = {
     text: "Text-based",
     sections: "Sections",
     contents: "Contents",
+    onThisPage: "On this page",
     langLabel: "Language",
     themeLabel: "Toggle dark mode",
     license: "MIT License",
@@ -37,6 +38,7 @@ const LANGS = {
     text: "Textbaserad",
     sections: "Avsnitt",
     contents: "Innehåll",
+    onThisPage: "På denna sida",
     langLabel: "Språk",
     themeLabel: "Växla mörkt läge",
     license: "MIT-licensen",
@@ -58,18 +60,36 @@ function langMenu(cfg) {
   return sv + en;
 }
 
-// Build the "Sections" dropdown from the rendered H2s (skipping the Contents
-// heading), so the anchors match the ids the heading-id plugin produced.
-function sectionsMenu(html, cfg) {
-  const links = [...html.matchAll(/<h2 id="([^"]+)">([\s\S]*?)<\/h2>/g)]
+// Rendered H2s (skipping the Contents heading), so anchors match the ids the
+// heading-id plugin produced. Feeds both the navbar dropdown and the side TOC.
+function sectionHeadings(html, cfg) {
+  return [...html.matchAll(/<h2 id="([^"]+)">([\s\S]*?)<\/h2>/g)]
     .map((m) => ({ id: m[1], text: m[2].replace(/<[^>]+>/g, "").trim() }))
-    .filter((h) => h.text.toLowerCase() !== cfg.contents.toLowerCase())
+    .filter((h) => h.text.toLowerCase() !== cfg.contents.toLowerCase());
+}
+
+function sectionsMenu(html, cfg) {
+  const links = sectionHeadings(html, cfg)
     .map((h) => `<a href="#${h.id}">${h.text}</a>`)
     .join("");
   return `<details class="topbar-menu">
             <summary class="topbar-trigger">${cfg.sections} ${caret}</summary>
             <div class="topbar-panel">${links}</div>
           </details>`;
+}
+
+// The fixed "On this page" TOC in the right gutter (same .toc pattern as the
+// visual page; scroll-spy lives in site.js, styles in style.css).
+function tocAside(html, cfg) {
+  const links = sectionHeadings(html, cfg)
+    .map((h) => `<a href="#${h.id}">${h.text}</a>`)
+    .join("\n        ");
+  return `<aside class="toc" aria-label="${cfg.onThisPage}">
+      <div class="toc-title">${cfg.onThisPage}</div>
+      <nav class="toc-links">
+        ${links}
+      </nav>
+    </aside>`;
 }
 
 function page(lang, cfg, body) {
@@ -112,6 +132,7 @@ ${body}
         <a href="https://github.com/everydaydesign/git-guide/blob/main/LICENSE">${cfg.license}</a>
       </footer>
     </main>
+    ${tocAside(body, cfg)}
     <script src="../../../assets/js/site.js?v=${VERSION}" defer></script>
   </body>
 </html>
