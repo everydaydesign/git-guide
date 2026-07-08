@@ -28,28 +28,64 @@
       if (e.target.closest("a")) d.open = false;
     });
   });
-  // Scroll-spy: highlight the current section in the "On this page" TOC.
+  // Scroll-spy for the "On this page" TOC. Position-based (not Intersection
+  // Observer) so the last section still activates at the bottom of the page.
   var tocLinks = document.querySelectorAll(".toc-links a");
-  if (tocLinks.length && "IntersectionObserver" in window) {
-    var byId = {};
+  if (tocLinks.length) {
+    var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var sections = [];
     tocLinks.forEach(function (a) {
-      byId[a.getAttribute("href").slice(1)] = a;
+      var el = document.getElementById(a.getAttribute("href").slice(1));
+      if (el) sections.push({ link: a, el: el });
     });
-    var active = null;
-    var obs = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (e) {
-          if (!e.isIntersecting) return;
-          if (active) active.classList.remove("toc-active");
-          active = byId[e.target.id];
-          if (active) active.classList.add("toc-active");
+
+    var current = null;
+    function setActive(link) {
+      if (current === link) return;
+      if (current) current.classList.remove("toc-active");
+      current = link;
+      if (current) current.classList.add("toc-active");
+    }
+
+    function onScroll() {
+      if (!sections.length) return;
+      var doc = document.documentElement;
+      var atBottom = window.innerHeight + window.scrollY >= doc.scrollHeight - 2;
+      var pick = sections[0];
+      if (atBottom) {
+        pick = sections[sections.length - 1];
+      } else {
+        for (var i = 0; i < sections.length; i++) {
+          if (sections[i].el.getBoundingClientRect().top <= 120) pick = sections[i];
+        }
+      }
+      setActive(pick.link);
+    }
+
+    var ticking = false;
+    window.addEventListener(
+      "scroll",
+      function () {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(function () {
+          onScroll();
+          ticking = false;
         });
       },
-      { rootMargin: "-80px 0px -72% 0px", threshold: 0 },
+      { passive: true },
     );
-    Object.keys(byId).forEach(function (id) {
-      var el = document.getElementById(id);
-      if (el) obs.observe(el);
+    onScroll();
+
+    // The first link ("How Git works") jumps to the very top of the page.
+    document.querySelectorAll('a[href="#overview"]').forEach(function (a) {
+      a.addEventListener("click", function (e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+        try {
+          history.replaceState(null, "", location.pathname + location.search);
+        } catch (err) {}
+      });
     });
   }
 })();
