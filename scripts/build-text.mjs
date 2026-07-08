@@ -85,12 +85,11 @@ function page(lang, cfg, body) {
   <body>
     <nav class="topbar">
       <div class="topbar-inner">
-        <a class="topbar-brand" href="../../../" title="${cfg.home}">
+        <a class="topbar-brand" href="../" title="${cfg.title}">
           <span class="topbar-mark">${brandGlyph}</span>
           <span class="topbar-brand-text">${cfg.title}</span>
         </a>
         <div class="topbar-links">
-          <a class="topbar-link" href="../../../">${cfg.homeLabel}</a>
           <a class="topbar-link" href="../">${cfg.visual}</a>
           <a class="topbar-link" href="./" aria-current="page">${cfg.text}</a>
         </div>

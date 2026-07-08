@@ -1,171 +1,17 @@
 <!doctype html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Guide to Git</title>
-    <link rel="stylesheet" href="assets/css/style.css?v=26" />
+    <title>Guide till Git</title>
+    <!-- Swedish visual guide is the default entry; switch language/format in the navbar. -->
+    <meta http-equiv="refresh" content="0; url=languages/sv/" />
+    <link rel="canonical" href="languages/sv/" />
     <script>
-      (function () {
-        try {
-          document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
-        } catch (e) {}
-      })();
+      location.replace("languages/sv/");
     </script>
   </head>
   <body>
-    <main class="picker">
-      <button
-        type="button"
-        class="theme-toggle picker-theme"
-        data-theme-toggle
-        aria-label="Toggle dark mode"
-      >
-        <svg
-          class="icon-sun"
-          aria-hidden="true"
-          width="18"
-          height="18"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <circle cx="12" cy="12" r="4"></circle>
-          <path
-            d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"
-          ></path>
-        </svg>
-        <svg
-          class="icon-moon"
-          aria-hidden="true"
-          width="18"
-          height="18"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"></path>
-        </svg>
-      </button>
-      <div>
-        <h1 class="picker-title">Guide to Git</h1>
-        <p class="picker-sub">Choose language and format</p>
-      </div>
-
-      <div class="picker-langs">
-        <section class="picker-lang">
-          <div class="picker-lang-head">
-            <span class="picker-lang-flag">🇸🇪</span>
-            <span class="picker-lang-name" lang="sv">Svenska</span>
-          </div>
-          <div class="picker-formats">
-            <a class="picker-format" href="languages/sv/">
-              <span class="picker-format-icon"
-                ><svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="#533afd"
-                  stroke-width="1.8"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"></path>
-                  <circle cx="12" cy="12" r="3"></circle></svg
-              ></span>
-              <span class="picker-format-label">Visual guide</span>
-              <span class="picker-format-hint">layout &amp; diagrams</span>
-            </a>
-            <a class="picker-format" href="languages/sv/text/">
-              <span class="picker-format-icon"
-                ><svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="#533afd"
-                  stroke-width="1.8"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <path d="M14 2v6h6"></path>
-                  <path d="M16 13H8"></path>
-                  <path d="M16 17H8"></path>
-                  <path d="M10 9H8"></path></svg
-              ></span>
-              <span class="picker-format-label">Text-based</span>
-              <span class="picker-format-hint">plain markdown</span>
-            </a>
-          </div>
-        </section>
-
-        <div class="picker-divider"></div>
-
-        <section class="picker-lang">
-          <div class="picker-lang-head">
-            <span class="picker-lang-flag">🇺🇸</span>
-            <span class="picker-lang-name">English</span>
-          </div>
-          <div class="picker-formats">
-            <a class="picker-format" href="languages/en/">
-              <span class="picker-format-icon"
-                ><svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="#533afd"
-                  stroke-width="1.8"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"></path>
-                  <circle cx="12" cy="12" r="3"></circle></svg
-              ></span>
-              <span class="picker-format-label">Visual guide</span>
-              <span class="picker-format-hint">layout &amp; diagrams</span>
-            </a>
-            <a class="picker-format" href="languages/en/text/">
-              <span class="picker-format-icon"
-                ><svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="#533afd"
-                  stroke-width="1.8"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <path d="M14 2v6h6"></path>
-                  <path d="M16 13H8"></path>
-                  <path d="M16 17H8"></path>
-                  <path d="M10 9H8"></path></svg
-              ></span>
-              <span class="picker-format-label">Text-based</span>
-              <span class="picker-format-hint">plain markdown</span>
-            </a>
-          </div>
-        </section>
-      </div>
-      <footer class="picker-footer">
-        © 2026 Montathar Faraon · Licensed under the
-        <a href="https://github.com/everydaydesign/git-guide/blob/main/LICENSE">MIT License</a>
-      </footer>
-    </main>
-    <script src="assets/js/site.js" defer></script>
+    <p><a href="languages/sv/">Guide till Git →</a></p>
   </body>
 </html>
