@@ -59,11 +59,12 @@
               </svg>
             </summary>
             <div class="topbar-panel">
-              <a href="#overview">How Git works</a><a href="#sec-1">01 The basics</a
-              ><a href="#sec-2">02 The big picture</a><a href="#sec-3">03 Fundamentals</a
-              ><a href="#sec-4">04 The order</a><a href="#sec-5">05 Branches</a
-              ><a href="#sec-6">06 Sync</a><a href="#sec-7">07 Review</a
-              ><a href="#sec-8">08 When it clashes</a><a href="#sec-9">Quick checklist</a>
+              <a href="#overview">How Git works</a><a href="#basics">01 The basics</a
+              ><a href="#big-picture">02 The big picture</a
+              ><a href="#stage-commit">03 Fundamentals</a><a href="#workflow">04 The order</a
+              ><a href="#branches">05 Branches</a><a href="#sync">06 Sync</a
+              ><a href="#review">07 Review</a><a href="#conflicts">08 When it clashes</a
+              ><a href="#checklist">Quick checklist</a>
             </div>
           </details>
           <details class="topbar-menu">
@@ -209,12 +210,12 @@
             </div>
           </div>
         </section>
-        <section class="section" aria-labelledby="sec-1">
+        <section class="section" aria-labelledby="basics">
           <div class="section-head">
             <span class="num section-num">01</span>
             <div class="section-kicker">The basics</div>
           </div>
-          <h2 class="section-title" id="sec-1">A time machine for your code</h2>
+          <h2 class="section-title" id="basics">A time machine for your code</h2>
           <p class="section-lede">
             Instead of saving copies like <span class="mono code-md">v1</span>,
             <span class="mono code-md">v2_final</span>, <span class="mono code-md">FINAL</span> Git
@@ -426,12 +427,12 @@
             </li>
           </ul>
         </section>
-        <section class="section" aria-labelledby="sec-2">
+        <section class="section" aria-labelledby="big-picture">
           <div class="section-head">
             <span class="num section-num">02</span>
             <div class="section-kicker">The big picture</div>
           </div>
-          <h2 class="section-title-wide" id="sec-2">How code flows in a group</h2>
+          <h2 class="section-title-wide" id="big-picture">How code flows in a group</h2>
           <p class="section-lede-wide">
             One person creates the repo and invites the others. <br />Everyone pulls (<b
               class="strong-ink"
@@ -677,12 +678,14 @@
             </p>
           </div>
         </section>
-        <section class="section" aria-labelledby="sec-3">
+        <section class="section" aria-labelledby="stage-commit">
           <div class="section-head">
             <span class="num section-num">03</span>
             <div class="section-kicker">Fundamentals</div>
           </div>
-          <h2 class="section-title-tight" id="sec-3">Stage and commit — like packing a bag</h2>
+          <h2 class="section-title-tight" id="stage-commit">
+            Stage and commit — like packing a bag
+          </h2>
           <p class="section-lede-tight">
             First, <b class="strong-ink">choose</b> what to include (stage). Then
             <b class="strong-ink">close</b> the bag and put a label on it (commit). Two steps, for a
@@ -856,12 +859,12 @@
             </p>
           </div>
         </section>
-        <section class="section" aria-labelledby="sec-4">
+        <section class="section" aria-labelledby="workflow">
           <div class="section-head">
             <span class="num section-num">04</span>
             <div class="section-kicker">The order</div>
           </div>
-          <h2 class="section-title" id="sec-4">Three steps, always in the same order</h2>
+          <h2 class="section-title" id="workflow">Three steps, always in the same order</h2>
           <p class="section-lede-narrow">
             Stage and commit happen <b class="strong-ink">locally</b> on your machine. Push is what
             shares the work with the group on GitHub.
@@ -1000,12 +1003,12 @@
             </div>
           </div>
         </section>
-        <section class="section" aria-labelledby="sec-5">
+        <section class="section" aria-labelledby="branches">
           <div class="section-head">
             <span class="num section-num">05</span>
             <div class="section-kicker">Branches</div>
           </div>
-          <h2 class="section-title-tight" id="sec-5">Your own workspace, separate from main</h2>
+          <h2 class="section-title-tight" id="branches">Your own workspace, separate from main</h2>
           <p class="section-lede-tight">
             A branch is a copy of the project where you can work freely without affecting others'
             code. When you are done, your branch is merged with
@@ -1120,12 +1123,12 @@
             </div>
           </div>
         </section>
-        <section class="section" aria-labelledby="sec-6">
+        <section class="section" aria-labelledby="sync">
           <div class="section-head">
             <span class="num section-num">06</span>
             <div class="section-kicker">Sync</div>
           </div>
-          <h2 class="section-title" id="sec-6">Pull first, push after</h2>
+          <h2 class="section-title" id="sync">Pull first, push after</h2>
           <p class="section-lede">
             <b class="strong-ink">Pull</b> pulls others' changes from GitHub to you.
             <b class="strong-ink">Push</b> pushes your commits up. You always sync in both
@@ -1239,12 +1242,12 @@
             </p>
           </div>
         </section>
-        <section class="section" aria-labelledby="sec-7">
+        <section class="section" aria-labelledby="review">
           <div class="section-head">
             <span class="num section-num">07</span>
             <div class="section-kicker">Review</div>
           </div>
-          <h2 class="section-title-wide" id="sec-7">No code enters main unreviewed</h2>
+          <h2 class="section-title-wide" id="review">No code enters main unreviewed</h2>
           <p class="section-lede-tight">
             A Pull Request lets the group read your code before it is merged. Another person reviews
             — the only rule is that you don't review your own code.
@@ -1441,12 +1444,12 @@
             </div>
           </div>
         </section>
-        <section class="section" aria-labelledby="sec-8">
+        <section class="section" aria-labelledby="conflicts">
           <div class="section-head">
             <span class="num section-num">08</span>
             <div class="section-kicker">When it clashes</div>
           </div>
-          <h2 class="section-title-tight" id="sec-8">When two people change the same line</h2>
+          <h2 class="section-title-tight" id="conflicts">When two people change the same line</h2>
           <p class="section-lede-tight">
             A conflict happens when two people have changed exactly the same line. Git doesn't know
             which version should win — so you have to choose. Usually the answer is to
@@ -1546,8 +1549,8 @@
             </p>
           </div>
         </section>
-        <section class="closing" aria-labelledby="sec-9">
-          <h2 class="section-title-sm" id="sec-9">Quick checklist</h2>
+        <section class="closing" aria-labelledby="checklist">
+          <h2 class="section-title-sm" id="checklist">Quick checklist</h2>
           <div class="checklist-row">
             <div class="checklist-card">
               <div class="checklist-label">Do once · project start</div>
@@ -1717,15 +1720,15 @@
       <div class="toc-title">On this page</div>
       <nav class="toc-links">
         <a href="#overview">How Git works</a>
-        <a href="#sec-1">The basics</a>
-        <a href="#sec-2">The big picture</a>
-        <a href="#sec-3">Fundamentals</a>
-        <a href="#sec-4">The order</a>
-        <a href="#sec-5">Branches</a>
-        <a href="#sec-6">Sync</a>
-        <a href="#sec-7">Review</a>
-        <a href="#sec-8">When it clashes</a>
-        <a href="#sec-9">Quick checklist</a>
+        <a href="#basics">The basics</a>
+        <a href="#big-picture">The big picture</a>
+        <a href="#stage-commit">Fundamentals</a>
+        <a href="#workflow">The order</a>
+        <a href="#branches">Branches</a>
+        <a href="#sync">Sync</a>
+        <a href="#review">Review</a>
+        <a href="#conflicts">When it clashes</a>
+        <a href="#checklist">Quick checklist</a>
       </nav>
     </aside>
     <script src="../../assets/js/site.js?v=27" defer></script>

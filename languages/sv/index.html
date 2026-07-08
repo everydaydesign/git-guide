@@ -59,11 +59,11 @@
               </svg>
             </summary>
             <div class="topbar-panel">
-              <a href="#overview">Så fungerar Git</a><a href="#sec-1">01 Grunden</a
-              ><a href="#sec-2">02 Stora bilden</a><a href="#sec-3">03 Grundläggande</a
-              ><a href="#sec-4">04 Ordningen</a><a href="#sec-5">05 Branches</a
-              ><a href="#sec-6">06 Synkronisering</a><a href="#sec-7">07 Granskning</a
-              ><a href="#sec-8">08 När det krockar</a><a href="#sec-9">Snabb checklista</a>
+              <a href="#overview">Så fungerar Git</a><a href="#basics">01 Grunden</a
+              ><a href="#big-picture">02 Stora bilden</a><a href="#stage-commit">03 Grundläggande</a
+              ><a href="#workflow">04 Ordningen</a><a href="#branches">05 Branches</a
+              ><a href="#sync">06 Synkronisering</a><a href="#review">07 Granskning</a
+              ><a href="#conflicts">08 När det krockar</a><a href="#checklist">Snabb checklista</a>
             </div>
           </details>
           <details class="topbar-menu">
@@ -209,12 +209,12 @@
             </div>
           </div>
         </section>
-        <section class="section" aria-labelledby="sec-1">
+        <section class="section" aria-labelledby="basics">
           <div class="section-head">
             <span class="num section-num">01</span>
             <div class="section-kicker">Grunden</div>
           </div>
-          <h2 class="section-title" id="sec-1">En tidsmaskin för er kod</h2>
+          <h2 class="section-title" id="basics">En tidsmaskin för er kod</h2>
           <p class="section-lede">
             I stället för att spara kopior som <span class="mono code-md">v1</span>,
             <span class="mono code-md">v2_final</span>,
@@ -428,12 +428,12 @@
             </li>
           </ul>
         </section>
-        <section class="section" aria-labelledby="sec-2">
+        <section class="section" aria-labelledby="big-picture">
           <div class="section-head">
             <span class="num section-num">02</span>
             <div class="section-kicker">Stora bilden</div>
           </div>
-          <h2 class="section-title-wide" id="sec-2">Så flödar koden i en grupp</h2>
+          <h2 class="section-title-wide" id="big-picture">Så flödar koden i en grupp</h2>
           <p class="section-lede-wide">
             En person skapar repot och bjuder in de andra. <br />Alla hämtar (<b class="strong-ink"
               >pull</b
@@ -678,12 +678,14 @@
             </p>
           </div>
         </section>
-        <section class="section" aria-labelledby="sec-3">
+        <section class="section" aria-labelledby="stage-commit">
           <div class="section-head">
             <span class="num section-num">03</span>
             <div class="section-kicker">Grundläggande</div>
           </div>
-          <h2 class="section-title-tight" id="sec-3">Stage och commit — som att packa en väska</h2>
+          <h2 class="section-title-tight" id="stage-commit">
+            Stage och commit — som att packa en väska
+          </h2>
           <p class="section-lede-tight">
             Först <b class="strong-ink">väljer</b> du vad som ska med (stage). Sen
             <b class="strong-ink">stänger</b> du väskan och sätter en etikett (commit). Två steg, av
@@ -857,12 +859,12 @@
             </p>
           </div>
         </section>
-        <section class="section" aria-labelledby="sec-4">
+        <section class="section" aria-labelledby="workflow">
           <div class="section-head">
             <span class="num section-num">04</span>
             <div class="section-kicker">Ordningen</div>
           </div>
-          <h2 class="section-title" id="sec-4">Tre steg, alltid i samma ordning</h2>
+          <h2 class="section-title" id="workflow">Tre steg, alltid i samma ordning</h2>
           <p class="section-lede-narrow">
             Stage och commit sker <b class="strong-ink">lokalt</b> hos dig. Push är det som delar
             arbetet med gruppen på GitHub.
@@ -1001,12 +1003,12 @@
             </div>
           </div>
         </section>
-        <section class="section" aria-labelledby="sec-5">
+        <section class="section" aria-labelledby="branches">
           <div class="section-head">
             <span class="num section-num">05</span>
             <div class="section-kicker">Branches</div>
           </div>
-          <h2 class="section-title-tight" id="sec-5">En egen arbetsyta, skild från main</h2>
+          <h2 class="section-title-tight" id="branches">En egen arbetsyta, skild från main</h2>
           <p class="section-lede-tight">
             En branch är en kopia av projektet där du kan jobba fritt utan att påverka andras kod.
             När du är klar slås din branch ihop med <span class="mono code-md">main</span> via en
@@ -1121,12 +1123,12 @@
             </div>
           </div>
         </section>
-        <section class="section" aria-labelledby="sec-6">
+        <section class="section" aria-labelledby="sync">
           <div class="section-head">
             <span class="num section-num">06</span>
             <div class="section-kicker">Synkronisering</div>
           </div>
-          <h2 class="section-title" id="sec-6">Hämta först, skicka sen</h2>
+          <h2 class="section-title" id="sync">Hämta först, skicka sen</h2>
           <p class="section-lede">
             <b class="strong-ink">Pull</b> hämtar andras ändringar från GitHub till dig.
             <b class="strong-ink">Push</b> skickar dina commits upp. Du synkar alltid åt båda
@@ -1240,12 +1242,12 @@
             </p>
           </div>
         </section>
-        <section class="section" aria-labelledby="sec-7">
+        <section class="section" aria-labelledby="review">
           <div class="section-head">
             <span class="num section-num">07</span>
             <div class="section-kicker">Granskning</div>
           </div>
-          <h2 class="section-title-wide" id="sec-7">Ingen kod går in i main ogranskad</h2>
+          <h2 class="section-title-wide" id="review">Ingen kod går in i main ogranskad</h2>
           <p class="section-lede-tight">
             En Pull Request låter gruppen läsa din kod innan den slås ihop. En annan person granskar
             — den enda regeln är att du inte granskar din egen kod.
@@ -1442,12 +1444,12 @@
             </div>
           </div>
         </section>
-        <section class="section" aria-labelledby="sec-8">
+        <section class="section" aria-labelledby="conflicts">
           <div class="section-head">
             <span class="num section-num">08</span>
             <div class="section-kicker">När det krockar</div>
           </div>
-          <h2 class="section-title-tight" id="sec-8">När två ändrar samma rad</h2>
+          <h2 class="section-title-tight" id="conflicts">När två ändrar samma rad</h2>
           <p class="section-lede-tight">
             En konflikt uppstår när två personer ändrat exakt samma rad. Git vet inte vilken version
             som ska gälla — så du får välja. Oftast är svaret att
@@ -1547,8 +1549,8 @@
             </p>
           </div>
         </section>
-        <section class="closing" aria-labelledby="sec-9">
-          <h2 class="section-title-sm" id="sec-9">Snabb checklista</h2>
+        <section class="closing" aria-labelledby="checklist">
+          <h2 class="section-title-sm" id="checklist">Snabb checklista</h2>
           <div class="checklist-row">
             <div class="checklist-card">
               <div class="checklist-label">Gör en gång · projektstart</div>
@@ -1718,15 +1720,15 @@
       <div class="toc-title">På denna sida</div>
       <nav class="toc-links">
         <a href="#overview">Så fungerar Git</a>
-        <a href="#sec-1">Grunden</a>
-        <a href="#sec-2">Stora bilden</a>
-        <a href="#sec-3">Grundläggande</a>
-        <a href="#sec-4">Ordningen</a>
-        <a href="#sec-5">Branches</a>
-        <a href="#sec-6">Synkronisering</a>
-        <a href="#sec-7">Granskning</a>
-        <a href="#sec-8">När det krockar</a>
-        <a href="#sec-9">Snabb checklista</a>
+        <a href="#basics">Grunden</a>
+        <a href="#big-picture">Stora bilden</a>
+        <a href="#stage-commit">Grundläggande</a>
+        <a href="#workflow">Ordningen</a>
+        <a href="#branches">Branches</a>
+        <a href="#sync">Synkronisering</a>
+        <a href="#review">Granskning</a>
+        <a href="#conflicts">När det krockar</a>
+        <a href="#checklist">Snabb checklista</a>
       </nav>
     </aside>
     <script src="../../assets/js/site.js?v=27" defer></script>
