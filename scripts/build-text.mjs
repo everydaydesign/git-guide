@@ -5,7 +5,7 @@ import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { Marked } from "marked";
 import { gfmHeadingId } from "marked-gfm-heading-id";
 
-const VERSION = 27; // keep in sync with the ?v= on the other pages
+const VERSION = 28; // keep in sync with the ?v= on the other pages
 
 const brandGlyph = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><line x1="6" x2="6" y1="3" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg>`;
 const globe = `<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>`;
@@ -19,8 +19,8 @@ const LANGS = {
     title: "Guide to Git",
     home: "Back to start",
     homeLabel: "Home",
-    visual: "Visual guide",
-    text: "Text guide",
+    visual: "Visual",
+    text: "Text-based",
     sections: "Sections",
     contents: "Contents",
     langLabel: "Language",
@@ -33,8 +33,8 @@ const LANGS = {
     title: "Guide till Git",
     home: "Till startsidan",
     homeLabel: "Hem",
-    visual: "Visuell guide",
-    text: "Textguide",
+    visual: "Visuell",
+    text: "Textbaserad",
     sections: "Avsnitt",
     contents: "Innehåll",
     langLabel: "Språk",
@@ -85,7 +85,7 @@ function page(lang, cfg, body) {
   <body>
     <nav class="topbar">
       <div class="topbar-inner">
-        <a class="topbar-brand" href="../" title="${cfg.title}">
+        <a class="topbar-brand" href="https://everydaydesign.github.io/webdesign/" title="${cfg.title}">
           <span class="topbar-mark">${brandGlyph}</span>
           <span class="topbar-brand-text">${cfg.title}</span>
         </a>

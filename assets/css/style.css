@@ -2204,7 +2204,7 @@ h3 {
    -------------------------------------------------------------------------- */
 .markdown {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0;
   padding: 44px 0 24px;
   font-size: 15.5px;
   line-height: 1.7;
