@@ -17,3 +17,5 @@ Choose language and format (visual or text-based) on the landing page.
 - Pull requests och hur ni granskar varandras kod
 - Merge-konflikter och `.gitignore`
 - Felsökning när något strular
+
+<!-- everydaydesign · webdesign course -->
